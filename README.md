@@ -64,3 +64,4 @@ The original files in `data/` are never edited. `scripts/prepare_data.py` produc
 `src/components/` contains the shared layout, scatterplot and ranking controls, professor reviews, department pages, and notebook visualizations. Chart colors follow Richmond navy `#000066` and red `#990000`; shared typography tokens live in `src/app/globals.css`. Recharts supplies the interactive charts; the regression intervals use labeled SVG, and rankings use accessible links / tables.
 
 An optional, feature-detected WebMCP `filter_professors` action shares the explorer's visible controls. Unsupported browsers use the normal interface. Adding more curated review types can extend the review JSON schema and key-based ingestion without changing source comments.
+# rate-my-richmond
