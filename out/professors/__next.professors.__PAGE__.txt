@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[33204,["/_next/static/chunks/27-cwnv436mbf.js","/_next/static/chunks/154d1f1hcw-ok.js","/_next/static/chunks/2kjtd31jvnth4.js"],"PeriodToggle"]
+3:I[24282,["/_next/static/chunks/27-cwnv436mbf.js","/_next/static/chunks/154d1f1hcw-ok.js","/_next/static/chunks/2kjtd31jvnth4.js"],"Explorer"]
+4:I[97367,["/_next/static/chunks/27-cwnv436mbf.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/_next/static/chunks/27-cwnv436mbf.js"],"ViewportBoundary"]
+a:I[97367,["/_next/static/chunks/27-cwnv436mbf.js"],"MetadataBoundary"]
+c:I[39756,["/_next/static/chunks/27-cwnv436mbf.js"],"default"]
+d:I[37457,["/_next/static/chunks/27-cwnv436mbf.js"],"default"]
+10:I[33204,["/_next/static/chunks/27-cwnv436mbf.js","/_next/static/chunks/154d1f1hcw-ok.js","/_next/static/chunks/2kjtd31jvnth4.js"],"Shell"]
+11:I[22016,["/_next/static/chunks/27-cwnv436mbf.js"],""]
+:HL["/_next/static/chunks/0hvf2s9bek54c.css","style"]
+8:X
+f:X
+f:C
+0:{"buildId":"10vEg6gpzz2ZVRSMxxp_O","data":[{"rsc":["$","$1","c",{"children":[[["$","section",null,{"className":"page-heading","children":[["$","div",null,{"children":[["$","div",null,{"className":"eyebrow","children":"The professor explorer"}],["$","h1",null,{"children":"Choose wisely."}],["$","p",null,{"children":"Search, sort, and see what everyone had to say."}]]}],["$","$L2",null,{}]]}],["$","$L3",null,{"table":true}]],[["$","script","script-0",{"src":"/_next/static/chunks/154d1f1hcw-ok.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/2kjtd31jvnth4.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Professors | Rate My Richmond"}],["$","meta","1",{"name":"description","content":"An unofficial student project exploring University of Richmond professor reviews. Professional graphs. Strong opinions."}]]}]}]}],null]}],"isPartial":"$@b","staleTime":"$8","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$8","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0hvf2s9bek54c.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/27-cwnv436mbf.js","async":true}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main","children":"Skip to content"}],["$","$L10",null,{"children":["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","section",null,{"className":"page-heading","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"children":"Nothing to rate here."}],["$","p",null,{"children":["This page doesn’t exist. ",["$","$L11",null,{"href":"/professors/","children":"Find a professor ↗"}]]}]]}]}],[]]}]}]]}]}]]}],"isPartial":"$@12","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@13","rootVaryParams":null,"needsRuntimeRequest":"$@14"}
+6:null
+8:300
+14:true
+8:C
+13:0
+b:"$undefined"
+e:"$undefined"
+12:"$undefined"
+7:"$undefined"

@@ -1,0 +1,45 @@
+{
+  "reviews": 12239,
+  "recentReviews": 3741,
+  "professors": 877,
+  "rankedProfessors": 219,
+  "departments": 27,
+  "validatedAwards": 9,
+  "aliasMappings": {
+    "Angel Blanco": "Angel Otero-Blanco",
+    "Craig, W. Heinicke": "Craig Heinicke",
+    ". Walden": "Darrell Walden",
+    "Doug Winiarski": "Douglas Winiarski",
+    ". Wray": "Elisabeth Wray",
+    "Jim Davis": "James Davis",
+    "Joseph (Joe) Hoyle": "Joe Hoyle",
+    "Phillip Rohrbach": "Philip Rohrbach",
+    "Pippa Holloway": "Philippa Holloway",
+    "Ricardo Tremolada": "Ricardo Ramos-Tremolada",
+    "Sara Hillgrove": "Sara Meyerdierks Hillgrove",
+    ". Nall": "Van Nall",
+    "Bill Bergman": "William (Bill) Bergman",
+    ". Myers": "William Myers"
+  },
+  "funnyKeysVerified": 30,
+  "sourceHashes": {
+    "department_difficulty_rankings.csv": "e2f1a0efc185dbed491816f1d7d06a4f8b774583a12e691e8cfc00b1efedd9c4",
+    "reviews_clean.csv": "0c20f231b0ffccc7adb19d7e15d033b676e8165d29e8b3f2a9ba77c3a1131f90",
+    "cluster_2022_2026.csv": "dacb75752ead5acee45888a1dd13f402b672c3b4ae071238cb7bd1d8ac4cd0c7",
+    "time_trend.csv": "483849694b7cbb452f0142fbc018635b50e336239ee8d06d3ef0fa5e003fe331",
+    "official_awards.csv": "6e70054918e5da1da5e4d0f214c5862d730d77299c1e92a384ac36b86e165737",
+    "business_vs_science_results.csv": "80cad039153d22be5fb6d163fc4050aa7dd75e2c66384c172daa6d033708d971",
+    "professor_stats_graph_ready.csv": "cb2986160c39227a856682e37e91dcb8d1cb9395f33d9827b286ceb03d3308d2",
+    "course_level_summary.csv": "5a55243bdad302e41826703aa83cc580d3af2a616ebece5f75f5bed1d41d83ee",
+    "cluster_all_time.csv": "bea9fc4f6594451add3eb7fe65b63173b58c568ffe81eb9517b8c3d4ec119f4b",
+    "RMP_Richmond_Comedy_Curation.xlsx": "a29ad0774701ac3419c26df22b20f9fad722a90d5412f7905f6c3ef397ab5e6f"
+  },
+  "limitations": [
+    "No supplied recent Alpha model.",
+    "No supplied difficulty-quality regression table or within-professor time-trend model.",
+    "Department summaries cover 27 departments, not every source department. Unmapped groups remain explicit.",
+    "All-time adjusted rankings cover 219 supplied professors only.",
+    "Recent Bayesian scores calculated using the documented 15-review threshold and prior weight 10; all three official recent awards reproduce exactly.",
+    "Funny labels use only the 30 verified Master_Top30 workbook entries. No Unhinged taxonomy is inferred."
+  ]
+}

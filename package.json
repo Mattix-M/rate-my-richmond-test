@@ -1,0 +1,27 @@
+{
+  "name": "rate-my-richmond",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "prebuild": "python3 scripts/prepare_data.py",
+    "build": "next build",
+    "start": "python3 -m http.server 3001 --directory out",
+    "data": "python3 scripts/prepare_data.py",
+    "test": "python3 scripts/prepare_data.py --check",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.0.0",
+    "lucide-react": "^0.577.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0"
+  }
+}
