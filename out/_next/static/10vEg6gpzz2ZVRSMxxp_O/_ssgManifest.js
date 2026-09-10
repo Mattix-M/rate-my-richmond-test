@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Fdepartments\u002F[id]","\u002Fprofessors\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
