@@ -3,3 +3,10 @@ node_modules/
 out/
 *.tsbuildinfo
 .DS_Store
+
+# Local presentation material and QA output
+.document-work/
+deliverables/
+output/
+tmp/
+.vercel/

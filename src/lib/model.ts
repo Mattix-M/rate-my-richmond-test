@@ -5,7 +5,7 @@ export type Professor = {id:string;name:string;department:string;group:string;al
 export type Review = {key:string;date:string;year:number;course:string;quality:number;difficulty:number;tags:string[];comment:string;funny:boolean};
 export const data = {...raw, professors:raw.professors as Professor[]};
 export const fmt=(n:number|null|undefined,d=2)=>n==null?'—':n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
-export const alphaText="Professor Alpha is a custom metric: how much higher or lower students rate a professor than expected for their difficulty, department, and review year. Positive means higher than expected. It is not an official RMP score.";
+export const alphaText="Rating relative to expectations (Alpha) is a custom metric: how much higher or lower students rate a professor than expected for their difficulty, department, and review year. Positive means higher than expected. It is not an official RMP score.";
 export const groups=[...new Set(data.professors.map(p=>p.group))].sort();
 export const departments=[...new Set(data.professors.map(p=>p.department))].sort();
 export const shortGroup=(s:string)=>s==='A&S Humanities / Social Sciences / Arts'?'A&S Humanities / Social Sciences / Arts':s;
