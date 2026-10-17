@@ -1,0 +1,192 @@
+/* Shared additions, followed by the phone layout. Loaded after the existing styles. */
+.mobile-nav,.professor-cards{display:none}
+.home-professor-search{padding:25px 0 28px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.home-professor-search label{display:block;font-weight:700;margin-bottom:10px;font-size:18px}
+.home-professor-search>div{display:flex;gap:10px;max-width:780px}
+.home-professor-search input{min-width:0;flex:1;border:1px solid #aeb2c2;padding:14px;font:inherit;color:var(--ink);background:#fff;border-radius:0}
+.home-professor-search>span{display:block;color:var(--muted);font-size:13px;margin-top:9px}
+.search-help{font-size:13px;margin:12px 0 20px}
+.method-intro{font-size:18px;margin:18px 0 26px}
+.method-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.method-summary article{border-top:2px solid var(--green);padding-top:18px}
+.method-summary article>span{font-size:12px;color:var(--muted)}
+.method-summary h3{font-size:20px;margin:10px 0}
+.method-summary p,.methodology-deep p{font-size:15px}
+.methodology-deep>summary{font-size:17px;padding:5px 0}
+.methodology-deep .methodology-grid{margin:25px 0}
+.method-formula{padding:24px;background:#f5f5f8;margin:25px 0 10px}
+.formula-line{font-family:Georgia,serif;font-size:20px!important;line-height:1.7;margin:15px 0}
+button,a,input,select,summary{-webkit-tap-highlight-color:transparent}
+:is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #6262b4;outline-offset:3px}
+summary{min-height:44px;align-content:center;cursor:pointer}
+.course-filter-toggle{display:none}
+
+@media(max-width:760px){
+  html{scroll-padding-top:90px}
+  body{font-size:16px;padding-bottom:calc(72px + env(safe-area-inset-bottom));overflow-wrap:break-word}
+  main{padding:0 18px 45px;min-width:0}
+  .site-header{position:sticky;top:0;z-index:40;gap:0;border-bottom:1px solid var(--line);background:#fff}
+  .wordmark{padding:15px 18px}
+  .wordmark strong{font-size:24px}
+  .wordmark small{font-size:9px;letter-spacing:.07em}
+  .menu-button{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:12px}
+  .site-header nav{max-height:calc(100dvh - 160px);overflow-y:auto;background:#fff;box-shadow:0 12px 18px #10133f14;border-top:1px solid var(--line)}
+  .site-header nav.open{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .site-header nav a,.site-header nav a:first-child{color:var(--ink);border:0;padding:16px 18px;font-size:12px;text-align:left;min-height:50px}
+  .site-header nav a:hover,.site-header nav a[aria-current=page]{color:var(--ink);background:#f0f0f6;box-shadow:none;text-decoration:underline;text-underline-offset:5px}
+  .mobile-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;bottom:0;left:0;right:0;z-index:45;background:#fff;border-top:1px solid var(--line);padding:6px 8px calc(6px + env(safe-area-inset-bottom));gap:3px;box-shadow:0 -4px 20px #10133f08}
+  .mobile-nav a,.mobile-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:50px;font-size:10px;font-weight:700;border:0;background:none;padding:5px 0;color:var(--muted);text-transform:none;letter-spacing:0}
+  .mobile-nav [aria-current=page],.mobile-nav [aria-expanded=true]{color:var(--green);background:#f0f0f6;border-radius:5px}
+  .page-heading{padding:30px 0 23px;gap:18px}
+  h1{font-size:clamp(34px,9.5vw,45px);line-height:1.08}
+  h2,.research-content h2,.about .section h2{font-size:30px;line-height:1.15}
+  .page-heading p{font-size:15px;line-height:1.55;margin-top:12px}
+  .eyebrow{font-size:10px;letter-spacing:.07em}
+  .period button{font-size:12px;min-height:44px}
+  .edition{margin-bottom:16px;padding:12px 0;flex-wrap:wrap;font-size:13px}
+  .edition a{font-size:12px;min-height:32px}
+  .home-professor-search{padding:12px 0 22px;margin-bottom:18px}
+  .home-professor-search label{font-size:17px}
+  .home-professor-search>div{flex-direction:column;gap:8px}
+  .home-professor-search input{font-size:16px;min-height:50px}
+  .home-professor-search>span{font-size:12px;line-height:1.5}
+  .home-tools{gap:10px;margin:18px 0 25px}
+  .home-tools>a{padding:17px 18px;gap:0;border-top-width:2px}
+  .home-tools h2{font-size:25px;margin:10px 0}
+  .home-tools p{font-size:14px;line-height:1.5;margin:0 0 14px}
+  .home-tools .text-link{font-size:13px}
+  .awards,.awards.awards{gap:12px}
+  .award,.award.award{padding:19px;border-top-width:2px}
+  .award h2,.award-0 h2{font-size:29px;margin-top:18px}
+  .award>p{font-size:14px}
+  .award .award-blurb{font-size:13px;margin-top:12px}
+  .award-stats{gap:18px;padding-top:15px}
+  .award-stats strong{font-size:25px}
+  .award-stats b{font-size:20px}
+  .award-stats span{font-size:11px}
+  .section{margin-top:42px}
+  .section-heading{margin-bottom:18px;padding-bottom:15px}
+  .section-heading p{font-size:15px;line-height:1.55}
+  .explorer{padding:15px 12px}
+  .explorer-search .search-field input{padding:13px 12px 13px 40px;font-size:16px;min-height:48px}
+  .explorer-search .button{min-height:44px;padding:10px;font-size:12px}
+  .filters label>span{font-size:11px}
+  .filters input,.filters select,.compare-search input{min-height:48px;font-size:16px}
+  .results-meta{font-size:12px;align-items:center;gap:8px;margin:8px 0}
+  .results-meta button{min-width:76px;text-decoration:underline;text-underline-offset:3px}
+  .search-help{font-size:12px;line-height:1.5;margin:5px 0 16px}
+  .professor-table{display:none}
+  .professor-cards{display:grid;gap:14px}
+  .professor-card{border:1px solid var(--line);padding:17px;background:#fff}
+  .professor-card>.prof-link{font-size:20px;line-height:1.35;justify-content:space-between;gap:12px}
+  .professor-card>.prof-link svg{flex-shrink:0}
+  .professor-card>p{font-size:13px;margin:7px 0 0;line-height:1.5}
+  .professor-card-metrics{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 12px}
+  .professor-card-metrics dt{font-size:12px;color:var(--muted)}
+  .professor-card-metrics dd{font-size:28px;margin:3px 0 0;line-height:1.2;font-variant-numeric:tabular-nums}
+  .professor-card-metrics small{font-size:13px;color:var(--muted);margin-left:4px}
+  .professor-card .sample-note{border-left:2px solid var(--orange);padding-left:10px;font-size:12px;margin:15px 0}
+  .card-extra{font-size:13px;border-top:1px solid var(--line);margin-top:15px}
+  .card-extra summary{min-height:44px;color:var(--muted)}
+  .card-extra dl{margin:4px 0 14px}
+  .card-extra dl>div{display:flex;justify-content:space-between;gap:10px;padding:6px 0}
+  .card-extra p{font-size:12px;margin-bottom:14px}
+  .professor-card>.compare-button{width:100%;min-height:44px;font-size:12px;margin-top:8px}
+  .scatter-wrap{height:340px;margin-left:-8px;margin-right:-8px}
+  .chart-tooltip{min-width:0;width:195px;max-width:calc(100vw - 80px);font-size:12px;padding:12px}
+  .chart-tooltip>strong{overflow-wrap:anywhere}
+  .chart-caption{font-size:12px;line-height:1.5}
+  .selected-professor{margin-top:14px;scroll-margin-top:90px}
+  .selected-professor .button{font-size:11px;padding:10px 8px}
+  .micro{font-size:12px;line-height:1.6}
+  .metric-strip{gap:18px;padding:20px 0}
+  .metric-strip strong{font-size:28px}
+  .rank-strip{gap:12px;font-size:12px}
+  .review-top{gap:12px;flex-wrap:wrap}
+  .review{padding:23px 0}
+  .review-comment{font-size:17px;line-height:1.65}
+  .tags span{font-size:11px;padding:5px 8px}
+  .view-controls{flex-wrap:wrap;gap:12px}
+  .review-search{font-size:16px}
+  .comparison-tray{bottom:calc(72px + env(safe-area-inset-bottom));width:calc(100% - 20px);gap:8px;padding:10px;z-index:44;box-shadow:0 4px 22px #10133f20}
+  .comparison-tray .button{font-size:11px;padding:10px;min-height:44px;letter-spacing:0}
+  .comparison-tray .text-button{font-size:12px}
+  body.has-comparison{padding-bottom:calc(160px + env(safe-area-inset-bottom))}
+  .compare-card-heading{position:static;min-height:138px}
+  .compare-card-heading h2{font-size:17px}
+  .compare-card .comparison-metrics>div{min-height:103px}
+  .compare-card .comparison-metrics dt{font-size:12px}
+  .compare-card .comparison-metrics dd{font-size:26px}
+  .course-search-bar{display:flex;flex-wrap:wrap;padding:14px;gap:12px}
+  .course-search-bar .grow{flex-basis:100%}
+  .course-filter-toggle{display:flex;width:100%;font-size:12px}
+  .course-search-bar .course-filter{display:none;flex-basis:100%}
+  .course-filters-open .course-filter{display:flex}
+  .course-grid{grid-template-columns:1fr}
+  .course-numbers{gap:24px;font-size:12px}
+  .sample-label{font-size:12px}
+  .course-detail{scroll-margin-top:90px;padding:18px;margin-bottom:18px}
+  .course-detail h3{font-size:18px}
+  .course-prof{padding:18px 0}
+  .course-prof .button{min-height:44px}
+  .lab-toolbar .button{font-size:12px}
+  .notebook-index{grid-template-columns:1fr 1fr;border:0;gap:8px}
+  .notebook-index a{padding:12px;border:1px solid var(--line);font-size:12px;line-height:1.4;display:flex;align-items:center;min-height:50px}
+  .research-section{padding:32px 0;gap:8px}
+  .research-content{min-width:0}
+  .research-content>.plain-english{font-size:15px;padding:14px;line-height:1.6}
+  .research-content h3{font-size:18px}
+  .insight-cards article{padding:17px}
+  .bar-row{grid-template-columns:minmax(110px,.9fr) minmax(0,1fr);gap:12px}
+  .bar-label{font-size:12px;line-height:1.45;white-space:normal}
+  .bar-label small{font-size:11px}
+  .bar-track b{font-size:12px}
+  .bar-axis{font-size:12px}
+  .about-intro{padding:25px 21px;border-left-width:4px}
+  .about-intro p{font-size:24px}
+  .about-intro p:nth-child(2){font-size:12px;letter-spacing:.02em}
+  .method-summary{grid-template-columns:1fr;gap:22px}
+  .method-summary article{padding-top:14px}
+  .method-summary h3{font-size:20px}
+  .method-summary p{font-size:15px;line-height:1.65}
+  .methodology-deep>summary{font-size:15px}
+  .methodology-deep .methodology-grid{grid-template-columns:1fr}
+  .method-formula{padding:16px}
+  .formula-line{font-size:18px!important}
+  .notice{font-size:13px;padding:15px 16px}
+  .game-intro{font-size:14px;margin-top:0}
+  .game-intro>span{font-size:12px}
+  .matchup-heading{flex-direction:row;align-items:center;padding:22px 0 18px;gap:12px}
+  .matchup-heading .eyebrow{display:none}
+  .matchup-heading h1{font-size:38px}
+  .matchup-heading p{font-size:14px;line-height:1.4;max-width:23ch}
+  .matchup-heading .matchup-edition{flex-shrink:0;gap:4px}
+  .matchup-heading .matchup-edition b{font-size:15px}
+  .matchup-heading .matchup-edition span{font-size:10px}
+  .game-intro{margin:0 0 14px;padding:10px 0}
+  .game-intro>p{display:none}
+  .round-track{margin:16px 0}
+  .round-track>span{width:35px;height:35px;font-size:13px}
+  .matchup-question{margin:16px 0}
+  .matchup-question .eyebrow,.matchup-question h2{display:none}
+  .matchup-question h2{font-size:26px}
+  .matchup-question>p{font-size:13px}
+  .matchup-choices{gap:10px}
+  .matchup-choice{padding:16px 12px}
+  .matchup-choice>.eyebrow{font-size:10px;min-height:30px;line-height:1.4}
+  .matchup-choice h3{font-size:26px;line-height:1.15;margin:10px 0}
+  .course-full-name{font-size:12px;line-height:1.5;min-height:6em}
+  .difficulty-bars{display:none}
+  .difficulty-bars i{max-height:56px}
+  .matchup-score{font-size:36px}
+  .matchup-score small{font-size:10px}
+  .matchup-evidence{font-size:11px}
+  .matchup-answer{font-size:11px;min-height:46px}
+  .round-verdict{font-size:14px}
+  .round-verdict .button{width:100%}
+  .matchup-catalog-links{font-size:11px;gap:12px}
+  .notebook-teaser{margin-top:45px;padding:25px 22px;border-left-width:4px}
+  .notebook-teaser h2{font-size:28px}
+  footer{padding:25px 18px;border-top-width:4px;gap:18px}
+}
+@media print{.mobile-nav,.menu-button{display:none!important}body{padding-bottom:0}}

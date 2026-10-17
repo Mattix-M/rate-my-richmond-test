@@ -17,7 +17,7 @@
 - Professor explorer: name search, Finance filter, minimum review count, sort controls, and period switch exercised. Missing adjusted scores stay visibly unavailable.
 - Academic groups: both supplied periods rendered; recent and all-time review counts and means matched their sources.
 - Finance detail: 198 reviews, 17 supplied professors, quality 3.64, difficulty 3.39, difficulty rank 3 and quality rank 21.
-- About: author text and exact Instagram destination verified.
+- About: unofficial status and methodology shown without personal author links.
 - Optional WebMCP action: valid filter input updated the same visible controls and returned Saif; invalid department rejected without changing the controls.
 - Fixed an SVG title hydration issue found during testing. Final production export served separately on port 3001: no production console errors, period persistence after reload worked, recent Robins coefficient was −0.345, Kevin Webster remained the recent winner, and his 40 original reviews loaded successfully.
 

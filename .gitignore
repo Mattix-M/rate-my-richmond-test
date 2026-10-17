@@ -10,3 +10,7 @@ deliverables/
 output/
 tmp/
 .vercel/
+
+# Credentials stay local
+.env*
+!.env.example

@@ -62,3 +62,18 @@ No hosting settings, remote repository or live deployment were changed.
 ## Useful next step
 
 With permission/access to an official schedule feed, replace user imports with a validated periodic snapshot using the same section schema. Keep snapshot time visible and continue sending people to BannerWeb for seats and registration. This can be added without changing the planner or the site's static hosting model.
+
+
+## Mobile improvements — October 17, 2026
+
+Approved for publication after removing the experimental second game.
+
+- Mobile bottom navigation, sticky header, larger search controls, compact professor cards and expandable secondary metrics. Desktop tables stay available.
+- Professor search defaults to one review, including reset. Search accepts documented aliases and accent-free spellings. Home search opens an all-time search; empty searches can clear restrictive filters. Ranking thresholds remain unchanged.
+- Course search also starts at one review. Extra filters collapse on mobile; opening course details scrolls/focuses the rendered panel, and closing restores focus to the course.
+- The methodology starts with three short explanations. Existing detail, caveats, and the checked adjusted-score formula sit behind disclosures.
+- URdle remains the only game. The experimental word game, its links, data and styles were removed before release.
+- Browser source maps are explicitly disabled in production, credential files are ignored, and no accounts, analytics scripts or submission features were added.
+- Local privacy findings are in output/LOCAL_PRIVACY_REVIEW.txt (ignored by Git). Website changes alone do not anonymize public repository history.
+
+Validation: 25 automated tests pass. A production export builds 916 pages. Browser checks cover 320px and 390px layouts, one-review professor search from home, navigation, expandable methodology, and course details.

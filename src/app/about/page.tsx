@@ -17,6 +17,14 @@ export default function Page() {
 
     <section id="methodology" className="section">
       <h2>How the numbers work.</h2>
+      <p className="method-intro">Two ratings. One review count. The rest is context.</p>
+      <div className="method-summary">
+        <article><span>01</span><h3>Quality ≠ difficulty</h3><p>Both run from 1 to 5. One is how students rated the experience; the other is how hard they said it was. A hard class can get a great rating.</p></article>
+        <article><span>02</span><h3>Count the reviews</h3><p>A 5.0 from one person is one person’s opinion. Everyone is searchable, but adjusted rankings need at least 20 all-time reviews, or 15 recent reviews.</p></article>
+        <article><span>03</span><h3>Adjusted ≠ unbiased</h3><p>Adjusted scores pull small samples toward the campus average. Alpha compares ratings with what a model expected. Neither can fix who chose to post.</p></article>
+      </div>
+      <p className="notice">Use this to find reviews worth reading. Anonymous ratings are context, not a verdict on a professor.</p>
+      <details className="method methodology-deep"><summary>Show the calculations and methodology</summary>
       <div className="methodology-grid">
         <article><h3>Where this came from</h3><p>{data.meta.reviews.toLocaleString('en-US')} anonymous Rate My Professors reviews from 2002–2026. People choose whether to post, so this is not a scientific survey or an official evaluation. It is a large pile of student opinions.</p></article>
         <article><h3>The one-review problem</h3><p>A single five-star review should not make someone number one. The all-time rankings only include the 219 professors with at least 20 reviews, then pull extreme scores toward the Richmond average. More reviews means less pulling.</p></article>
@@ -28,10 +36,13 @@ export default function Page() {
         <article><h3>Names and reviews</h3><p>Fourteen documented name variations are combined so the same professor does not appear twice. The original review comments are shown exactly as posted. That does not make every claim in them true.</p></article>
         <article><h3>The extra comparisons</h3><p>The time comparison uses 2002–2021 versus 2022–2026, with at least 15 reviews in each. Course comparisons also need 15 reviews per course. They show what changed in the reviews, not why it changed.</p></article>
       </div>
-      <details className="method"><summary>The extremely boring fine print</summary>
+      <div className="method-formula"><h3>Adjusted rating</h3><p className="formula-line">(reviews × average rating + prior weight × campus average) ÷ (reviews + prior weight)</p><p>All time: prior weight 20, at least 20 reviews. Recent (2022–2026): prior weight 10, at least 15 reviews. The same weighted-average idea is used for quality and difficulty. Alpha uses a separate regression model; it is not this formula.</p></div>
+      </details>
+      <details className="method"><summary>Limits and missing data</summary>
         <p>There are {data.meta.professors} professor groups after combining documented name variations. Some departments were never mapped to an academic group and stay “Unmapped.” The 27 department summaries do not cover every review. Missing or ineligible adjusted scores appear as a dash, and the source files are never edited.</p>
         <p>The Robins comparison controls for course level and review year. Its confidence interval shows the model’s uncertainty, and its p-value tests compatibility with no difference. It still describes self-selected reviews; it does not prove that attending one school causes anything.</p>
       </details>
     </section>
+    <section className="section"><h2>A note on privacy.</h2><p>No account is needed. Saved courses and daily game progress stay in your browser. The site is unofficial and does not collect reviews directly.</p></section>
   </div>;
 }

@@ -12,7 +12,7 @@ export type Point = Professor & Metrics;
 export function ProfessorScatter({points, search = ''}: {points: Point[]; search?: string}) {
   const {period} = usePeriod();
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const plot = points.map(p => ({...p, highlight: !!search && p.name.toLowerCase().includes(search.toLowerCase())}));
+  const plot = points.map(p => ({...p, highlight: !!search && [p.name, ...p.aliases].some(name => name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(search.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()))}));
   const matches = plot.filter(p => p.highlight);
   const chosen = plot.find(p => p.id === selectedId);
   const select = (v: unknown) => {const p = v as Point; if (p?.id) setSelectedId(p.id);};
@@ -54,6 +54,14 @@ export function ProfessorTable({points, sort = 'best'}: {points: Point[]; sort?:
     return x == null ? y == null ? a.name.localeCompare(b.name) : 1 : y == null ? -1 : (asc ? x - y : y - x) || a.name.localeCompare(b.name);
   });
   return <>
+    <div className="professor-cards">{sorted.slice(0, limit).map(p => <article className="professor-card" key={p.id}>
+      <Link className="prof-link" href={profURL(p)}>{p.name}<ArrowUpRight size={18}/></Link>
+      <p>{p.department} · {p.reviews} {p.reviews === 1 ? 'review' : 'reviews'}</p>
+      <dl className="professor-card-metrics"><div><dt>Quality</dt><dd>{fmt(p.quality, 1)}<small>/5</small></dd></div><div><dt>Difficulty</dt><dd>{fmt(p.difficulty, 1)}<small>/5</small></dd></div></dl>
+      {p.reviews < 5 && <p className="sample-note">Small sample. Read the reviews before deciding.</p>}
+      <details className="card-extra"><summary>More numbers</summary><dl><div><dt>Adjusted quality</dt><dd>{fmt(p.bayesianQuality)}</dd></div><div><dt>Adjusted difficulty</dt><dd>{fmt(p.bayesianDifficulty)}</dd></div>{p.alpha != null && <div><dt>Alpha</dt><dd>{fmt(p.alpha)}</dd></div>}<div><dt>Rating spread (SD)</dt><dd>{fmt(p.polarization)}</dd></div></dl>{p.bayesianQuality == null && <p>No eligible adjusted score in this period. The original ratings are still here.</p>}</details>
+      <CompareButton id={p.id} name={p.name}/>
+    </article>)}</div>
     <div className="table-scroll professor-table"><table><thead><tr><th>Professor</th><th>Quality</th><th>Difficulty</th><th>Reviews</th><th>Adjusted quality</th><th>{field === 'alpha' ? 'Relative rating (Alpha)' : field === 'polarization' ? 'Rating spread (SD)' : 'Adjusted difficulty'}</th><th>Compare</th></tr></thead><tbody>
       {sorted.slice(0, limit).map(p => <tr key={p.id}>
         <td><Link className="prof-link" href={profURL(p)}>{p.name}<ArrowUpRight size={15}/></Link><span className="subcell">{p.department}</span></td>
@@ -75,11 +83,11 @@ export function Explorer({fixedDepartment, table = false}: {fixedDepartment?: st
   const [department, setDepartment] = useState(fixedDepartment || '');
   const [group, setGroup] = useState('');
   const [minOverride, setMin] = useState<number | null>(null);
-  const min = minOverride ?? (period === 'all' ? 20 : 15);
+  const min = minOverride ?? 1;
   const [sort, setSort] = useState('best');
   const [open, setOpen] = useState(false);
   const [restored, setRestored] = useState(false);
-  const storageKey = `rmr-filters:${fixedDepartment || (table ? 'list' : 'plot')}`;
+  const storageKey = `rmr-filters:v2:${fixedDepartment || (table ? 'list' : 'plot')}`;
   useEffect(() => {
     try {
       const saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
@@ -91,22 +99,26 @@ export function Explorer({fixedDepartment, table = false}: {fixedDepartment?: st
         if (sortOptions.some(([value]) => value === saved.sort)) setSort(saved.sort);
       }
     } catch {}
+    const query = new URLSearchParams(window.location.search).get('q');
+    if (query != null) {setSearch(query); setMin(1); setDepartment(fixedDepartment || ''); setGroup('');}
     setRestored(true);
   }, [storageKey, fixedDepartment]);
   useEffect(() => {if (restored) try {sessionStorage.setItem(storageKey, JSON.stringify({search, department, group, minOverride, sort}));} catch {}}, [restored, storageKey, search, department, group, minOverride, sort]);
   const applyFilters = useCallback((v: {search: string; department: string; group: string; minimumReviews: number; period: 'all' | 'recent'}) => {setSearch(v.search); setDepartment(v.department); setGroup(v.group); setMin(v.minimumReviews); setPeriod(v.period);}, [setPeriod]);
   useExplorerTools(applyFilters, fixedDepartment);
   const points = useMemo(() => data.professors.flatMap(p => {const m = p[period]; return m && m.reviews >= min && (!department || p.department === department) && (!group || p.group === group) ? [{...p, ...m}] : [];}), [period, min, department, group]);
-  const filtered = useMemo(() => table ? points.filter(p => p.name.toLowerCase().includes(search.toLowerCase())) : points, [table, points, search]);
+  const filtered = useMemo(() => table ? points.filter(p => [p.name, ...p.aliases].some(name => name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(search.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()))) : points, [table, points, search]);
   return <div className="explorer">
-    <div className="explorer-search"><label className="search-field"><Search size={18}/><input type="search" aria-label="Search professors" placeholder="Find your professor…" value={search} onChange={e => setSearch(e.target.value)}/></label><button className="button mobile-only" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? 'Hide filters' : 'Filters & sort'}</button></div>
-    <div className={`filters explorer-filters ${open ? 'filters-open' : ''}`}>
+    <div className="explorer-search"><label className="search-field"><Search size={18}/><input type="search" aria-label="Search professors" placeholder="Find your professor…" value={search} onChange={e => setSearch(e.target.value)}/></label><button className="button mobile-only" aria-controls="professor-filters" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? 'Hide filters' : 'Filters & sort'}</button></div>
+    <div id="professor-filters" className={`filters explorer-filters ${open ? 'filters-open' : ''}`}>
       {!fixedDepartment && <label><span>Department</span><select aria-label="Department" value={department} onChange={e => setDepartment(e.target.value)}><option value="">All departments</option>{departments.map(d => <option key={d}>{d}</option>)}</select></label>}
       <label><span>Academic group</span><select aria-label="Academic group" value={group} onChange={e => setGroup(e.target.value)}><option value="">All academic groups</option>{groups.map(g => <option key={g}>{g}</option>)}</select></label>
       <label><span>Minimum reviews</span><select aria-label="Minimum reviews" value={min} onChange={e => setMin(+e.target.value)}>{[1, 5, 15, 20, 30, 50, 100].map(n => <option key={n} value={n}>{n}+ reviews</option>)}</select></label>
       {table && <label><span>Sort by</span><select aria-label="Sort professors" value={sort} onChange={e => setSort(e.target.value)}>{sortOptions.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>}
     </div>
-    <div className="results-meta"><span>{fmt(filtered.length, 0)} professors · {period === 'all' ? 'All time' : '2022–2026'} · {min}+ reviews</span><button onClick={() => {setSearch(''); setDepartment(fixedDepartment || ''); setGroup(''); setMin(null); setSort('best');}}>Reset filters</button></div>
+    <div className="results-meta"><span role="status">{fmt(filtered.length, 0)} {filtered.length === 1 ? 'professor' : 'professors'} · {period === 'all' ? 'All time' : '2022–2026'} · {min}+ reviews</span><button onClick={() => {setSearch(''); setDepartment(fixedDepartment || ''); setGroup(''); setMin(null); setSort('best');}}>Reset filters</button></div>
+    {table && <p className="search-help">Everyone with a review is searchable. Rankings still require more evidence.</p>}
+    {table && search.trim() && filtered.length === 0 && <button className="button" onClick={() => {setPeriod('all'); setMin(1); setDepartment(fixedDepartment || ''); setGroup('');}}>Search all time with 1+ reviews</button>}
     {table ? <ProfessorTable points={filtered} sort={sort}/> : <ProfessorScatter points={points} search={search}/>}
   </div>;
 }
