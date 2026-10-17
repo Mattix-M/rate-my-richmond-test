@@ -27,6 +27,7 @@ test('empty reviews are missing values, not zero ratings', () => {
 });
 test('shared courses require a match for every professor, without guessing aliases', () => {
   assert.equal(courseKey(' econ 101 '), 'ECON101');
+  assert.equal(courseKey('ECON-101'), 'ECON101');
   const a = [row(), row({course: 'BIO101'})], b = [row({course: 'econ101'}), row({course: 'BIOL101'})];
   assert.deepEqual(sharedCourses([a, b]), ['ECON101']);
   assert.deepEqual(sharedCourses([a, b, []]), []);

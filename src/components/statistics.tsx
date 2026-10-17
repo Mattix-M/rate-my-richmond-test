@@ -21,44 +21,44 @@ export function Statistics() {
     <div className="notebook-index">{[['01', 'Can students enjoy effort?'], ['02', 'Is RMP biased?'], ['03', 'Who beats expectations?'], ['04', 'Are students just bitchier?'], ['05', 'What happens when Robins meets numbers?'], ['06', 'Is Robins actually easier?'], ['07', 'Do harder classes get lower ratings?']].map(([n, label]) => <a key={n} href={`#question-${n}`}>{n} · {label} ↘</a>)}</div>
     <ResearchSection number="01" title="Can students enjoy a class that requires effort?">
       <p className="period-note">{periodLabel} · At least 4/5 for both raw quality and difficulty</p>
-      <p className="plain-english">Against all odds, yes. Good job, guys.</p>
+      <p className="plain-english">Yes. Hard class, still left a good review. Huge day for personal growth.</p>
       <div className="insight-cards">{highBoth.map(p => {const m = p[period]!; return <article key={p.id}><h3><Link href={profURL(p)}>{p.name} ↗</Link></h3><p>{p.department}</p><dl className="mini-metrics"><div><dt>Quality</dt><dd>{fmt(m.quality)}</dd></div><div><dt>Difficulty</dt><dd>{fmt(m.difficulty)}</dd></div><div><dt>Reviews</dt><dd>{m.reviews}</dd></div></dl><CompareButton id={p.id} name={p.name}/></article>;})}</div>
       {!highBoth.length && <p className="notice">No eligible professors meet both thresholds in this period.</p>}
-      <p className="micro">Ordered by adjusted quality and limited to professors with enough reviews. This is what students rated, not a measurement of how much entered their brains.</p>
+      <p className="micro">Sorted by adjusted quality. Enough reviews required. Nobody measured how much entered anyone’s brain.</p>
     </ResearchSection>
     <ResearchSection number="02" title="Is Rate My Professors biased?">
       <p className="period-note">{periodLabel} · Three eligible professors with the largest spread in quality ratings</p>
-      <p className="plain-english">Shocking discovery: RMP is biased. Who could have seen that coming?</p>
+      <p className="plain-english">Yes. Anonymous reviews are biased. WOW. Groundbreaking and earth-shattering.</p>
       <div className="insight-cards distribution-cards">{slice.disagreements.map(r => {const p = data.professors.find(p => p.id === r.id)!; return <article key={p.id}><h3><Link href={profURL(p)}>{p.name} ↗</Link></h3><p>Average quality {fmt(r.quality)} · Spread {fmt(r.sd)}</p><RatingDistribution counts={r.counts}/></article>;})}</div>
-      <details className="method"><summary>How disagreement is measured</summary><p>Spread is the sample standard deviation of individual quality ratings. Larger values mean reviewers disagree more; they do not mean a professor is worse. The bars show the actual counts and percentages.</p></details>
+      <details className="method"><summary>What “spread” means</summary><p>It measures how far apart the individual ratings are. A bigger number means the reviewers disagreed more. It does not mean the professor was worse.</p></details>
     </ResearchSection>
     <ResearchSection number="03" title="Who gets better ratings than expected?">
       <span className="scope-label">All time · Alpha</span>
-      <p className="plain-english">These professors get higher ratings than the model expects after accounting for difficulty, department, and year. Highly recommend these guys.</p>
+      <p className="plain-english">Rated higher than expected. Highly recommend.</p>
       <div className="insight-cards">{highAlpha.map(p => <article key={p.id}><h3><Link href={profURL(p)}>{p.name} ↗</Link></h3><p>{p.department}</p><dl className="mini-metrics"><div><dt>Alpha</dt><dd>+{fmt(p.all.alpha)}</dd></div><div><dt>Quality</dt><dd>{fmt(p.all.quality)}</dd></div><div><dt>Difficulty</dt><dd>{fmt(p.all.difficulty)}</dd></div></dl><CompareButton id={p.id} name={p.name}/></article>)}</div>
       <p className="micro">Alpha is rating relative to expectations, not an official RMP score. Positive means higher than expected.</p>
     </ResearchSection>
     <ResearchSection number="04" title="Are students just bitchier now?">
       <span className="scope-label">All time · Raw yearly averages</span>
-      <p className="plain-english">Not really. The raw trend does not show students steadily becoming harsher. We remain inconsistent.</p>
+      <p className="plain-english">No. We complain about the same amount every year. Tradition matters.</p>
       <SeriesChart rows={data.timeTrend} x="review_year" series={[{key: 'mean_quality', name: 'Quality', color: '#000066'}, {key: 'mean_difficulty', name: 'Difficulty', color: '#990000'}]}/>
       <p className="micro">The mix of professors and courses changes every year, so this is not a controlled test of student bitchiness. Also, 2026 is partial.</p>
     </ResearchSection>
     <ResearchSection number="05" title="What happens when Robins students encounter numbers?">
       <span className="scope-label">All time · Robins departments</span>
-      <p className="plain-english">Finance has the highest reported difficulty in Robins. Business and Marketing are at the other end. Numbers remain undefeated.</p>
+      <p className="plain-english">Finance is the hardest part of Robins. Man, those Excel coloring books must be brutal.</p>
       <HorizontalBars rows={robinsDepartments} label="name" value="difficulty" title="Average reported difficulty"/>
-      <p className="micro">Raw department averages from the supplied summaries. This is a comparison of student ratings, not proof that one major requires more work.</p>
+      <p className="micro">Raw department averages. Student ratings, not proof that one major requires more work.</p>
     </ResearchSection>
     <ResearchSection number="06" title="Is Robins actually easier?">
       <p className="period-note">{periodLabel} · Robins Business vs. Gottwald Sciences</p><Comparison/>
-      <p className="aside-copy">The numbers say yes. The numbers also say Jepson is harder than Gottwald. So either accept both, or start arguing with the spreadsheet.</p>
+      <p className="aside-copy">The numbers say Robins is easier. They also say Jepson is harder than Gottwald. You can’t accept one and call bullshit on the other.</p>
       <details className="method"><summary>Check the comparison with Math & CS included</summary><Comparison broad/></details>
     </ResearchSection>
     <ResearchSection number="07" title="Do students rate harder classes lower?">
       <p className="period-note">{periodLabel} · Descriptive review averages</p><SeriesChart rows={slice.difficultyQuality} x="difficulty" series={[{key: 'quality', name: 'Average quality', color: '#000066'}]} yLabel="Average quality (1–5)"/>
       <div className="table-scroll"><table><caption className="sr-only">Quality by reported difficulty</caption><thead><tr><th>Difficulty score</th><th>Average quality</th><th>Reviews</th></tr></thead><tbody>{slice.difficultyQuality.map(r => <tr key={r.difficulty}><td>{r.difficulty}</td><td>{fmt(r.quality)}</td><td>{fmt(r.reviews, 0)}</td></tr>)}</tbody></table></div>
-      <p className="plain-english">Are Richmond students academically rigorous, or are we just bitching because we wanted an easy class? The ratings lean toward option two.</p>
+      <p className="plain-english">Harder classes receive lower ratings. Whether that is academic judgment or post-final emotion is between us.</p>
       <p className="micro">Each point is the average quality score for reviews at that difficulty level. It shows the pattern; it cannot prove that difficulty caused the rating.</p>
     </ResearchSection>
   </>;

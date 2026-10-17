@@ -54,10 +54,10 @@ The original files in `data/` are never edited. `scripts/prepare_data.py` produc
 
 - No recent Alpha, recent department summaries, full difficulty–quality regression table, or within-professor time-trend regression was supplied. Corresponding unavailable statistics are labeled. The unverified approximately −0.41 coefficient is not displayed.
 - The 27 department summaries cover only part of the review corpus. Their supplied professor counts can differ from alias-merged explorer counts. Academic mappings are only used where supplied.
-- New course comparisons require at least 15 reviews per course. Earlier/recent changes use nonoverlapping 2002–2021 and 2022–2026 windows with at least 15 reviews in each. These are descriptive comparisons, not causal estimates.
+- Statistics-page course comparisons require at least 15 reviews per course. The course explorer shows raw means with explicit sample-size labels and a configurable review minimum. Earlier/recent changes use nonoverlapping 2002–2021 and 2022–2026 windows with at least 15 reviews in each. These are descriptive comparisons, not causal estimates.
 - Department standouts are clearly labeled subsets of eligible supplied / documented recent scores, distinct from the official campus-wide awards.
 - No building mapping, Unhinged taxonomy, accounts, submissions, or live scraping.
-- Fonts use Google Fonts with system fallbacks. All data and review files are local.
+- Fonts use Georgia and system sans-serif. All data and review files are local.
 
 ## Implementation
 
@@ -68,3 +68,9 @@ An optional, feature-detected WebMCP `filter_professors` action shares the explo
 ## Sharing and privacy
 
 Compare up to three professors, filter by shared course, and copy the comparison URL. On phones, choose which pair to display. Public attribution and personal social links have been removed; this does not anonymize Git commit history or hosting account ownership. Local presentation/output folders are ignored by Git.
+
+## Course search, schedule lab and URdle
+
+See [UPGRADE_NOTES.md](UPGRADE_NOTES.md) for the October 16 feature plan, implementation and data-access findings. New routes are `/courses/`, `/planner/`, `/games/` and `/data/`. URdle now uses five daily reported-difficulty matchups; see [URDLE.md](URDLE.md).
+
+`prepare_courses.py` builds the course index and review-date metadata from the existing archive. The planner runs locally in the browser with CSV/TSV imports or entered sections; it needs no private Richmond integration. There is no live RMP or official schedule feed. Dates, evidence counts and import limitations are visible in the interface.

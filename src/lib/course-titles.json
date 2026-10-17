@@ -1,0 +1,397 @@
+{
+  "ACCT201": {
+    "title": "Fundamentals of Financial Accounting",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ACCT201",
+    "verifiedAt": "2026-10-16"
+  },
+  "ACCT202": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/ACCT202",
+    "note": "HTTPError"
+  },
+  "ACCT205": {
+    "title": "Fundamentals of Managerial Accounting",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ACCT205",
+    "verifiedAt": "2026-10-16"
+  },
+  "ACCT301": {
+    "title": "Intermediate Financial Accounting 1",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ACCT301",
+    "verifiedAt": "2026-10-16"
+  },
+  "ACCT302": {
+    "title": "Intermediate Financial Accounting 2",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ACCT302",
+    "verifiedAt": "2026-10-16"
+  },
+  "ACCT305": {
+    "title": "Cost and Managerial Accounting",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ACCT305",
+    "verifiedAt": "2026-10-16"
+  },
+  "ANTH101": {
+    "title": "Introduction to Cultural Anthropology",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ANTH101",
+    "verifiedAt": "2026-10-16"
+  },
+  "BIO200": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/BIO200",
+    "note": "HTTPError"
+  },
+  "BIO201": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/BIO201",
+    "note": "HTTPError"
+  },
+  "BIO202": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/BIO202",
+    "note": "HTTPError"
+  },
+  "BIO205": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/BIO205",
+    "note": "HTTPError"
+  },
+  "BIOL200": {
+    "title": "Integrated Biological Principles I",
+    "sourceUrl": "https://catalog.richmond.edu/courses/BIOL200",
+    "verifiedAt": "2026-10-16"
+  },
+  "BUAD201": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/BUAD201",
+    "note": "HTTPError"
+  },
+  "BUAD202": {
+    "title": "Statistics for Business and Economics",
+    "sourceUrl": "https://catalog.richmond.edu/courses/BUAD202",
+    "verifiedAt": "2026-10-16"
+  },
+  "BUAD203": {
+    "title": "Software Tools and Applications",
+    "sourceUrl": "https://catalog.richmond.edu/courses/BUAD203",
+    "verifiedAt": "2026-10-16"
+  },
+  "BUAD205": {
+    "title": "Business Communication",
+    "sourceUrl": "https://catalog.richmond.edu/courses/BUAD205",
+    "verifiedAt": "2026-10-16"
+  },
+  "BUAD392": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/BUAD392",
+    "note": "HTTPError"
+  },
+  "BUAD497": {
+    "title": "Strategic Management",
+    "sourceUrl": "https://catalog.richmond.edu/courses/BUAD497",
+    "verifiedAt": "2026-10-16"
+  },
+  "CALC211": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/CALC211",
+    "note": "HTTPError"
+  },
+  "CALC212": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/CALC212",
+    "note": "HTTPError"
+  },
+  "CHEM141": {
+    "title": "Chemistry: Structure, Thermodynamics, and Kinetics",
+    "sourceUrl": "https://catalog.richmond.edu/courses/CHEM141",
+    "verifiedAt": "2026-10-16"
+  },
+  "CHEM205": {
+    "title": "Organic Chemistry I with Lab",
+    "sourceUrl": "https://catalog.richmond.edu/courses/CHEM205",
+    "verifiedAt": "2026-10-16"
+  },
+  "CHEM206": {
+    "title": "Organic Chemistry II with Lab",
+    "sourceUrl": "https://catalog.richmond.edu/courses/CHEM206",
+    "verifiedAt": "2026-10-16"
+  },
+  "CHEM317": {
+    "title": "Inorganic Chemistry with Lab",
+    "sourceUrl": "https://catalog.richmond.edu/courses/CHEM317",
+    "verifiedAt": "2026-10-16"
+  },
+  "CMSC150": {
+    "title": "Introduction to Computing",
+    "sourceUrl": "https://catalog.richmond.edu/courses/CMSC150",
+    "verifiedAt": "2026-10-16"
+  },
+  "CMSC221": {
+    "title": "Data Structures",
+    "sourceUrl": "https://catalog.richmond.edu/courses/CMSC221",
+    "verifiedAt": "2026-10-16"
+  },
+  "CMSC222": {
+    "title": "Discrete Structures for Computing with Lab",
+    "sourceUrl": "https://catalog.richmond.edu/courses/CMSC222",
+    "verifiedAt": "2026-10-16"
+  },
+  "CS150": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/CS150",
+    "note": "HTTPError"
+  },
+  "ECON101": {
+    "title": "Principles of Microeconomics",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ECON101",
+    "verifiedAt": "2026-10-16"
+  },
+  "ECON102": {
+    "title": "Principles of Macroeconomics",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ECON102",
+    "verifiedAt": "2026-10-16"
+  },
+  "ECON270": {
+    "title": "Introductory Econometrics",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ECON270",
+    "verifiedAt": "2026-10-16"
+  },
+  "ECON271": {
+    "title": "Microeconomic Theory",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ECON271",
+    "verifiedAt": "2026-10-16"
+  },
+  "ECON272": {
+    "title": "Macroeconomic Theory",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ECON272",
+    "verifiedAt": "2026-10-16"
+  },
+  "ENG101": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/ENG101",
+    "note": "HTTPError"
+  },
+  "ENG103": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/ENG103",
+    "note": "HTTPError"
+  },
+  "ENG299": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/ENG299",
+    "note": "HTTPError"
+  },
+  "ENVR201": {
+    "title": "Introduction to Environmental Studies",
+    "sourceUrl": "https://catalog.richmond.edu/courses/ENVR201",
+    "verifiedAt": "2026-10-16"
+  },
+  "FIN360": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/FIN360",
+    "note": "HTTPError"
+  },
+  "FIN361": {
+    "title": "Corporate Finance",
+    "sourceUrl": "https://catalog.richmond.edu/courses/FIN361",
+    "verifiedAt": "2026-10-16"
+  },
+  "FIN366": {
+    "title": "Investments",
+    "sourceUrl": "https://catalog.richmond.edu/courses/FIN366",
+    "verifiedAt": "2026-10-16"
+  },
+  "FREN221": {
+    "title": "Intensive Intermediate French",
+    "sourceUrl": "https://catalog.richmond.edu/courses/FREN221",
+    "verifiedAt": "2026-10-16"
+  },
+  "FREN301": {
+    "title": "French Conversation through Cinema",
+    "sourceUrl": "https://catalog.richmond.edu/courses/FREN301",
+    "verifiedAt": "2026-10-16"
+  },
+  "GEOG260": {
+    "title": "Foundations of Geospatial Analysis",
+    "sourceUrl": "https://catalog.richmond.edu/courses/GEOG260",
+    "verifiedAt": "2026-10-16"
+  },
+  "HIST100": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/HIST100",
+    "note": "HTTPError"
+  },
+  "HIST101": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/HIST101",
+    "note": "HTTPError"
+  },
+  "HS100": {
+    "title": "Health Systems and Policy",
+    "sourceUrl": "https://catalog.richmond.edu/courses/HS100",
+    "verifiedAt": "2026-10-16"
+  },
+  "HS101": {
+    "title": "Global Health",
+    "sourceUrl": "https://catalog.richmond.edu/courses/HS101",
+    "verifiedAt": "2026-10-16"
+  },
+  "LAIS151": {
+    "title": "Spanish for Advanced Beginners",
+    "sourceUrl": "https://catalog.richmond.edu/courses/LAIS151",
+    "verifiedAt": "2026-10-16"
+  },
+  "LAIS221": {
+    "title": "Intensive Intermediate Spanish",
+    "sourceUrl": "https://catalog.richmond.edu/courses/LAIS221",
+    "verifiedAt": "2026-10-16"
+  },
+  "LAIS301": {
+    "title": "Spanish in the Community",
+    "sourceUrl": "https://catalog.richmond.edu/courses/LAIS301",
+    "verifiedAt": "2026-10-16"
+  },
+  "LDST101": {
+    "title": "Historical Foundations of Leadership",
+    "sourceUrl": "https://catalog.richmond.edu/courses/LDST101",
+    "verifiedAt": "2026-10-16"
+  },
+  "LDST102": {
+    "title": "Social Foundations of Leadership",
+    "sourceUrl": "https://catalog.richmond.edu/courses/LDST102",
+    "verifiedAt": "2026-10-16"
+  },
+  "LDST250": {
+    "title": "Critical Thinking and Methods of Inquiry",
+    "sourceUrl": "https://catalog.richmond.edu/courses/LDST250",
+    "verifiedAt": "2026-10-16"
+  },
+  "MATH211": {
+    "title": "Calculus I",
+    "sourceUrl": "https://catalog.richmond.edu/courses/MATH211",
+    "verifiedAt": "2026-10-16"
+  },
+  "MATH212": {
+    "title": "Calculus II",
+    "sourceUrl": "https://catalog.richmond.edu/courses/MATH212",
+    "verifiedAt": "2026-10-16"
+  },
+  "MATH235": {
+    "title": "Multivariate Calculus",
+    "sourceUrl": "https://catalog.richmond.edu/courses/MATH235",
+    "verifiedAt": "2026-10-16"
+  },
+  "MATH245": {
+    "title": "Linear Algebra",
+    "sourceUrl": "https://catalog.richmond.edu/courses/MATH245",
+    "verifiedAt": "2026-10-16"
+  },
+  "MATH329": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/MATH329",
+    "note": "HTTPError"
+  },
+  "MGMT225": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/MGMT225",
+    "note": "HTTPError"
+  },
+  "MGMT330": {
+    "title": "Organizational Behavior",
+    "sourceUrl": "https://catalog.richmond.edu/courses/MGMT330",
+    "verifiedAt": "2026-10-16"
+  },
+  "MGMT340": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/MGMT340",
+    "note": "HTTPError"
+  },
+  "MKT320": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/MKT320",
+    "note": "HTTPError"
+  },
+  "PHIL101": {
+    "title": "Introduction to Philosophy",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PHIL101",
+    "verifiedAt": "2026-10-16"
+  },
+  "PHIL251": {
+    "title": "Elementary Symbolic Logic",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PHIL251",
+    "verifiedAt": "2026-10-16"
+  },
+  "PHYS131": {
+    "title": "Calculus-Based General Physics 1 with Lab",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PHYS131",
+    "verifiedAt": "2026-10-16"
+  },
+  "PHYS132": {
+    "title": "Calculus-Based General Physics 2 with Lab",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PHYS132",
+    "verifiedAt": "2026-10-16"
+  },
+  "PLSC220": {
+    "title": "Introduction to American Government",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PLSC220",
+    "verifiedAt": "2026-10-16"
+  },
+  "PLSC240": {
+    "title": "Introduction to Comparative Government",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PLSC240",
+    "verifiedAt": "2026-10-16"
+  },
+  "PLSC250": {
+    "title": "Introduction to International Relations",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PLSC250",
+    "verifiedAt": "2026-10-16"
+  },
+  "PLSC260": {
+    "title": "Introduction to Public Policy",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PLSC260",
+    "verifiedAt": "2026-10-16"
+  },
+  "PLSC270": {
+    "title": "Social Science Inquiry",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PLSC270",
+    "verifiedAt": "2026-10-16"
+  },
+  "PPEL261": {
+    "title": "Seminar in Theory and Public Policy",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PPEL261",
+    "verifiedAt": "2026-10-16"
+  },
+  "PSYC100": {
+    "title": "Introduction to Psychological Science",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PSYC100",
+    "verifiedAt": "2026-10-16"
+  },
+  "PSYC200": {
+    "title": "Methods and Analyses",
+    "sourceUrl": "https://catalog.richmond.edu/courses/PSYC200",
+    "verifiedAt": "2026-10-16"
+  },
+  "PSYCH100": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/PSYCH100",
+    "note": "HTTPError"
+  },
+  "RHCS101": {
+    "title": "Key Terms in Communication",
+    "sourceUrl": "https://catalog.richmond.edu/courses/RHCS101",
+    "verifiedAt": "2026-10-16"
+  },
+  "SOC101": {
+    "title": "Foundations of Society: Introduction to Sociological Analysis",
+    "sourceUrl": "https://catalog.richmond.edu/courses/SOC101",
+    "verifiedAt": "2026-10-16"
+  },
+  "SPAN221": {
+    "title": null,
+    "sourceUrl": "https://catalog.richmond.edu/courses/SPAN221",
+    "note": "HTTPError"
+  },
+  "THTR212": {
+    "title": "Basics of Acting",
+    "sourceUrl": "https://catalog.richmond.edu/courses/THTR212",
+    "verifiedAt": "2026-10-16"
+  }
+}
