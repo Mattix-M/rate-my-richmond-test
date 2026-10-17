@@ -24,6 +24,7 @@ export function Compare() {
       const params = new URLSearchParams(window.location.search);
       if (params.has('ids')) setIds(cleanComparisonIds((params.get('ids') || '').split(',')));
       if (params.get('period') === 'recent' || params.get('period') === 'all') setPeriod(params.get('period') as 'all' | 'recent');
+      setCourse(courseKey(params.get('course')||''));
       setReady(true);
     };
     read(); window.addEventListener('popstate', read);
@@ -33,11 +34,12 @@ export function Compare() {
     if (!ready) return;
     const url = new URL(window.location.href);
     url.searchParams.set('ids', key); url.searchParams.set('period', period);
+    if(course)url.searchParams.set('course',course);else url.searchParams.delete('course');
     window.history.replaceState(null, '', url); setCopied(false);
-  }, [key, period, ready]);
+  }, [key, period, ready, course]);
   useEffect(() => {
     const controller = new AbortController();
-    setEntries({}); setCourse(''); setPair('0,1');
+    setEntries({}); setPair('0,1');
     for (const id of key.split(',').filter(Boolean)) {
       fetch(`/reviews/${id}.json`, {signal: controller.signal})
         .then(r => {if (!r.ok) throw new Error(); return r.json() as Promise<Review[]>;})
@@ -56,13 +58,13 @@ export function Compare() {
     return term ? data.professors.filter(p => !ids.includes(p.id) && `${p.name} ${p.department}`.toLowerCase().includes(term)).slice(0, 8) : [];
   }, [search, ids]);
   return <>
-    <section className="page-heading"><div><div className="eyebrow">Professor comparison</div><h1>Compare professors</h1><p>Ratings, courses, and the reviews behind them. Choose up to three professors.</p></div><PeriodToggle/></section>
+    <section className="page-heading"><div><div className="eyebrow">Professor comparison</div><h1>Compare professors</h1><p>Put the numbers next to each other. Choose up to three professors.</p></div><PeriodToggle/></section>
     <div className="compare-controls"><label className="compare-search"><span>Add a professor</span><input type="search" aria-label="Find a professor to compare" placeholder="Search by name or department…" value={search} onChange={e => setSearch(e.target.value)}/></label><Link className="button" href="/professors/">Browse all professors</Link>{ids.length > 0 && <button className="button" type="button" onClick={async () => {try {await navigator.clipboard.writeText(window.location.href); setCopied(true);} catch {setCopied(false); window.prompt('Copy this comparison link', window.location.href);}}}>{copied ? 'Link copied' : 'Copy comparison link'}</button>}</div>
     {search.trim() && <div className="compare-results" aria-label="Professor search results">{results.length ? results.map(p => <button type="button" disabled={ids.length >= 3} key={p.id} onClick={() => {toggle(p.id); setSearch('');}}><strong>{p.name}</strong><span>{p.department}</span><small>{ids.length >= 3 ? 'Remove a professor first' : 'Add +'}</small></button>) : <p>No other professors match that search.</p>}</div>}
     <p className="micro" role="status">{professors.length} of 3 selected{copied ? ' · Comparison link copied' : ''}</p>
     {professors.length === 0 ? <div className="empty-state"><h2>Start with two names.</h2><p>Search above, or use the Compare button on any professor page.</p></div> : <>
       <div className="comparison-options"><label>Compare reviews for<select aria-label="Shared course" value={selectedCourse} onChange={e => setCourse(e.target.value)}><option value="">All reviewed courses</option>{shared.map(code => <option key={code}>{code}</option>)}</select></label>{ids.length === 3 && <label className="mobile-only">Show on this screen<select aria-label="Visible comparison pair" value={pair} onChange={e => setPair(e.target.value)}>{[[0, 1], [0, 2], [1, 2]].map(([a, b]) => <option key={`${a},${b}`} value={`${a},${b}`}>{professors[a].name} + {professors[b].name}</option>)}</select></label>}</div>
-      <p className="micro">{selectedCourse ? 'Course-specific averages are unadjusted. The campus-wide adjusted ranking does not apply to one course.' : available && ids.length > 1 && !shared.length ? 'No matching course labels in this period. These professors may teach different courses.' : 'Shared-course options use matching review labels, normalized for capitalization and spaces.'}</p>
+      <p className="micro">{selectedCourse ? 'Course-specific averages are unadjusted. The campus-wide adjusted ranking does not apply to one course.' : course&&!available?'Loading the requested course comparison…':course&&available?`No shared ${course} reviews in this period. Showing all reviewed courses instead.`:available && ids.length > 1 && !shared.length ? 'No matching course labels in this period. These professors may teach different courses.' : 'Shared-course options use matching review labels, normalized for capitalization, spaces and hyphens.'}</p>
       <div className="compare-grid" style={{'--compare-columns': professors.length, '--mobile-columns': Math.min(2, professors.length)} as CSSProperties}>{professors.map((p, index) => {
         const entry = entries[p.id];
         const rows = entry?.rows ? inPeriod(entry.rows, period).filter(r => !selectedCourse || courseKey(r.course) === selectedCourse) : [];
@@ -75,7 +77,7 @@ export function Compare() {
             <RatingDistribution counts={summary.distribution.map(r => r.quality)}/>
             <h3>Common review tags</h3><ul className="tag-counts">{summary.tags.slice(0, 5).map(t => <li key={t.tag}>{t.tag} <span>{t.count}/{summary.count}</span></li>)}</ul>{!summary.tags.length && <p className="micro">No tags in these reviews.</p>}
             <h3>Reviewed courses</h3><ul className="course-counts">{summary.courses.slice(0, 5).map(c => <li key={c.course}>{c.course}<span>{c.count} reviews</span></li>)}</ul>
-            <Link className="button" href={`${profURL(p)}#reviews`}>Read reviews →</Link>
+            <Link className="button" href={`${profURL(p)}?period=${period}${selectedCourse?'&course='+selectedCourse:''}#reviews`}>Read reviews →</Link>
           </>}
         </article>;
       })}</div><p className="micro">Quality and difficulty are separate 1–5 review scores. Adjusted quality accounts for review count; it does not adjust for the specific course. Tags count reviews mentioning each tag.</p>

@@ -8,6 +8,8 @@ import {SeriesChart} from './charts';
 import {CompareButton} from './comparison-context';
 import {useReviews} from './use-reviews';
 import {RatingDistribution} from './rating-distribution';
+import evidence from '@/lib/review-evidence.json';
+import {evidenceLabel,freshnessLabel} from '@/lib/course-data';
 
 export function ProfessorDetail({professor: p}: {professor: Professor}) {
   const {period} = usePeriod();
@@ -18,6 +20,9 @@ export function ProfessorDetail({professor: p}: {professor: Professor}) {
   const [sort, setSort] = useState('newest');
   const [limit, setLimit] = useState(20);
   const [allCourses, setAllCourses] = useState(false);
+  const [today,setToday]=useState<Date|null>(null);
+  useEffect(()=>setToday(new Date()),[]);
+  useEffect(()=>{const requested=new URLSearchParams(location.search).get('course');if(requested)setCourse(courseKey(requested));},[p.id]);
   const subset = useMemo(() => inPeriod(reviews || [], period), [reviews, period]);
   const summary = useMemo(() => summarizeReviews(subset), [subset]);
   const selectedCourse = summary.courses.some(c => c.course === course) ? course : '';
@@ -40,6 +45,7 @@ export function ProfessorDetail({professor: p}: {professor: Professor}) {
     <Link href="/professors/" className="back-link">← All professors</Link>
     <section className="page-heading"><div><div className="eyebrow">{p.group}</div><h1>{p.name}</h1><p>{dep ? <Link href={`/departments/${dep.id}/`}>{p.department} ↗</Link> : p.department}</p></div><PeriodToggle/></section>
     <div className="profile-actions"><a href="#reviews" className="button dark">Read reviews ↓</a><CompareButton id={p.id} name={p.name}/></div>
+    <div className="evidence-banner"><span>{evidenceLabel(p.all.reviews)}</span><span>{today?freshnessLabel((evidence.professors as Record<string,{latest:string}>)[p.id].latest,today):'Review archive'}</span><span>Latest archived review: {dateLabel((evidence.professors as Record<string,{latest:string}>)[p.id].latest)}</span><a href={`https://www.ratemyprofessors.com/professor/${p.id.split('-').at(-1)}`} target="_blank" rel="noreferrer">Check RMP ↗</a><Link href="/data/">Data notes ↗</Link></div>
     {m ? <><div className="metric-strip profile-metrics">{[['Average quality', fmt(m.quality)], ['Reported difficulty', fmt(m.difficulty)], ['Reviews', fmt(m.reviews, 0)], ['Latest review', reviews ? dateLabel(summary.latest) : error ? 'Unavailable' : 'Loading…']].map(([label, value]) => <div key={label}><span>{label}</span><strong className={label === 'Latest review' ? 'date-value' : ''}>{value}</strong></div>)}</div><p className="micro">Quality and difficulty use separate 1–5 scales. These figures cover all reviewed courses in the selected period.</p>
     <details className="method"><summary>Adjusted scores and ranking details</summary><div className="metric-strip">{[['Adjusted quality', fmt(m.bayesianQuality)], ['Adjusted difficulty', fmt(m.bayesianDifficulty)], ['Relative rating (Alpha)', fmt(m.alpha)], ['Rating disagreement (SD)', fmt(m.polarization)]].map(([label, value]) => <div key={label}><span>{label}</span><strong>{value}</strong></div>)}</div><div className="rank-strip"><span>Richmond quality <b>{rank()}</b></span><span>Department quality <b>{rank(true)}</b></span></div><p>Adjusted scores pull small samples toward the campus average. Ranks use eligible professors, and ties share a rank. {alphaText} {period === 'recent' ? 'Recent Alpha is unavailable.' : !m.ranked ? 'No eligible adjusted score is supplied for this professor.' : ''}</p></details></> : <p className="notice">No reviews in 2022–2026. Switch to All time to see this professor’s ratings.</p>}
     {reviews && summary.count > 0 && <section className="section"><div className="section-heading"><h2>More context</h2></div><div className="chart-pair"><div><h3>How students rated this professor</h3><RatingDistribution counts={summary.distribution.map(r => r.quality)}/></div><div><h3>Ratings by review year</h3><SeriesChart rows={years} x="year" series={[{key: 'quality', name: 'Quality', color: '#000066'}, {key: 'difficulty', name: 'Difficulty', color: '#990000'}]}/><p className="micro">Yearly averages can move a lot when only a few students post.</p></div></div>

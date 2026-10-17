@@ -1,0 +1,6491 @@
+{
+  "professors": [
+    {
+      "id": "joyce-450909",
+      "name": "- Joyce",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "babb-583618",
+      "name": ". Babb",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "bagwell-291331",
+      "name": ". Bagwell",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "mcgarvie-335218",
+      "name": ". McGarvie",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "al-goethals-1123684",
+      "name": "AL Goethals",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "abbie-sadler-2585097",
+      "name": "Abbie Sadler",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "abdullah-kumas-1843029",
+      "name": "Abdullah Kumas",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "abigail-cheever-370226",
+      "name": "Abigail Cheever",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "abner-holton-385474",
+      "name": "Abner Holton",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "adam-dean-1491695",
+      "name": "Adam Dean",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "adam-marquardt-1761982",
+      "name": "Adam Marquardt",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "adam-stanaland-3073953",
+      "name": "Adam Stanaland",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "agnes-burmeister-2732295",
+      "name": "Agnes Burmeister",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "agnes-grocholski-586540",
+      "name": "Agnes Grocholski",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "agnieszka-szymanska-2398358",
+      "name": "Agnieszka Szymanska",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "akira-suzuki-367607",
+      "name": "Akira Suzuki",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alaa-magableh-2960664",
+      "name": "Alaa Magableh",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alan-loxterman-69162",
+      "name": "Alan Loxterman",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alberto-lopez-1658235",
+      "name": "Alberto Lopez",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "aleksandra-sznajder-lee-1685261",
+      "name": "Aleksandra Sznajder-Lee",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alex-checkovich-1123637",
+      "name": "Alex Checkovich",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alex-hamrick-2959525",
+      "name": "Alex Hamrick",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "alexander-dugas-1363232",
+      "name": "Alexander Dugas",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "alexander-persaud-2435677",
+      "name": "Alexander Persaud",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "alicia-diaz-1947657",
+      "name": "Alicia Diaz",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alicia-lopez-1515392",
+      "name": "Alicia Lopez",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alicia-lopez-opere-1797667",
+      "name": "Alicia Lopez Opere",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alina-cichocki-2989539",
+      "name": "Alina Cichocki",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "allison-archer-2331405",
+      "name": "Allison Archer",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "allison-brenning-2220880",
+      "name": "Allison Brenning",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "allison-cornell-3126187",
+      "name": "Allison Cornell",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "allison-richmond-1295618",
+      "name": "Allison Richmond",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "alvaro-kaempfer-59183",
+      "name": "Alvaro Kaempfer",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "amalia-gjerloev-3077247",
+      "name": "Amalia Gjerloev",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "amit-eynan-514653",
+      "name": "Amit Eynan",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "amy-treonis-747365",
+      "name": "Amy Treonis",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ana-mitric-485894",
+      "name": "Ana Mitric",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "ana-petrova-3054463",
+      "name": "Ana Petrova",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "andrea-simpson-492518",
+      "name": "Andrea Simpson",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "andrea-vickery-2189353",
+      "name": "Andrea Vickery",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "andrea-waddle-1919661",
+      "name": "Andrea Waddle",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "andrew-grace-2980311",
+      "name": "Andrew  Grace",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "andrew-bell-2106091",
+      "name": "Andrew Bell",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "andrew-kozlowski-1338096",
+      "name": "Andrew Kozlowski",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "andrew-rountree-2090921",
+      "name": "Andrew Rountree",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "andrew-spalding-2662203",
+      "name": "Andrew Spalding",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "andrew-sutton-2056781",
+      "name": "Andrew Sutton",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "andrew-szackmary-795119",
+      "name": "Andrew Szackmary",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "andrew-yates-485878",
+      "name": "Andrew Yates",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "andy-mcgraw-1043181",
+      "name": "Andy McGraw",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "andy-szakmary-1660309",
+      "name": "Andy Szakmary",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "angel-otero-blanco-1043686",
+      "name": "Angel Otero-Blanco",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": [
+        "Angel Blanco"
+      ]
+    },
+    {
+      "id": "angela-hilliker-1637476",
+      "name": "Angela Hilliker",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "angela-leeper-2891094",
+      "name": "Angela Leeper",
+      "department": "Freshman Year Experience",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "angela-vanderwerken-2451270",
+      "name": "Angela VanDerwerken",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "angelica-burgos-2294021",
+      "name": "Angelica Burgos",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "anita-hubbard-475499",
+      "name": "Anita Hubbard",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "anne-marie-morgan-1635302",
+      "name": "Anne Marie Morgan",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "anne-van-gelder-706909",
+      "name": "Anne Van Gelder",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "annisa-rochadiat-2646145",
+      "name": "Annisa Rochadiat",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "anthony-russell-383297",
+      "name": "Anthony Russell",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "anthony-sparacino-2556446",
+      "name": "Anthony Sparacino",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "aparna-telang-1230991",
+      "name": "Aparna Telang",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "april-greenan-2709952",
+      "name": "April Greenan",
+      "department": "Humanities",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "april-hill-476418",
+      "name": "April Hill",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ardavan-mobasheri-2270390",
+      "name": "Ardavan Mobasheri",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "arella-gussow-3096803",
+      "name": "Arella Gussow",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "arlenis-santana-3087114",
+      "name": "Arlenis Santana",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "arryn-robbins-2877396",
+      "name": "Arryn Robbins",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "art-evans-3006953",
+      "name": "Art Evans",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "arthur-charlesworth-135473",
+      "name": "Arthur Charlesworth",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "ashley-austin-2183634",
+      "name": "Ashley Austin",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "ashley-dobbs-2622164",
+      "name": "Ashley Dobbs",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "aslan-lotfi-2980312",
+      "name": "Aslan Lotfi",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "asli-baykal-1189153",
+      "name": "Asli Baykal",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "atiya-husain-2270277",
+      "name": "Atiya Husain",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "augustin-mbemba-1616629",
+      "name": "Augustin Mbemba",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "aurora-hermida-ruiz-749707",
+      "name": "Aurora Hermida-Ruiz",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "barbara-sholley-396395",
+      "name": "Barbara Sholley",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "barry-lawson-142367",
+      "name": "Barry Lawson",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "bedelia-richards-1558585",
+      "name": "Bedelia Richards",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "bella-isaac-3142668",
+      "name": "Bella Isaac",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "ben-barber-2895830",
+      "name": "Ben Barber",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "benjamin-broening-472747",
+      "name": "Benjamin Broening",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "bertram-ashe-456615",
+      "name": "Bertram Ashe",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "beth-crawford-272211",
+      "name": "Beth Crawford",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "betsy-mullen-840177",
+      "name": "Betsy Mullen",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "betsy-riopelle-1891941",
+      "name": "Betsy Riopelle",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "bharathi-subramaniasiva-2568896",
+      "name": "Bharathi Subramaniasiva",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "bill-dickinson-1628212",
+      "name": "Bill Dickinson",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "binish-rijal-2693420",
+      "name": "Binish Rijal",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "blue-crump-2312984",
+      "name": "Blue Crump",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "bo-meng-2417861",
+      "name": "Bo Meng",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "bo-park-2960633",
+      "name": "Bo Park",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "bo-yun-park-2979043",
+      "name": "Bo Yun Park",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "bob-jenkins-2687662",
+      "name": "Bob Jenkins",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "bob-spires-2595403",
+      "name": "Bob Spires",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "boston-woolfolk-2193209",
+      "name": "Boston Woolfolk",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "boya-wen-3110612",
+      "name": "Boya Wen",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "brandon-shulleeta-3156811",
+      "name": "Brandon  Shulleeta",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "brandon-ng-2787950",
+      "name": "Brandon Ng",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "brannon-mcdaniel-1584671",
+      "name": "Brannon McDaniel",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "brantley-nicholson-1758426",
+      "name": "Brantley Nicholson",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "brian-fennessy-2726901",
+      "name": "Brian Fennessy",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "brian-henry-916768",
+      "name": "Brian Henry",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "brianna-frakes-2854210",
+      "name": "Brianna Frakes",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "brittany-alperin-2541312",
+      "name": "Brittany Alperin",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "bruce-mckechnie-2622724",
+      "name": "Bruce McKechnie",
+      "department": "Professional & Continuing Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "bruno-alcalde-2332375",
+      "name": "Bruno Alcalde",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "burgess-rhodes-829707",
+      "name": "Burgess Rhodes",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "cait-mongrain-3163232",
+      "name": "Cait Mongrain",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "caitlin-fisher-reid-1759996",
+      "name": "Caitlin Fisher-Reid",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "caitlin-giustiniano-3061399",
+      "name": "Caitlin Giustiniano",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "camilla-nonterah-2317494",
+      "name": "Camilla Nonterah",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "carl-tobias-685595",
+      "name": "Carl Tobias",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "carlos-hurtado-2566131",
+      "name": "Carlos Hurtado",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "carlos-valencia-711981",
+      "name": "Carlos Valencia",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "carol-brown-2476988",
+      "name": "Carol Brown",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "carol-parish-858422",
+      "name": "Carol Parish",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "carol-summers-135689",
+      "name": "Carol Summers",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "carol-wharton-236112",
+      "name": "Carol Wharton",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "carol-wittig-1263365",
+      "name": "Carol Wittig",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "caroline-weist-2221978",
+      "name": "Caroline Weist",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "carrie-wu-1697388",
+      "name": "Carrie WU",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "casey-ireland-2963570",
+      "name": "Casey Ireland",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "cassandra-marshall-1757331",
+      "name": "Cassandra Marshall",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "catherine-adoyo-2838449",
+      "name": "Catherine Adoyo",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "catherine-finegan-dollak-2833316",
+      "name": "Catherine Finegan-Dollak",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "catherine-shaffner-1926268",
+      "name": "Catherine Shaffner",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "cemile-kumas-2309997",
+      "name": "Cemile Kumas",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "chad-curtis-1755315",
+      "name": "Chad Curtis",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "chanda-samanta-1222863",
+      "name": "Chanda Samanta",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "cheryl-pallant-590008",
+      "name": "Cheryl Pallant",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "chiara-giorgetti-3016966",
+      "name": "Chiara Giorgetti",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "chris-bischof-2059524",
+      "name": "Chris Bischof",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "chris-faigle-575622",
+      "name": "Chris Faigle",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "chris-miller-2936308",
+      "name": "Chris Miller",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "chris-motz-2890153",
+      "name": "Chris Motz",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "chris-shugrue-2725432",
+      "name": "Chris Shugrue",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "chris-stevenson-379337",
+      "name": "Chris Stevenson",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "chris-von-rueden-2696299",
+      "name": "Chris von Rueden",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "chris-vonrueden-2156397",
+      "name": "Chris vonRueden",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "christine-contrada-1848028",
+      "name": "Christine Contrada",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "christine-helms-1978587",
+      "name": "Christine Helms",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "christine-kohnen-1955481",
+      "name": "Christine Kohnen",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "christine-mowery-1156952",
+      "name": "Christine Mowery",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "christine-panasian-1222884",
+      "name": "Christine Panasian",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "christopher-corts-2071439",
+      "name": "Christopher Corts",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "christopher-cotropia-1133764",
+      "name": "Christopher Cotropia",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "christopher-courtney-2436131",
+      "name": "Christopher Courtney",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "chuck-mike-585845",
+      "name": "Chuck Mike",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "cindy-bukach-906230",
+      "name": "Cindy Bukach",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "cindy-conn-2833095",
+      "name": "Cindy Conn",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "clarke-williams-669159",
+      "name": "Clarke Williams",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "claudia-ferman-401424",
+      "name": "Claudia Ferman",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "claudio-lopez-guerra-2692469",
+      "name": "Claudio Lopez-Guerra",
+      "department": "Philosophy & Political Science",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "colin-kielty-2606575",
+      "name": "Colin Kielty",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "colleen-carpenter-2755210",
+      "name": "Colleen Carpenter",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "collin-rabe-1919662",
+      "name": "Collin Rabe",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "con-beausang-2241293",
+      "name": "Con Beausang",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "corey-payne-3060927",
+      "name": "Corey Payne",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "corina-lain-666887",
+      "name": "Corina Lain",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "cornelius-beausang-867147",
+      "name": "Cornelius Beausang",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "corrado-corradini-1787403",
+      "name": "Corrado Corradini",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "courtney-blondino-2901448",
+      "name": "Courtney Blondino",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "craig-burshem-1562584",
+      "name": "Craig Burshem",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "craig-heinicke-1088430",
+      "name": "Craig Heinicke",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": [
+        "Craig, W. Heinicke"
+      ]
+    },
+    {
+      "id": "craig-kinsley-554418",
+      "name": "Craig Kinsley",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "craig-kocher-1819794",
+      "name": "Craig Kocher",
+      "department": "Not Specified",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "crystal-hoyt-1703835",
+      "name": "Crystal Hoyt",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "cynthia-conn-2592155",
+      "name": "Cynthia Conn",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "cynthia-fraser-3086289",
+      "name": "Cynthia Fraser",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "cynthia-merrill-1443884",
+      "name": "Cynthia Merrill",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "d-neil-ashworth-587974",
+      "name": "D. Neil Ashworth",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "dan-chen-2525143",
+      "name": "Dan Chen",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "dan-palazzolo-45892",
+      "name": "Dan Palazzolo",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "dan-roberts-148705",
+      "name": "Dan Roberts",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "dana-el-kurd-2730576",
+      "name": "Dana El Kurd",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "dana-lascu-389158",
+      "name": "Dana Lascu",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "dana-ollestad-2449823",
+      "name": "Dana Ollestad",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "dana-shalash-2874119",
+      "name": "Dana Shalash",
+      "department": "Literature",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "daniel-coudriet-711983",
+      "name": "Daniel Coudriet",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "daniel-geart-1738102",
+      "name": "Daniel Geart",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "daniel-mackay-1424605",
+      "name": "Daniel MacKay",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "daniel-paik-1490321",
+      "name": "Daniel Paik",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "daniel-selby-1323561",
+      "name": "Daniel Selby",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "darrell-walden-2129273",
+      "name": "Darrell Walden",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": [
+        ". Walden"
+      ]
+    },
+    {
+      "id": "daryl-dance-69169",
+      "name": "Daryl Dance",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-balash-2947091",
+      "name": "David Balash",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "david-brandenberger-749703",
+      "name": "David Brandenberger",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-burkman-1641984",
+      "name": "David Burkman",
+      "department": "Film",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "david-epstein-2107427",
+      "name": "David Epstein",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "david-esleck-475502",
+      "name": "David Esleck",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-giancaspro-2338426",
+      "name": "David Giancaspro",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-kitchen-1438751",
+      "name": "David Kitchen",
+      "department": "Science",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "david-landy-1315844",
+      "name": "David Landy",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-leary-440761",
+      "name": "David Leary",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-lefkowitz-1429087",
+      "name": "David Lefkowitz",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-niethamer-931721",
+      "name": "David Niethamer",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-north-1635333",
+      "name": "David North",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "david-piacenti-1355417",
+      "name": "David Piacenti",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-pierce-2123359",
+      "name": "David Pierce",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "david-routt-308199",
+      "name": "David Routt",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-salisbury-1190751",
+      "name": "David Salisbury",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-soule-2474324",
+      "name": "David Soule",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "david-stevens-979017",
+      "name": "David Stevens",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "david-wilkins-2624510",
+      "name": "David Wilkins",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "dawn-e-latane-1050971",
+      "name": "Dawn E. Latane",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "dean-croushore-653017",
+      "name": "Dean Croushore",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "dean-simpson-430225",
+      "name": "Dean Simpson",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "deandra-clarke-2764473",
+      "name": "Deandra Clarke",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "deborah-carvelli-1783664",
+      "name": "Deborah Carvelli",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "deborwah-faulk-3087039",
+      "name": "Deborwah Faulk",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "debra-o-brien-418358",
+      "name": "Debra O'Brien",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "dejun-tony-kong-1939775",
+      "name": "Dejun Tony Kong",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "della-dumbaugh-745082",
+      "name": "Della Dumbaugh",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "deniz-besik-2675446",
+      "name": "Deniz Besik",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "derek-miller-2050156",
+      "name": "Derek Miller",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "dieter-gunkel-2278967",
+      "name": "Dieter Gunkel",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "dina-abdo-3063797",
+      "name": "Dina Abdo",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "dixon-abreu-289815",
+      "name": "Dixon Abreu",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "dominique-williams-2459924",
+      "name": "Dominique Williams",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "don-belt-2452896",
+      "name": "Don Belt",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "don-forsyth-842180",
+      "name": "Don Forsyth",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "doron-samuel-siegel-1929859",
+      "name": "Doron Samuel-Siegel",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "dorothy-holland-267125",
+      "name": "Dorothy Holland",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "doug-bosse-1809295",
+      "name": "Doug Bosse",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "douglas-hicks-313472",
+      "name": "Douglas Hicks",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "douglas-szajda-394303",
+      "name": "Douglas Szajda",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "douglas-winiarski-2332750",
+      "name": "Douglas Winiarski",
+      "department": "Theology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": [
+        "Doug Winiarski"
+      ]
+    },
+    {
+      "id": "dr-bondurant-2961972",
+      "name": "Dr. Bondurant",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "dr-m-charity-3039135",
+      "name": "Dr. M Charity",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "dulce-lawrence-456029",
+      "name": "Dulce Lawrence",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "durga-gautam-2848698",
+      "name": "Durga Gautam",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "edward-ayers-318374",
+      "name": "Edward Ayers",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "edward-cook-3014957",
+      "name": "Edward Cook",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "edward-ferrier-2757118",
+      "name": "Edward Ferrier",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "eileen-downey-2755220",
+      "name": "Eileen Downey",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "elaine-rogers-631158",
+      "name": "Elaine Rogers",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elena-calvillo-505271",
+      "name": "Elena Calvillo",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elena-prokhorova-738817",
+      "name": "Elena Prokhorova",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elisabeth-gruner-425258",
+      "name": "Elisabeth Gruner",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elisabeth-wray-1929157",
+      "name": "Elisabeth Wray",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": [
+        ". Wray"
+      ]
+    },
+    {
+      "id": "elizabeth-baughan-1273192",
+      "name": "Elizabeth Baughan",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-faier-1528501",
+      "name": "Elizabeth Faier",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-gross-2024870",
+      "name": "Elizabeth Gross",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-kissling-2055748",
+      "name": "Elizabeth Kissling",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-outka-1191539",
+      "name": "Elizabeth Outka",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-ransom-455009",
+      "name": "Elizabeth Ransom",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-sheehan-1563327",
+      "name": "Elizabeth Sheehan",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-starke-1947391",
+      "name": "Elizabeth Starke",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "elizabeth-turner-1349429",
+      "name": "Elizabeth Turner",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "ellen-walk-792806",
+      "name": "Ellen Walk",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "ellis-bell-78401",
+      "name": "Ellis Bell",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ellis-west-403643",
+      "name": "Ellis West",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "emily-boone-525729",
+      "name": "Emily Boone",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "emma-goldman-236110",
+      "name": "Emma Goldman",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "emmy-ready-2407291",
+      "name": "Emmy Ready",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "emory-bogle-511734",
+      "name": "Emory Bogle",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "erfan-moqadam-2852028",
+      "name": "Erfan Moqadam",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "eric-grollman-2002995",
+      "name": "Eric Grollman",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "eric-yellin-925300",
+      "name": "Eric Yellin",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "erica-hughes-2725387",
+      "name": "Erica Hughes",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "erik-craft-134228",
+      "name": "Erik Craft",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "erik-johnson-2128101",
+      "name": "Erik Johnson",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "erik-nielson-1834862",
+      "name": "Erik Nielson",
+      "department": "Liberal Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "erika-zimmermann-damer-2349081",
+      "name": "Erika Zimmermann Damer",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "erling-sjovold-1021082",
+      "name": "Erling Sjovold",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "ernest-mcgowen-1718412",
+      "name": "Ernest McGowen",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "ernest-o-boyle-1424390",
+      "name": "Ernest O'Boyle",
+      "department": "Research",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "ernesto-seman-1967559",
+      "name": "Ernesto Seman",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "eugene-maurakis-1679641",
+      "name": "Eugene Maurakis",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "eugene-yorchone-wu-1846495",
+      "name": "Eugene Yorchone WU",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "eunice-clark-3153797",
+      "name": "Eunice Clark",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "evan-welchance-3136274",
+      "name": "Evan Welchance",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "faith-wilkerson-2592600",
+      "name": "Faith Wilkerson",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "feng-hao-2056992",
+      "name": "Feng Hao",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "fernando-gomez-1932422",
+      "name": "Fernando Gomez",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "fiona-ross-517427",
+      "name": "Fiona Ross",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "floyd-duncan-2312319",
+      "name": "Floyd Duncan",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "francoise-ravaux-kirkpatrick-425256",
+      "name": "Francoise Ravaux-Kirkpatrick",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "frank-eakin-611223",
+      "name": "Frank Eakin",
+      "department": "Religion",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "fred-hagemeister-3054290",
+      "name": "Fred Hagemeister",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "fred-talbott-2243230",
+      "name": "Fred Talbott",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "g-scott-davis-376724",
+      "name": "G. Scott Davis",
+      "department": "Religion",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "gm-keaton-2944141",
+      "name": "GM Keaton",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "gary-greenfield-111903",
+      "name": "Gary Greenfield",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "gary-mcdowell-380797",
+      "name": "Gary McDowell",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "gary-radice-553307",
+      "name": "Gary Radice",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ge-wu-2588932",
+      "name": "Ge Wu",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "gene-anderson-107457",
+      "name": "Gene Anderson",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "gengsong-gao-2764470",
+      "name": "Gengsong Gao",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "geoff-goddu-355710",
+      "name": "Geoff Goddu",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "geoffrey-traugh-3136188",
+      "name": "Geoffrey  Traugh",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "george-hoffer-1450278",
+      "name": "George Hoffer",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "gerald-quirk-1799897",
+      "name": "Gerald Quirk",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "gil-hickman-383304",
+      "name": "Gil Hickman",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "ginnie-willard-2527834",
+      "name": "Ginnie Willard",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "giorgio-mendez-2117113",
+      "name": "Giorgio Mendez",
+      "department": "Criminal Justice",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "graeme-mack-2839376",
+      "name": "Graeme Mack",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "gretchen-morris-1886169",
+      "name": "Gretchen Morris",
+      "department": "International Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "guanyi-yi-leu-2185574",
+      "name": "Guanyi-Yi Leu",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "guoping-huang-2744482",
+      "name": "Guoping Huang",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "guzel-garifullina-2975390",
+      "name": "Guzel  Garifullina",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "gwen-nally-1935284",
+      "name": "Gwen Nally",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "haley-harwell-2184726",
+      "name": "Haley Harwell",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "hari-luitel-1127060",
+      "name": "Hari Luitel",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "harry-hoke-487793",
+      "name": "Harry Hoke",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "haw-cheng-2635204",
+      "name": "Haw Cheng",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "heather-adams-950216",
+      "name": "Heather Adams",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "heather-hogg-2377383",
+      "name": "Heather Hogg",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "heather-russell-2060871",
+      "name": "Heather Russell",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "heather-sadowski-3045467",
+      "name": "Heather Sadowski",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "heide-trepainer-1780481",
+      "name": "Heide Trepainer",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "heidi-walsh-1860404",
+      "name": "Heidi Walsh",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "hemali-oza-3149804",
+      "name": "Hemali Oza",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "henry-chambers-1906796",
+      "name": "Henry Chambers",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "henry-nebel-605082",
+      "name": "Henry Nebel",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "herrera-patricia-2658446",
+      "name": "Herrera Patricia",
+      "department": "Liberal Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "hilary-raymond-604037",
+      "name": "Hilary Raymond",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "hugh-west-531409",
+      "name": "Hugh West",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "huyen-curtis-2419811",
+      "name": "Huyen Curtis",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "ihab-abuzayda-2596307",
+      "name": "Ihab AbuZayda",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "ilka-saal-127856",
+      "name": "Ilka Saal",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "isaac-skromne-2561762",
+      "name": "Isaac Skromne",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ivan-feldman-2076344",
+      "name": "Ivan Feldman",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "j-david-stevens-974243",
+      "name": "J David Stevens",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "j-thomas-wren-780943",
+      "name": "J. Thomas Wren",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "jack-bell-2199970",
+      "name": "Jack Bell",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jack-molenkamp-2591974",
+      "name": "Jack Molenkamp",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jack-preis-1227535",
+      "name": "Jack Preis",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "jack-singal-1855416",
+      "name": "Jack Singal",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jacy-jacob-2646138",
+      "name": "Jacy Jacob",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jada-banks-1634160",
+      "name": "Jada Banks",
+      "department": "Humanities",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jake-tan-2903330",
+      "name": "Jake  Tan",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jake-nowland-1568455",
+      "name": "Jake Nowland",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "james-davis-186071",
+      "name": "James Davis",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": [
+        "Jim Davis"
+      ]
+    },
+    {
+      "id": "james-gibson-1434706",
+      "name": "James Gibson",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "james-monks-631152",
+      "name": "James Monks",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "james-morrison-2617861",
+      "name": "James Morrison",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "james-staveley-o-carroll-1539801",
+      "name": "James Staveley-O'Carroll",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "james-wright-826134",
+      "name": "James Wright",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "jan-french-898413",
+      "name": "Jan French",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "jana-leonard-1092534",
+      "name": "Jana Leonard",
+      "department": "Paralegal",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "jane-berry-484021",
+      "name": "Jane Berry",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jane-geaney-78402",
+      "name": "Jane Geaney",
+      "department": "Religious Studies",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "janelle-peifer-2877386",
+      "name": "Janelle Peifer",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jannette-amaral-rodriguez-2513790",
+      "name": "Jannette Amaral-Rodriguez",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "javier-hidalgo-1897332",
+      "name": "Javier Hidalgo",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "jeannine-keefer-2374502",
+      "name": "Jeannine Keefer",
+      "department": "Architecture",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "jeff-grollman-2088682",
+      "name": "Jeff Grollman",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jeff-hass-973141",
+      "name": "Jeff Hass",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jeff-pollack-1343235",
+      "name": "Jeff Pollack",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jeff-simpson-2306984",
+      "name": "Jeff Simpson",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jeff-stedman-1045345",
+      "name": "Jeff Stedman",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jeffery-riehl-940125",
+      "name": "Jeffery Riehl",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jeffrey-cimbalo-984555",
+      "name": "Jeffrey Cimbalo",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jeffrey-harrison-1397662",
+      "name": "Jeffrey Harrison",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jeffrey-legro-3054425",
+      "name": "Jeffrey Legro",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jeffrey-mcmahan-2716104",
+      "name": "Jeffrey McMahan",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jeffrey-sedgwick-1722163",
+      "name": "Jeffrey Sedgwick",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "jeffrey-toussaint-1169158",
+      "name": "Jeffrey Toussaint",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-bowie-2697880",
+      "name": "Jennifer Bowie",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-cable-2485481",
+      "name": "Jennifer Cable",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-erkulwater-578973",
+      "name": "Jennifer Erkulwater",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-glancy-1324378",
+      "name": "Jennifer Glancy",
+      "department": "Religion",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-nourse-401089",
+      "name": "Jennifer Nourse",
+      "department": "Humanities",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-o-donnell-2391070",
+      "name": "Jennifer O'Donnell",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-olson-2101044",
+      "name": "Jennifer Olson",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-pribble-1271979",
+      "name": "Jennifer Pribble",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-scott-2852470",
+      "name": "Jennifer Scott",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jennifer-sevin-2331739",
+      "name": "Jennifer Sevin",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jeppe-von-platz-2316817",
+      "name": "Jeppe von Platz",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jeremy-drummond-743181",
+      "name": "Jeremy Drummond",
+      "department": "Film",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "jeremy-lecrone-2174112",
+      "name": "Jeremy LeCrone",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "jerry-gilfoyle-2975807",
+      "name": "Jerry Gilfoyle",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jerry-stevens-396697",
+      "name": "Jerry Stevens",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jessica-erickson-2761848",
+      "name": "Jessica Erickson",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "jessica-ka-yee-chan-1924068",
+      "name": "Jessica Ka Yee Chan",
+      "department": "International Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "jessie-fillerup-1672183",
+      "name": "Jessie Fillerup",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jianru-yang-2184062",
+      "name": "Jianru Yang",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jie-yao-1929840",
+      "name": "Jie Yao",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jillean-mccommons-2818068",
+      "name": "Jillean McCommons",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jim-deverick-1841063",
+      "name": "Jim Deverick",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "jim-helms-376569",
+      "name": "Jim Helms",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jim-lanham-769256",
+      "name": "Jim Lanham",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "jimmy-kandeh-45893",
+      "name": "Jimmy Kandeh",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joanna-drell-472836",
+      "name": "Joanna Drell",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joanna-love-2331169",
+      "name": "Joanna Love",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joanna-wares-1634339",
+      "name": "Joanna Wares",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "joanne-ciulla-1265659",
+      "name": "Joanne Ciulla",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "joe-essid-296793",
+      "name": "Joe Essid",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joe-hoyle-2049473",
+      "name": "Joe Hoyle",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": [
+        "Joseph (Joe) Hoyle"
+      ]
+    },
+    {
+      "id": "joe-troncale-379229",
+      "name": "Joe Troncale",
+      "department": "International Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "joel-eisen-511910",
+      "name": "Joel Eisen",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "joel-mier-2694050",
+      "name": "Joel Mier",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "johann-stegmeir-1124155",
+      "name": "Johann Stegmeir",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "john-alley-826193",
+      "name": "John Alley",
+      "department": "Photography",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "john-douglass-729339",
+      "name": "John Douglass",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "john-earl-1044217",
+      "name": "John Earl",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "john-feaster-1191520",
+      "name": "John Feaster",
+      "department": "Communication Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "john-gordon-431079",
+      "name": "John Gordon",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "john-gupton-379659",
+      "name": "John Gupton",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "john-hayden-1036171",
+      "name": "John Hayden",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "john-hubbard-394307",
+      "name": "John Hubbard",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "john-pagan-768468",
+      "name": "John Pagan",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "john-peters-3062029",
+      "name": "John Peters",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "john-treadway-191569",
+      "name": "John Treadway",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "john-vaughan-426801",
+      "name": "John Vaughan",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "john-warrick-236109",
+      "name": "John Warrick",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "john-wight-211837",
+      "name": "John Wight",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "john-zinn-1965736",
+      "name": "John Zinn",
+      "department": "Professional & Continuing Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "johnny-finn-1538557",
+      "name": "Johnny Finn",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jon-glass-2450815",
+      "name": "Jon Glass",
+      "department": "Information Science",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "jon-park-2407014",
+      "name": "Jon Park",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "jonathan-dattelbaum-888345",
+      "name": "Jonathan Dattelbaum",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jonathan-richardson-2599843",
+      "name": "Jonathan Richardson",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jonathan-stubbs-1858986",
+      "name": "Jonathan Stubbs",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "jonathan-whitaker-1329905",
+      "name": "Jonathan Whitaker",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jordyn-farizo-2947072",
+      "name": "Jordyn Farizo",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "jorge-wong-medina-3073171",
+      "name": "Jorge Wong Medina",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jory-brinkerhoff-1628415",
+      "name": "Jory Brinkerhoff",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "jory-denny-2174434",
+      "name": "Jory Denny",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "josafath-reynoso-2302285",
+      "name": "Josafath Reynoso",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joseph-farizo-2636137",
+      "name": "Joseph Farizo",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "joseph-obi-267127",
+      "name": "Joseph Obi",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joshua-schwartz-2133228",
+      "name": "Joshua Schwartz",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joshua-walker-1437912",
+      "name": "Joshua Walker",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "joyce-macallister-110425",
+      "name": "Joyce MacAllister",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "joyce-van-der-laan-smith-1148423",
+      "name": "Joyce Van Der Laan Smith",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "juan-ardila-falla-2953506",
+      "name": "Juan Ardila Falla",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "judy-richardson-1595353",
+      "name": "Judy Richardson",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "juidth-buchanan-474810",
+      "name": "Juidth Buchanan",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "julian-hayter-1842618",
+      "name": "Julian Hayter",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "julianne-guillard-1843368",
+      "name": "Julianne Guillard",
+      "department": "Women's Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "julie-baker-380261",
+      "name": "Julie Baker",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "julie-fulcher-752626",
+      "name": "Julie Fulcher",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "julie-laskaris-241126",
+      "name": "Julie Laskaris",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "julie-pollock-1960734",
+      "name": "Julie Pollock",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "julien-isnard-2640874",
+      "name": "Julien Isnard",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "julietta-singh-1563318",
+      "name": "Julietta Singh",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "jumana-al-ahmad-1905168",
+      "name": "Jumana Al-Ahmad",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kamal-gasimov-3145845",
+      "name": "Kamal Gasimov",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "karen-hensley-3093354",
+      "name": "Karen Hensley",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "karen-kochel-2544373",
+      "name": "Karen Kochel",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "karen-masterson-2733831",
+      "name": "Karen Masterson",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "karen-zivi-1043010",
+      "name": "Karen Zivi",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "karen-de-melo-3061621",
+      "name": "Karen de Melo",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "karin-boxer-2411949",
+      "name": "Karin Boxer",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "karina-vazquez-2201759",
+      "name": "Karina Vazquez",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kasongo-kapanga-479755",
+      "name": "Kasongo Kapanga",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kate-cassada-2731419",
+      "name": "Kate Cassada",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "katelyn-jones-2182979",
+      "name": "Katelyn Jones",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "katherine-hoke-236107",
+      "name": "Katherine Hoke",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "kathleen-skerrett-2561436",
+      "name": "Kathleen Skerrett",
+      "department": "Women's Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "kathrin-bower-446551",
+      "name": "Kathrin Bower",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kathryn-burnes-1603384",
+      "name": "Kathryn Burnes",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "kathryn-jacobsen-2752649",
+      "name": "Kathryn Jacobsen",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "kathryn-trapp-464979",
+      "name": "Kathryn Trapp",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "kathy-thompson-379527",
+      "name": "Kathy Thompson",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kathy-zoghby-483337",
+      "name": "Kathy Zoghby",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "katie-gilstrap-2053475",
+      "name": "Katie Gilstrap",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "katie-herrin-baines-2172759",
+      "name": "Katie Herrin Baines",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "katie-roderick-3135451",
+      "name": "Katie Roderick",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "katrina-nousek-2658703",
+      "name": "Katrina Nousek",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kay-brooks-2846604",
+      "name": "Kay Brooks",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "kayleigh-mccrary-2948659",
+      "name": "Kayleigh McCrary",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "kelley-annesley-3054423",
+      "name": "Kelley Annesley",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kelli-chapman-2316013",
+      "name": "Kelli Chapman",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kelling-donald-1061565",
+      "name": "Kelling Donald",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "kelly-lambert-2241125",
+      "name": "Kelly Lambert",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kelly-shaw-776147",
+      "name": "Kelly Shaw",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "kelsey-cowger-1486376",
+      "name": "Kelsey Cowger",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kevin-cherry-1596596",
+      "name": "Kevin Cherry",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kevin-christensen-3066631",
+      "name": "Kevin Christensen",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "kevin-cruz-2056979",
+      "name": "Kevin Cruz",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "kevin-harding-469528",
+      "name": "Kevin Harding",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kevin-kuswa-267113",
+      "name": "Kevin Kuswa",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kevin-pelletier-1262764",
+      "name": "Kevin Pelletier",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kevin-rutherford-2119183",
+      "name": "Kevin Rutherford",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "kevin-walsh-1906798",
+      "name": "Kevin Walsh",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "kevin-webster-2836142",
+      "name": "Kevin Webster",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kevin-woodson-3016961",
+      "name": "Kevin Woodson",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "kibibi-mack-shelton-396829",
+      "name": "Kibibi MacK-Shelton",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kiersten-maryott-1192406",
+      "name": "Kiersten Maryott",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "kim-shannon-1790474",
+      "name": "Kim Shannon",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "kim-wiseman-898625",
+      "name": "Kim Wiseman",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "kimberley-browne-2445767",
+      "name": "Kimberley Browne",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kimberley-klinker-1191522",
+      "name": "Kimberley Klinker",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kip-krumweide-1271065",
+      "name": "Kip Krumweide",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "kirk-jonas-510053",
+      "name": "Kirk Jonas",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kitty-maynard-3055412",
+      "name": "Kitty  Maynard",
+      "department": "Literature",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "krista-stenger-446935",
+      "name": "Krista Stenger",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "kristen-lindgren-1248298",
+      "name": "Kristen Lindgren",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kristen-osenga-1709058",
+      "name": "Kristen Osenga",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "kristian-lorenzo-1929839",
+      "name": "Kristian Lorenzo",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kristin-bezio-1677496",
+      "name": "Kristin Bezio",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "kristine-chiodo-2671952",
+      "name": "Kristine Chiodo",
+      "department": "Professional amp Continuing Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "kristine-grayson-dattlebaum-2008463",
+      "name": "Kristine Grayson-Dattlebaum",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "kristine-nolin-1474486",
+      "name": "Kristine Nolin",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "kristjen-lundberg-2204295",
+      "name": "Kristjen Lundberg",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kurt-beals-3016700",
+      "name": "Kurt Beals",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kyle-jenkins-3034598",
+      "name": "Kyle Jenkins",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "kyle-redican-2848380",
+      "name": "Kyle Redican",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "kyle-wendling-2656368",
+      "name": "Kyle Wendling",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "ladelle-mcwhorter-336894",
+      "name": "Ladelle McWhorter",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "laine-briddell-1390836",
+      "name": "Laine Briddell",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lara-pellegrinelli-896997",
+      "name": "Lara Pellegrinelli",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "laura-fernandez-2837454",
+      "name": "Laura Fernandez",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "laura-knouse-1624454",
+      "name": "Laura Knouse",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "laura-kuti-2559985",
+      "name": "Laura Kuti",
+      "department": "Freshman Year Experience",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "laura-runyen-janecky-319599",
+      "name": "Laura Runyen-Janecky",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "laura-thompson-2735075",
+      "name": "Laura Thompson",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "laura-webb-1338171",
+      "name": "Laura Webb",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "lauren-henley-2690476",
+      "name": "Lauren Henley",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "lazaro-lima-1713105",
+      "name": "Lazaro Lima",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lee-carleton-103328",
+      "name": "Lee Carleton",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "leo-plante-1991750",
+      "name": "Leo Plante",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "leo-wibberly-370108",
+      "name": "Leo Wibberly",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "leonardo-bacarezza-1937094",
+      "name": "Leonardo Bacarezza",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "leslie-bohon-2954029",
+      "name": "Leslie Bohon",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lester-caudill-379643",
+      "name": "Lester Caudill",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "lewis-barnett-825464",
+      "name": "Lewis Barnett",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "lewis-litteral-395991",
+      "name": "Lewis Litteral",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "liam-mcgrinder-2241288",
+      "name": "Liam McGrinder",
+      "department": "Ethnic Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "lidia-radi-889987",
+      "name": "Lidia Radi",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lilla-orr-2819016",
+      "name": "Lilla Orr",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "linda-boland-554023",
+      "name": "Linda Boland",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "linda-fairtile-2218415",
+      "name": "Linda Fairtile",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "linda-hobgood-127490",
+      "name": "Linda Hobgood",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lindsey-stravitz-1930101",
+      "name": "Lindsey Stravitz",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "lindsey-sullivan-2372627",
+      "name": "Lindsey Sullivan",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "lionel-mew-1822343",
+      "name": "Lionel Mew",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "lisa-gentile-1011763",
+      "name": "Lisa Gentile",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "lisa-jobe-shields-2105707",
+      "name": "Lisa Jobe-Shields",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lisa-summers-1300376",
+      "name": "Lisa Summers",
+      "department": "International Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "lisa-voeks-45897",
+      "name": "Lisa Voeks",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "lorenza-marcin-377829",
+      "name": "Lorenza Marcin",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "louis-schwartz-485931",
+      "name": "Louis Schwartz",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "luai-allarakia-2779859",
+      "name": "Luai Allarakia",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lucas-izquierdo-1221812",
+      "name": "Lucas Izquierdo",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "lucia-reinaga-2080132",
+      "name": "Lucia Reinaga",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "luke-norris-2739147",
+      "name": "Luke Norris",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "lynda-kachurek-2451672",
+      "name": "Lynda Kachurek",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "mack-clair-914430",
+      "name": "MacK Clair",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "mackenzie-dobson-3005724",
+      "name": "Mackenzie Dobson",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "maia-linask-1622804",
+      "name": "Maia Linask",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "maja-white-1350847",
+      "name": "Maja White",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "malcolm-hill-606310",
+      "name": "Malcolm Hill",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "manuella-meyer-1318853",
+      "name": "Manuella Meyer",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "marbury-fagan-395985",
+      "name": "Marbury Fagan",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "marcella-torres-2588813",
+      "name": "Marcella Torres",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "marcia-whitehead-236105",
+      "name": "Marcia Whitehead",
+      "department": "Literature",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "maren-reiner-490674",
+      "name": "Maren Reiner",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "margaret-dorsey-2761402",
+      "name": "Margaret Dorsey",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "margaret-park-1479042",
+      "name": "Margaret Park",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "margaret-tait-2959522",
+      "name": "Margaret Tait",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "mari-lee-mifsud-127489",
+      "name": "Mari Lee Mifsud",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "maria-westerfield-1424481",
+      "name": "Maria Westerfield",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "mariama-de-sousa-dias-2352556",
+      "name": "Mariama de Sousa Dias",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "marianella-belliard-134794",
+      "name": "Marianella Belliard",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "marie-mcgoldrick-277810",
+      "name": "Marie McGoldrick",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "mariela-mendez-2927181",
+      "name": "Mariela Mendez",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "mariela-mendez-de-coudriet-1158770",
+      "name": "Mariela Mendez De Coudriet",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "marilie-coetsee-2573928",
+      "name": "Marilie Coetsee",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "marina-astakhova-2957461",
+      "name": "Marina Astakhova",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "mark-guglielmo-1838387",
+      "name": "Mark Guglielmo",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "mark-huff-1060506",
+      "name": "Mark Huff",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "mark-rhodes-676642",
+      "name": "Mark Rhodes",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "marshall-geiger-587734",
+      "name": "Marshall Geiger",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "marta-puig-590936",
+      "name": "Marta Puig",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "martha-merritt-2640127",
+      "name": "Martha Merritt",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "marti-tomlin-2854326",
+      "name": "Marti  Tomlin",
+      "department": "Physical Education",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "martin-sulzer-reichel-81898",
+      "name": "Martin Sulzer-Reichel",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "maruti-mishra-2789587",
+      "name": "Maruti Mishra",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "mary-evans-1158771",
+      "name": "Mary Evans",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "mary-finley-brook-1338708",
+      "name": "Mary Finley-Brook",
+      "department": "International Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "mary-heen-2000186",
+      "name": "Mary Heen",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "mary-lunn-2848697",
+      "name": "Mary Lunn",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "mary-scott-2459805",
+      "name": "Mary Scott",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "mary-tate-1476773",
+      "name": "Mary Tate",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "mary-thomas-533951",
+      "name": "Mary Thomas",
+      "department": "Writing",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "matt-spahr-2634322",
+      "name": "Matt Spahr",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "matt-trawick-572250",
+      "name": "Matt Trawick",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "matthew-lowder-2561431",
+      "name": "Matthew Lowder",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "matthew-oware-2689526",
+      "name": "Matthew Oware",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "matthew-wilson-2832576",
+      "name": "Matthew Wilson",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "maura-alexander-2302607",
+      "name": "Maura Alexander",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "maureen-moran-2376910",
+      "name": "Maureen Moran",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "mavis-brown-590299",
+      "name": "Mavis Brown",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "mcdonald-davis-1679629",
+      "name": "McDonald Davis",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "megan-bookhout-2536760",
+      "name": "Megan Bookhout",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "megan-driscoll-2690468",
+      "name": "Megan Driscoll",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "melanie-catherine-simpson-868347",
+      "name": "Melanie Catherine Simpson",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "melinda-yang-2572104",
+      "name": "Melinda Yang",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "melissa-ooten-2582708",
+      "name": "Melissa Ooten",
+      "department": "Women's Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "melissa-spencer-2731564",
+      "name": "Melissa Spencer",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "meredith-harbach-1528832",
+      "name": "Meredith Harbach",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "michael-davison-1739258",
+      "name": "Michael Davison",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "michael-harwich-2403373",
+      "name": "Michael Harwich",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "michael-kerckhove-430472",
+      "name": "Michael Kerckhove",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "michael-marsh-soloway-2571127",
+      "name": "Michael Marsh-Soloway",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "michael-mullens-3064067",
+      "name": "Michael Mullens",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "michael-nerdahl-1387670",
+      "name": "Michael Nerdahl",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "michael-norris-2205334",
+      "name": "Michael Norris",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "michelle-hamm-370513",
+      "name": "Michelle Hamm",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "michelle-kahn-2421944",
+      "name": "Michelle Kahn",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "michelle-martinez-3117045",
+      "name": "Michelle Martinez",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "michelle-montague-mfuni-3104066",
+      "name": "Michelle Montague-Mfuni",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "miguel-diaz-barriga-3106738",
+      "name": "Miguel Diaz-Barriga",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "mike-leopold-339852",
+      "name": "Mike Leopold",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "mike-spear-309265",
+      "name": "Mike Spear",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "miles-johnson-2294028",
+      "name": "Miles Johnson",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "mimi-hanaoka-1693626",
+      "name": "Mimi Hanaoka",
+      "department": "Religion",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "miranda-shaw-272066",
+      "name": "Miranda Shaw",
+      "department": "Religion",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "miranda-young-2695859",
+      "name": "Miranda Young",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "mirela-fetea-437830",
+      "name": "Mirela Fetea",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "miriam-mccormick-400140",
+      "name": "Miriam McCormick",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "mishita-mehra-3036883",
+      "name": "Mishita Mehra",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "mitchell-conover-826131",
+      "name": "Mitchell Conover",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "mmachi-obiorah-2728441",
+      "name": "Mmachi Obiorah",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "moe-asato-2285713",
+      "name": "Moe Asato",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "molla-reda-2239284",
+      "name": "Molla Reda",
+      "department": "International Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "monika-siebert-1931020",
+      "name": "Monika  Siebert",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "monti-datta-1293693",
+      "name": "Monti Datta",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "montserrat-torres-nogales-2975975",
+      "name": "Montserrat Torres Nogales",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "montserrat-torres-nogales-2790625",
+      "name": "Montserrat Torres-Nogales",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "mulugeta-wayu-2402322",
+      "name": "Mulugeta Wayu",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "myra-daleng-706911",
+      "name": "Myra Daleng",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "najung-kim-2756092",
+      "name": "Najung Kim",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "nakul-telang-1611311",
+      "name": "Nakul Telang",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "nancy-bagranoff-2658897",
+      "name": "Nancy Bagranoff",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "nancy-ridgway-214420",
+      "name": "Nancy Ridgway",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "nancy-schauber-289410",
+      "name": "Nancy Schauber",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "nancy-tran-2845032",
+      "name": "Nancy Tran",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "natalie-mccauley-2482787",
+      "name": "Natalie McCauley",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "nathan-derstine-3117492",
+      "name": "Nathan Derstine",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "nathan-snaza-1712500",
+      "name": "Nathan Snaza",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "neeraja-gupta-2943175",
+      "name": "Neeraja Gupta",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "nicholas-baker-2789422",
+      "name": "Nicholas Baker",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "nicole-maurantonio-1253295",
+      "name": "Nicole Maurantonio",
+      "department": "Communication Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "nicole-sackley-842189",
+      "name": "Nicole Sackley",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "nigel-james-3045627",
+      "name": "Nigel James",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "noah-sachs-1306258",
+      "name": "Noah Sachs",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "nona-moskowitz-1563300",
+      "name": "Nona Moskowitz",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "nuray-grove-469129",
+      "name": "Nuray Grove",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "oksana-kis-2970617",
+      "name": "Oksana Kis",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "olena-mykhaylova-1380556",
+      "name": "Olena Mykhaylova",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "olenka-pevney-412793",
+      "name": "Olenka Pevney",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "olivia-aronson-lafont-2443421",
+      "name": "Olivia Aronson-Lafont",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "olivier-delers-1040739",
+      "name": "Olivier Delers",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "olubukola-olayiwola-2890656",
+      "name": "Olubukola Olayiwola",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "omar-quintero-2291810",
+      "name": "Omar Quintero",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ori-belkind-705006",
+      "name": "Ori Belkind",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "ovidiu-lipan-936984",
+      "name": "Ovidiu Lipan",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "pablo-talamante-2884991",
+      "name": "Pablo  Talamante",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "pam-england-803397",
+      "name": "Pam England",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "pat-princiotto-752545",
+      "name": "Pat Princiotto",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "patricia-stohr-hunt-485340",
+      "name": "Patricia Stohr-Hunt",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "patricia-torres-3073907",
+      "name": "Patricia Torres",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "patrick-martin-2996336",
+      "name": "Patrick Martin",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "patti-carey-1505516",
+      "name": "Patti Carey",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "paul-achter-545690",
+      "name": "Paul Achter",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "paul-crane-2376912",
+      "name": "Paul Crane",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "paul-kvam-2241122",
+      "name": "Paul Kvam",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "paul-yoon-1194723",
+      "name": "Paul Yoon",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "paula-lessem-379667",
+      "name": "Paula Lessem",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "penny-deans-587744",
+      "name": "Penny Deans",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "peter-kaufman-1189243",
+      "name": "Peter Kaufman",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "peter-leviness-480283",
+      "name": "Peter Leviness",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "peter-lurie-487754",
+      "name": "Peter Lurie",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "peter-smallwood-752122",
+      "name": "Peter Smallwood",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "peter-swisher-831420",
+      "name": "Peter Swisher",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "philip-rohrbach-1429120",
+      "name": "Philip Rohrbach",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": [
+        "Phillip Rohrbach"
+      ]
+    },
+    {
+      "id": "philippa-holloway-2708986",
+      "name": "Philippa Holloway",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": [
+        "Pippa Holloway"
+      ]
+    },
+    {
+      "id": "pir-rothenberg-912041",
+      "name": "Pir Rothenberg",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "porcher-taylor-587762",
+      "name": "Porcher Taylor",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "prateek-bhakta-2206814",
+      "name": "Prateek Bhakta",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "priscilla-erickson-2755243",
+      "name": "Priscilla Erickson",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "racheal-cooper-2709313",
+      "name": "Racheal Cooper",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "racheal-harbin-1834513",
+      "name": "Racheal Harbin",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "rachel-beanland-2914360",
+      "name": "Rachel Beanland",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "rafael-de-sa-462080",
+      "name": "Rafael De Sa",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "raika-sadeghein-2563788",
+      "name": "Raika Sadeghein",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "randolph-new-434856",
+      "name": "Randolph New",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "randy-raggio-1585969",
+      "name": "Randy Raggio",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "rania-sweis-1900626",
+      "name": "Rania Sweis",
+      "department": "Anthropology",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "rashelle-hayes-2183635",
+      "name": "Rashelle Hayes",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "ravynn-stringfield-2904135",
+      "name": "Ravynn Stringfield",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "ray-hilliard-469127",
+      "name": "Ray Hilliard",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "raymond-pat-fishe-2719396",
+      "name": "Raymond (Pat) Fishe",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "raymond-dominey-319593",
+      "name": "Raymond Dominey",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "raymond-fishe-386415",
+      "name": "Raymond Fishe",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "raymond-slaughter-1121645",
+      "name": "Raymond Slaughter",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "reed-west-587799",
+      "name": "Reed West",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "reingard-nethersole-483808",
+      "name": "Reingard Nethersole",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "rene-kanters-1492772",
+      "name": "Rene Kanters",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "rhiannon-graybill-3042516",
+      "name": "Rhiannon Graybill",
+      "department": "Religious Studies",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "rhonda-vonshay-sharpe-2666066",
+      "name": "Rhonda Vonshay Sharpe",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "ricardo-ramos-tremolada-1046410",
+      "name": "Ricardo Ramos-Tremolada",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": [
+        "Ricardo Tremolada"
+      ]
+    },
+    {
+      "id": "richard-becker-1038904",
+      "name": "Richard Becker",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "richard-cimino-2188039",
+      "name": "Richard Cimino",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "richard-coughlan-1161367",
+      "name": "Richard Coughlan",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "richard-dagger-1497355",
+      "name": "Richard Dagger",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "richard-franssen-1419629",
+      "name": "Richard Franssen",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "richard-lampe-2118390",
+      "name": "Richard Lampe",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "richard-leatherman-2638375",
+      "name": "Richard Leatherman",
+      "department": "Professional & Continuing Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "rick-mayes-133070",
+      "name": "Rick Mayes",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "rie-cherie-2485219",
+      "name": "Rie Cherie",
+      "department": "Liberal Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "rob-miller-361892",
+      "name": "Rob Miller",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "robert-cook-523274",
+      "name": "Robert Cook",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "robert-dolan-133440",
+      "name": "Robert Dolan",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "robert-galgano-588080",
+      "name": "Robert Galgano",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "robert-hodierne-1202298",
+      "name": "Robert Hodierne",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "robert-kenzer-81896",
+      "name": "Robert Kenzer",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "robert-maddox-1128545",
+      "name": "Robert Maddox",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "robert-nelson-399110",
+      "name": "Robert Nelson",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "robert-nicholson-580445",
+      "name": "Robert Nicholson",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "robert-pawlewicz-2767276",
+      "name": "Robert Pawlewicz",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "robert-phillips-587765",
+      "name": "Robert Phillips",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "robert-sanborn-473836",
+      "name": "Robert Sanborn",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "robert-schmidt-604038",
+      "name": "Robert Schmidt",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "robert-stone-795115",
+      "name": "Robert Stone",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "robert-tuck-1534455",
+      "name": "Robert Tuck",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "ron-smith-1598265",
+      "name": "Ron Smith",
+      "department": "Liberal Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "ronald-hugar-236106",
+      "name": "Ronald Hugar",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "roni-kingsley-2217378",
+      "name": "Roni Kingsley",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ruiqi-zhang-2971361",
+      "name": "Ruiqi Zhang",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "russ-leonard-538897",
+      "name": "Russ Leonard",
+      "department": "Not Specified",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "ruth-longobardi-532486",
+      "name": "Ruth Longobardi",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "ryan-coppage-2036796",
+      "name": "Ryan Coppage",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ryan-steel-2732718",
+      "name": "Ryan Steel",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "saif-mehkari-1659565",
+      "name": "Saif Mehkari",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "sam-abrash-135671",
+      "name": "Sam Abrash",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "sam-director-3039526",
+      "name": "Sam Director",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "sam-perry-1844745",
+      "name": "Sam Perry",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "samantha-seeley-1950980",
+      "name": "Samantha Seeley",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sandra-joireman-1888685",
+      "name": "Sandra Joireman",
+      "department": "International Studies",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "sandy-williams-2621635",
+      "name": "Sandy Williams",
+      "department": "Art",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "sara-hanson-2417378",
+      "name": "Sara Hanson",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "sara-krehbiel-2112554",
+      "name": "Sara Krehbiel",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "sara-meyerdierks-hillgrove-1151421",
+      "name": "Sara Meyerdierks Hillgrove",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": [
+        "Sara Hillgrove"
+      ]
+    },
+    {
+      "id": "sara-pappas-480831",
+      "name": "Sara Pappas",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sarah-kitty-tryon-2895575",
+      "name": "Sarah (Kitty) Tryon",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sarah-bogard-1949168",
+      "name": "Sarah Bogard",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sarah-skeen-1901025",
+      "name": "Sarah Skeen",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sarah-wood-1318781",
+      "name": "Sarah Wood",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "scott-allison-396753",
+      "name": "Scott Allison",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "scott-bray-1499744",
+      "name": "Scott Bray",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "scott-castro-3030768",
+      "name": "Scott Castro",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "scott-johnson-127492",
+      "name": "Scott Johnson",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "scott-meredith-639607",
+      "name": "Scott Meredith",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "sean-byrne-1990674",
+      "name": "Sean Byrne",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "sean-driscoll-2741262",
+      "name": "Sean Driscoll",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sebastian-laumer-3128424",
+      "name": "Sebastian Laumer",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "shahan-mufti-1810273",
+      "name": "Shahan Mufti",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "shakun-datta-879301",
+      "name": "Shakun Datta",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "shakun-mago-1431400",
+      "name": "Shakun Mago",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "shannon-fegans-1438758",
+      "name": "Shannon Fegans",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "shannon-jones-2156079",
+      "name": "Shannon Jones",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "shari-motro-1101291",
+      "name": "Shari Motro",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "sharon-feldman-446548",
+      "name": "Sharon Feldman",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "shaun-gao-2366073",
+      "name": "Shaun Gao",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "shaun-serej-1557609",
+      "name": "Shaun Serej",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "sheila-carapico-375100",
+      "name": "Sheila Carapico",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "shirley-mitteldorfer-801947",
+      "name": "Shirley Mitteldorfer",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "shital-thekdi-1865832",
+      "name": "Shital Thekdi",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "shruthi-sridha-3099533",
+      "name": "Shruthi Sridha",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "shweta-ware-2728443",
+      "name": "Shweta Ware",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "sim-rivers-3100211",
+      "name": "Sim Rivers",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sonja-bertucci-2531392",
+      "name": "Sonja Bertucci",
+      "department": "Film",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "spencer-bakich-2133230",
+      "name": "Spencer Bakich",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "spencer-neale-1919292",
+      "name": "Spencer Neale",
+      "department": "Film",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "starrene-foster-2707731",
+      "name": "Starrene Foster",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stefan-greenfield-casas-2854880",
+      "name": "Stefan Greenfield-Casas",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stephanie-cobb-1707822",
+      "name": "Stephanie Cobb",
+      "department": "Religion",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stephanie-spera-2633087",
+      "name": "Stephanie Spera",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stephen-addiss-394301",
+      "name": "Stephen Addiss",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stephen-allred-2257000",
+      "name": "Stephen Allred",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "stephen-brauer-2941208",
+      "name": "Stephen Brauer",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stephen-ferguson-3059673",
+      "name": "Stephen Ferguson",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "stephen-hudson-2699616",
+      "name": "Stephen Hudson",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stephen-long-1324357",
+      "name": "Stephen Long",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "stephen-simon-1635015",
+      "name": "Stephen Simon",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "steve-buttes-1552243",
+      "name": "Steve Buttes",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "steve-nash-135662",
+      "name": "Steve Nash",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "steve-tallman-1221816",
+      "name": "Steve Tallman",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "steven-thompson-587743",
+      "name": "Steven Thompson",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "stuart-wheeler-134222",
+      "name": "Stuart Wheeler",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "su-lin-tai-1312085",
+      "name": "Su-Lin Tai",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "summer-liu-2986651",
+      "name": "Summer Liu",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "susan-herbert-735252",
+      "name": "Susan Herbert",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "suzanne-corriell-1878676",
+      "name": "Suzanne Corriell",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "suzanne-riehl-2728092",
+      "name": "Suzanne Riehl",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sydney-watts-487104",
+      "name": "Sydney Watts",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "sylvia-gale-2076347",
+      "name": "Sylvia Gale",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "tamar-eisen-1878678",
+      "name": "Tamar Eisen",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "tanja-softic-69166",
+      "name": "Tanja Softic",
+      "department": "Fine Arts",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "taylor-arnold-2338388",
+      "name": "Taylor Arnold",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "ted-bunn-437831",
+      "name": "Ted Bunn",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "ted-peebles-82093",
+      "name": "Ted Peebles",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "teddy-ritter-1127062",
+      "name": "Teddy Ritter",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "tenace-setor-2834621",
+      "name": "Tenace Setor",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "terri-halperin-551468",
+      "name": "Terri Halperin",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "terry-price-600753",
+      "name": "Terry Price",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "terryl-givens-81902",
+      "name": "Terryl Givens",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "teshell-greene-1996996",
+      "name": "Teshell Greene",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "thad-williamson-1251884",
+      "name": "Thad Williamson",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "thelma-wheeler-1617468",
+      "name": "Thelma Wheeler",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "theresa-dolson-394305",
+      "name": "Theresa Dolson",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "thias-diaz-montalvo-1601749",
+      "name": "Thias Diaz-Montalvo",
+      "department": "Spanish",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "thomas-arnold-389161",
+      "name": "Thomas Arnold",
+      "department": "Finance",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "thomas-bonfiglio-425262",
+      "name": "Thomas Bonfiglio",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "thomas-manganaro-2534038",
+      "name": "Thomas Manganaro",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "thomas-shields-485919",
+      "name": "Thomas Shields",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "thomas-stevens-2331164",
+      "name": "Thomas Stevens",
+      "department": "Music",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "tianyuan-xu-3056072",
+      "name": "Tianyuan Xu",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "tim-schilling-1491500",
+      "name": "Tim Schilling",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "timothy-barney-1749365",
+      "name": "Timothy Barney",
+      "department": "Communication",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "timothy-hamilton-1756206",
+      "name": "Timothy Hamilton",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "timothy-hayes-2124633",
+      "name": "Timothy Hayes",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "timothy-van-meter-1630847",
+      "name": "Timothy Van Meter",
+      "department": "Biology",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "todd-lookingbill-1350866",
+      "name": "Todd Lookingbill",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "tom-campbell-3066146",
+      "name": "Tom Campbell",
+      "department": "Psychology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "tom-kapsidelis-2853063",
+      "name": "Tom Kapsidelis",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "tom-mattson-2480166",
+      "name": "Tom Mattson",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "tom-mullen-316466",
+      "name": "Tom Mullen",
+      "department": "Journalism",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "tom-myers-1143011",
+      "name": "Tom Myers",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "tom-zylkin-2300482",
+      "name": "Tom Zylkin",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "tracy-roof-289405",
+      "name": "Tracy Roof",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "trevor-mcguire-2445711",
+      "name": "Trevor McGuire",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "trey-sutton-2056777",
+      "name": "Trey Sutton",
+      "department": "Management",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "tuba-inal-1198011",
+      "name": "Tuba Inal",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "tyana-ellis-2903243",
+      "name": "Tyana Ellis",
+      "department": "Health Science",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "tze-loo-1094164",
+      "name": "Tze Loo",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "uygar-abaci-1880834",
+      "name": "Uygar Abaci",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "valaria-vendrzyk-587731",
+      "name": "Valaria Vendrzyk",
+      "department": "Accounting",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "van-nall-2049238",
+      "name": "Van Nall",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": [
+        ". Nall"
+      ]
+    },
+    {
+      "id": "vic-bednar-2951243",
+      "name": "Vic Bednar",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "vicki-davis-2731183",
+      "name": "Vicki Davis",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "victoria-george-995156",
+      "name": "Victoria George",
+      "department": "Religion",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "vikram-kamat-2302224",
+      "name": "Vikram Kamat",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "vincent-wang-378338",
+      "name": "Vincent Wang",
+      "department": "Political Science",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "violet-ho-1270034",
+      "name": "Violet Ho",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "virginia-talley-1300377",
+      "name": "Virginia Talley",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "vladimir-chlouba-3073489",
+      "name": "Vladimir Chlouba",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "volha-olga-chykina-2646810",
+      "name": "Volha (Olga) Chykina",
+      "department": "Leadership",
+      "group": "Jepson",
+      "aliases": []
+    },
+    {
+      "id": "volkan-bakirdan-2854322",
+      "name": "Volkan Bakirdan",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "volker-grzimek-1076157",
+      "name": "Volker Grzimek",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "wade-berryhill-457880",
+      "name": "Wade Berryhill",
+      "department": "Law",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "wade-downey-904363",
+      "name": "Wade Downey",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "waide-robinson-1844747",
+      "name": "Waide Robinson",
+      "department": "Education",
+      "group": "Other / Excluded",
+      "aliases": []
+    },
+    {
+      "id": "walid-hamarneh-1845572",
+      "name": "Walid Hamarneh",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "walt-stevenson-482449",
+      "name": "Walt Stevenson",
+      "department": "Classics",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "walter-green-697234",
+      "name": "Walter Green",
+      "department": "Criminal Justice",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "walter-schoen-399116",
+      "name": "Walter Schoen",
+      "department": "Theater",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "wendi-e-berry-1407579",
+      "name": "Wendi E. Berry",
+      "department": "English",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "wendy-stout-2526212",
+      "name": "Wendy Stout",
+      "department": "Geography",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "wes-cain-1627591",
+      "name": "Wes Cain",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "will-kelly-2451268",
+      "name": "Will Kelly",
+      "department": "Religious Studies",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "william-bill-bergman-1846583",
+      "name": "William (Bill) Bergman",
+      "department": "Marketing",
+      "group": "Robins Business",
+      "aliases": [
+        "Bill Bergman"
+      ]
+    },
+    {
+      "id": "william-anderson-1479028",
+      "name": "William Anderson",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "william-case-1028537",
+      "name": "William Case",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "william-cooper-834762",
+      "name": "William Cooper",
+      "department": "Hospitality",
+      "group": "Unmapped",
+      "aliases": []
+    },
+    {
+      "id": "william-hodge-2852928",
+      "name": "William Hodge",
+      "department": "Physics",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "william-myers-379674",
+      "name": "William Myers",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": [
+        ". Myers"
+      ]
+    },
+    {
+      "id": "william-o-neal-2755515",
+      "name": "William O'Neal",
+      "department": "Chemistry",
+      "group": "Gottwald Sciences",
+      "aliases": []
+    },
+    {
+      "id": "william-prior-2943566",
+      "name": "William Prior",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "william-reckner-2302253",
+      "name": "William Reckner",
+      "department": "Philosophy",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "william-ross-439730",
+      "name": "William Ross",
+      "department": "Mathematics",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "xingxing-chen-2506432",
+      "name": "Xingxing Chen",
+      "department": "Business",
+      "group": "Robins Business",
+      "aliases": []
+    },
+    {
+      "id": "yasin-arafat-3118827",
+      "name": "Yasin Arafat",
+      "department": "Economics",
+      "group": "Economics",
+      "aliases": []
+    },
+    {
+      "id": "yetkin-borlu-2200481",
+      "name": "Yetkin Borlu",
+      "department": "Sociology",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "yu-chuan-chen-2517371",
+      "name": "Yu-Chuan Chen",
+      "department": "Art History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "yucel-yanikdag-995779",
+      "name": "Yucel Yanikdag",
+      "department": "History",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    },
+    {
+      "id": "yucong-jiang-2690467",
+      "name": "Yucong Jiang",
+      "department": "Computer Science",
+      "group": "Math & CS",
+      "aliases": []
+    },
+    {
+      "id": "yvonne-howell-277842",
+      "name": "Yvonne Howell",
+      "department": "Languages",
+      "group": "A&S Humanities / Social Sciences / Arts",
+      "aliases": []
+    }
+  ],
+  "puzzles": [
+    {
+      "professorId": "darrell-walden-2129273",
+      "reviews": [
+        {
+          "key": "2a5706fed95b0185",
+          "text": "A truly awesome professor. Is hilarious in class and has a good balance of work and fun in his class. 3 tests, chapter assignments on Connect each week. If you put in the work, there are no surprises and should be an easy good grade.",
+          "date": "2025-05-06",
+          "course": "ACCT205",
+          "redacted": false,
+          "sourcePath": "/reviews/darrell-walden-2129273.json"
+        },
+        {
+          "key": "82ed4950dd9c6d64",
+          "text": "Uses a flipped classroom style. Do the readings and then come to class to clarify questions and get a full understanding. Weekly online homework, but they help with understanding the material.",
+          "date": "2025-02-07",
+          "course": "ACCT201",
+          "redacted": false,
+          "sourcePath": "/reviews/darrell-walden-2129273.json"
+        },
+        {
+          "key": "6b1ab55135f7014f",
+          "text": "If you complete the work on time and practice multiple choice questions like the ones on the quizzes, you should be fine and get a good grade.",
+          "date": "2024-12-24",
+          "course": "ACCT205",
+          "redacted": false,
+          "sourcePath": "/reviews/darrell-walden-2129273.json"
+        },
+        {
+          "key": "fc04e56f9cd3ed6d",
+          "text": "Dr. [name hidden] is an incredibly caring professor who clearly wants the best for his students. Grading is mainly two mid-term exams and online quizzes throughout the year, and he also offers a low exam adjustment which helps students who improve over the semester.",
+          "date": "2024-12-18",
+          "course": "ACCT205",
+          "redacted": true,
+          "sourcePath": "/reviews/darrell-walden-2129273.json"
+        },
+        {
+          "key": "c97a2cc11370aa97",
+          "text": "This class is definitely challenging, but if you put in the work and stay ahead of your assignments, you will be fine. Professor [name hidden] makes it his mission to support you and help you succeed in any way.",
+          "date": "2024-12-18",
+          "course": "ACCT205",
+          "redacted": true,
+          "sourcePath": "/reviews/darrell-walden-2129273.json"
+        },
+        {
+          "key": "00e3db105803580d",
+          "text": "I really enjoyed this class with Professor [name hidden] and it's clear that he wants all of his students to succeed. just do the homework, study the quizzes, and use the materials he provides to prepare for exams (every exam was very similar to what he said it would be). overall a very good option for 205 and would recommend taking him",
+          "date": "2024-12-18",
+          "course": "ACCT205",
+          "redacted": true,
+          "sourcePath": "/reviews/darrell-walden-2129273.json"
+        }
+      ]
+    },
+    {
+      "professorId": "erik-craft-134228",
+      "reviews": [
+        {
+          "key": "8b381d2d19ebd40b",
+          "text": "This is a very difficult class; however, if you put the time into it and genuinely try to succeed, it is very possible. He has a flipped classroom, which means basically all of your learning will be done through online lectures and textbook reading, and then will be reinforced in class. Other than that, he is a great professor.",
+          "date": "2025-12-12",
+          "course": "ECON101",
+          "redacted": false,
+          "sourcePath": "/reviews/erik-craft-134228.json"
+        },
+        {
+          "key": "9dec21230a817231",
+          "text": "His tests are very do-able and almost identical to the practice tests. The hardest part of the course is the problem sets hw. Not hard to get an A in this class if you show up willing to learn - just take easier classes with it that semester and it will not be too crazy.",
+          "date": "2025-11-04",
+          "course": "ECON101",
+          "redacted": false,
+          "sourcePath": "/reviews/erik-craft-134228.json"
+        },
+        {
+          "key": "356f211ea66bf907",
+          "text": "Will teach you so much, but way more work than any other micro teacher.  very clear on what he wants you to know for the tests. If you are willing to work a lot, it's worth it; if you have not taken econ in high school and just need to pass, not worth it for the work.",
+          "date": "2025-12-14",
+          "course": "ECON101",
+          "redacted": false,
+          "sourcePath": "/reviews/erik-craft-134228.json"
+        },
+        {
+          "key": "6afd71b8e42a92af",
+          "text": "Dr. [name hidden] is a very nice professor who has high standards. He expects a lot from his students, but you will do well if you follow his instructions. He is very helpful, responds to emails in a timely manner and will explain concepts in office hours if you are unsure. Yes, it is a hard class, but he wants you to succeed! You learn a lot!! Recommend!",
+          "date": "2025-12-11",
+          "course": "ECON101",
+          "redacted": true,
+          "sourcePath": "/reviews/erik-craft-134228.json"
+        },
+        {
+          "key": "fce2bc417e8f5f06",
+          "text": "[name hidden] is a good professor. If you do the work you will do well on everything. He gives a lot of work, but is a great guy and knows what he is talking about. Would recommend over other \"easy\" econ profs.",
+          "date": "2025-11-07",
+          "course": "101",
+          "redacted": true,
+          "sourcePath": "/reviews/erik-craft-134228.json"
+        },
+        {
+          "key": "6061cfaa7928fd30",
+          "text": "He will get you to understand econ, whether you want to or not. Daily quizzes on reverse classroom online lectures. Practice problems and more lectures during class. Will cold call during class, but little pressure. Tests and exams were 100% manageable. He will curve your final grade if you show improvement too. Great person and can really teach.",
+          "date": "2025-12-29",
+          "course": "ECON101",
+          "redacted": false,
+          "sourcePath": "/reviews/erik-craft-134228.json"
+        }
+      ]
+    },
+    {
+      "professorId": "tenace-setor-2834621",
+      "reviews": [
+        {
+          "key": "a9240d8d1a0298e8",
+          "text": "The classes are hard. But he gives you everything you need to succeed. He gives you the exam questions weeks before the exam. Do the homework, go to the office hours and pay attention in class.",
+          "date": "2025-05-01",
+          "course": "MGMT225",
+          "redacted": false,
+          "sourcePath": "/reviews/tenace-setor-2834621.json"
+        },
+        {
+          "key": "90586146634df96d",
+          "text": "Pros: Good professor. classes are very hands on and engaging. knowledgeable. Cons: very intimidating. tough grader.",
+          "date": "2025-04-30",
+          "course": "MGMT225",
+          "redacted": false,
+          "sourcePath": "/reviews/tenace-setor-2834621.json"
+        },
+        {
+          "key": "50b17e543f450764",
+          "text": "He's super chill and lets us call him by his first name. The material actually sticks because he makes everything interesting with his random funny stories. don't think it's an easy A just cause he's laid back. You gotta do the hw and practice constantly. But fr if you put in decent effort you will be okay.",
+          "date": "2025-02-11",
+          "course": "MGMT225",
+          "redacted": false,
+          "sourcePath": "/reviews/tenace-setor-2834621.json"
+        },
+        {
+          "key": "023916e8d19b7a05",
+          "text": "The expectations when you start this clear are very high, but [name hidden] makes them extremely clear. I can't say I didn't learn a lot, because truly, I really enjoyed the content and [name hidden] does a great job of teaching the content, sometimes it just gets a bit harder than it has to be because of some policies [name hidden] has.",
+          "date": "2025-12-07",
+          "course": "MGMT225",
+          "redacted": true,
+          "sourcePath": "/reviews/tenace-setor-2834621.json"
+        },
+        {
+          "key": "ef4e2f659484797d",
+          "text": "As an international student, I love the perspective [name hidden] brings to class. He ties real-world problems into everything and you can tell he cares about us learnin not just for the grade but for life after college. His teaching is hads on and he is funny. If you want to actually learn something useful I will recommend his class.",
+          "date": "2025-05-01",
+          "course": "MGMT225",
+          "redacted": true,
+          "sourcePath": "/reviews/tenace-setor-2834621.json"
+        },
+        {
+          "key": "88f15b33bdc5a172",
+          "text": "[name hidden] is charismatic. He is encouraging in office hours. You need to be on your toes as he moves pretty quickly through material. However, he pushes his students towards excellence with challenging exams and a real-world group project in connection with a real business. You will be rewarded by learning a lot and gaining great skills for a résumé.",
+          "date": "2025-02-04",
+          "course": "MGMT225",
+          "redacted": true,
+          "sourcePath": "/reviews/tenace-setor-2834621.json"
+        }
+      ]
+    },
+    {
+      "professorId": "carlos-hurtado-2566131",
+      "reviews": [
+        {
+          "key": "c2683336e41dfb72",
+          "text": "Practice tests were exactly the same as the exams. If you do the practice tests and problems you will get an A.",
+          "date": "2026-04-23",
+          "course": "BUAD202",
+          "redacted": false,
+          "sourcePath": "/reviews/carlos-hurtado-2566131.json"
+        },
+        {
+          "key": "f6d598bcc0106930",
+          "text": "Gives lots of practice that helps make learning easier. There are quizzes before each test, each worth 2.5%, that cover the same topics as the exams. This makes prepping for the exams so much easier. Always accessible outside of class and cares about helping his students.",
+          "date": "2026-04-22",
+          "course": "BUAD202",
+          "redacted": false,
+          "sourcePath": "/reviews/carlos-hurtado-2566131.json"
+        },
+        {
+          "key": "9b6380e544f9aa32",
+          "text": "[name hidden] is great. The class is not difficult if you pay attention and exams were a direct reflection of what we learned in class. He was accessible outside of class and helpful if you need help. Your grade is largely exam based (roughly 50%) with 1/4 of the grade coming from a lenient final project. Would recommend.",
+          "date": "2025-12-03",
+          "course": "BUAD202",
+          "redacted": true,
+          "sourcePath": "/reviews/carlos-hurtado-2566131.json"
+        },
+        {
+          "key": "d61f0b61a98f28a1",
+          "text": "Not only is [name hidden] super funny, but he truly cares about his students. The lectures can be confusing at times, but if you review the material outside of class, you'll be set up for success. His exams are fair, and his study guides tell you exactly what you need to know.",
+          "date": "2025-12-03",
+          "course": "BUAD202",
+          "redacted": true,
+          "sourcePath": "/reviews/carlos-hurtado-2566131.json"
+        },
+        {
+          "key": "389f29c77744b10e",
+          "text": "[name hidden] is a character and a great guy. He may not be the absolute best teacher in the world, but he will make sure everyone succeeds. The practices are EXACTLY the same as the quizzes/exams and as long as you pay attention in class this class will be extremely easy. you also get a cheat sheet and a premade excel cheat sheet for exams",
+          "date": "2026-05-10",
+          "course": "BUAD202",
+          "redacted": true,
+          "sourcePath": "/reviews/carlos-hurtado-2566131.json"
+        },
+        {
+          "key": "88e61d709b592f2c",
+          "text": "He is the best professor in B-school. This is an easy class, and he is pretty enthusiastic and easygoing. Take his class if you can!",
+          "date": "2025-12-03",
+          "course": "BUAD202",
+          "redacted": false,
+          "sourcePath": "/reviews/carlos-hurtado-2566131.json"
+        }
+      ]
+    },
+    {
+      "professorId": "racheal-cooper-2709313",
+      "reviews": [
+        {
+          "key": "18dd67a624513c20",
+          "text": "She is recently getting a bad rep. Yes, this class is hard if you don't have it in you to study a lot during the week but I think an A is very achievable for everyone which is why I still think shes a great option and a lot nicer than gets credit for.",
+          "date": "2025-05-13",
+          "course": "MATH211",
+          "redacted": false,
+          "sourcePath": "/reviews/racheal-cooper-2709313.json"
+        },
+        {
+          "key": "150517d24687f76a",
+          "text": "Dr. [name hidden] has some bad rep but I really enjoyed her teaching style. She is willing to help, and is always transparent with you. Due to having many classes, she will recommend you get a tutor, but that means ONE ON ONE help so it's nice. If you study regularly, are attentive, and do all the work you will be fine.",
+          "date": "2025-05-21",
+          "course": "MATH211",
+          "redacted": true,
+          "sourcePath": "/reviews/racheal-cooper-2709313.json"
+        },
+        {
+          "key": "1635e229e505b6d5",
+          "text": "For the most part, Dr. [name hidden]'s class wasn't bad. If you put the time into understanding the material you should get an A. If Calculus doesn't come naturally to you, it might be a little bit harder because she moves quickly, but it is still manageable. One downside is that Dr. [name hidden] doesn't respond quickly outside of class, so be ready to wait.",
+          "date": "2024-12-20",
+          "course": "MATH212",
+          "redacted": true,
+          "sourcePath": "/reviews/racheal-cooper-2709313.json"
+        },
+        {
+          "key": "0f8c864ce86829d4",
+          "text": "Cares so much about her students and genuinely wants you to succeed. Will always do what she can to help you. Pretty easy class but this was a lower-level class. Def recommend her. Also she is just a great person and has a good teaching style. Mastery based grading system def takes weight off your shoulders and helps u focus on ur work not grade",
+          "date": "2023-09-19",
+          "course": "MATH212",
+          "redacted": false,
+          "sourcePath": "/reviews/racheal-cooper-2709313.json"
+        },
+        {
+          "key": "5bf08e137432ddc5",
+          "text": "Professor [name hidden] wants her students to succeed and get good grades - she does no grading grading system (you just have to take a question per each unit on the test and once you pass all of them you don't have to take the final). She provides good videos before her lectures and gives many mental health days. Easy A in calc with minimal work",
+          "date": "2024-11-04",
+          "course": "MATH211",
+          "redacted": true,
+          "sourcePath": "/reviews/racheal-cooper-2709313.json"
+        },
+        {
+          "key": "643c4b8d776f4fda",
+          "text": "Dr. [name hidden] is by far the best professor I've had at UR. She breaks down concepts to ensure everyone from all levels of mathematics can understand. I highly recommend any of her classes, but they fill up fast. \n-Uses mastery-based grading system\n-Has mental-health days built into class schedule",
+          "date": "2023-08-28",
+          "course": "MATH212",
+          "redacted": true,
+          "sourcePath": "/reviews/racheal-cooper-2709313.json"
+        }
+      ]
+    },
+    {
+      "professorId": "emily-boone-525729",
+      "reviews": [
+        {
+          "key": "7b11304e7507f6b2",
+          "text": "She is clear about her expectations, classes can be a little boring but she does activities to make it more interesting. Projects were fun and she is a fair grader.",
+          "date": "2026-03-29",
+          "course": "ENVR201",
+          "redacted": false,
+          "sourcePath": "/reviews/emily-boone-525729.json"
+        },
+        {
+          "key": "c34ec5ac69161e17",
+          "text": "very easy class, spent very little time outside of class on work. class can be boring and quizzes are sometimes confusing, would just recommend taking notes. you can use cheat sheet on the quizzes",
+          "date": "2025-12-19",
+          "course": "ENVR201",
+          "redacted": false,
+          "sourcePath": "/reviews/emily-boone-525729.json"
+        },
+        {
+          "key": "3f365a2a801bc7ea",
+          "text": "I've taken two of her classes and loved both! She's super chill, as long as you take good notes and don't forget the online textbook homework you should do well, and she's always willing to talk about things outside of class. I don't agree at all with people saying her tests are hard, the application is usually related to in-class examples.",
+          "date": "2025-11-07",
+          "course": "BIO199",
+          "redacted": false,
+          "sourcePath": "/reviews/emily-boone-525729.json"
+        },
+        {
+          "key": "957edd1c2e76f936",
+          "text": "This class was super chill and [name hidden] is very nice. On 2/3  of the quizzes (basically tests), we were allowed a cheat sheet, and they were pretty straightforward anyway. Lecture heavy, but if you take good notes you should be totally fine. Not much homework and no final just a final project and v short presentation.",
+          "date": "2025-12-04",
+          "course": "ENVR201",
+          "redacted": true,
+          "sourcePath": "/reviews/emily-boone-525729.json"
+        },
+        {
+          "key": "226f0bad4e6c69fa",
+          "text": "[name hidden] is amazing!  There are always chances for extra credit after the exam which will increase your grade. She is very clear on her criteria. There is not much work to do outside of the classroom. People say her exams are hard but I disagree. They are open note, and are more about your overall understanding.",
+          "date": "2025-05-21",
+          "course": "BIO199",
+          "redacted": true,
+          "sourcePath": "/reviews/emily-boone-525729.json"
+        },
+        {
+          "key": "2f3376c3372cf7f3",
+          "text": "Prof. [name hidden] is super sweet and very knowledgeable on Environmental Studies. There were some long textbook homework's, but easy work. Her exams are a bit tricky, but she let us use a page of notes while taking them to back up your answers. The final project was a lot of fun as a graphic designer conveying a message about environmental sustainability",
+          "date": "2026-01-28",
+          "course": "ENVR201",
+          "redacted": true,
+          "sourcePath": "/reviews/emily-boone-525729.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import type {Period, Review} from './model';
 
-export const courseKey = (course: string) => course.trim().toUpperCase().replace(/\s+/g, '');
+export const courseKey = (course: string) => course.trim().toUpperCase().replace(/[\s-]+/g, '');
 export const inPeriod = (rows: Review[], period: Period) => period === 'all' ? rows : rows.filter(r => r.year >= 2022 && r.year <= 2026);
 
 export function summarizeReviews(rows: Review[]) {
