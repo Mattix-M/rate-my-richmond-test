@@ -56,7 +56,7 @@ export function Statistics() {
     </ResearchSection>
     <ResearchSection number="04" title="Who’s more forgiving about hard classes?">
       <p className="period-note">{periodLabel} · Reviews reporting difficulty 4 or 5</p>
-      <p className="plain-english">Poli Sci: {fmt(poliSciPositive, 1)}%. Math: {fmt(mathPositive, 1)}%. Bit of a fucking gap.</p>
+      <p className="plain-english">Poli Sci: {fmt(poliSciPositive, 1)}%. Math: {fmt(mathPositive, 1)}%. Bit of a gap.</p>
       <div className="hard-review-chart" role="group" aria-label="Share of hard-class reviews giving quality four or five out of five"><h3>Hard reviews that still give high quality ratings</h3>{hardDepartments.map(d => {const positive = d.distribution[3] + d.distribution[4]; const pct = positive / d.reviews * 100; return <div className="hard-review-row" key={d.department}><div><b>{d.department}</b><small>{positive} of {d.reviews} reviews</small></div><div className="hard-review-track" aria-hidden="true"><i style={{width: `${pct}%`}}/></div><strong>{fmt(pct, 1)}%</strong></div>;})}</div>
       <details className="method"><summary>Other departments and the exact counts</summary><p>This compares reviews reporting difficulty 4 or 5. The percentage is the share also giving quality 4 or 5. The gap is real in this archive; it doesn’t tell us whether students are more forgiving or whether their courses and experiences differ.</p><div className="table-scroll"><table><caption className="sr-only">Quality ratings among reviews reporting difficulty four or five</caption><thead><tr><th>Department</th><th>Quality 4–5</th><th>Hard reviews</th></tr></thead><tbody>{research.hardDepartments.filter(d => d.reviews >= (period === 'all' ? 50 : 20)).sort((a, b) => (b.distribution[3] + b.distribution[4]) / b.reviews - (a.distribution[3] + a.distribution[4]) / a.reviews).map(d => <tr key={d.department}><td>{d.department}</td><td>{fmt((d.distribution[3] + d.distribution[4]) / d.reviews * 100, 1)}%</td><td>{d.reviews}</td></tr>)}</tbody></table></div><p>Departments with at least {period === 'all' ? 50 : 20} hard reviews in this period. Department labels come from the review export.</p></details>
     </ResearchSection>
@@ -83,7 +83,7 @@ export function Statistics() {
     </ResearchSection>
     <ResearchSection number="08" title="Are we getting bitchier?">
       <p className="period-note">All time only · Raw yearly averages</p>
-      <p className="plain-english">Apparently the reviews have gotten nicer. Could’ve fooled the group chat.</p>
+      <p className="plain-english">No, we are consistent.</p>
       <SeriesChart rows={data.timeTrend} x="review_year" series={[{key: 'mean_quality', name: 'Quality', color: '#000066'}, {key: 'mean_difficulty', name: 'Difficulty', color: '#990000'}]}/>
       <details className="method"><summary>What the yearly trend can tell us</summary><p>Each point is a raw yearly average. The mix of professors, courses and reviewers changes, so this doesn’t track the same students becoming nicer. 2026 is partial. This historical chart stays all-time when the page period changes.</p></details>
     </ResearchSection>
@@ -95,7 +95,7 @@ export function Statistics() {
     </ResearchSection>
     <ResearchSection number="10" title="Which classes did we rate the hardest?">
       <p className="period-note">{periodLabel} · Named courses with at least 30 reviews in this period</p>
-      <p className="plain-english">{hardest[0].code}. {hardest[0].code === 'ECON271' ? 'This is not helping my math/stats agenda.' : 'That’s the top reported difficulty in this list.'}</p>
+      <p className="plain-english">{hardest[0].code === 'ECON271' ? 'Microtheory. I personally disagree, but alas.' : `${hardest[0].code}. That’s the top reported difficulty in this list.`}</p>
       <ol className="one-star-courses difficulty-courses">{hardest.map(c => {const s = c[period]!; return <li key={c.code}><Link href={`/courses/?course=${c.code}&period=${period}`}><div className="one-star-course-name"><b>{c.code}</b><span>{c.title}</span></div><div className="one-star-course-result"><strong>{fmt(s.difficulty)}<small> / 5</small></strong><span>{s.reviews} reviews</span></div><div className="one-star-track" aria-hidden="true"><i style={{width: `${s.difficulty / 5 * 100}%`}}/></div></Link></li>;})}</ol>
       <details className="method"><summary>What this ranking means</summary><p>Raw average difficulty from 1 to 5, with at least 30 reviews in the selected period. The list covers exact course codes with matched catalog names and excludes generic seminar/special-topic codes. It is not a ranking of every course offered, and the professors, years and reviewers are mixed together.</p></details>
     </ResearchSection>
