@@ -43,6 +43,5 @@ export default function Page() {
         <p>The Robins comparison controls for course level and review year. Its confidence interval shows the model’s uncertainty, and its p-value tests compatibility with no difference. It still describes self-selected reviews; it does not prove that attending one school causes anything.</p>
       </details>
     </section>
-    <section className="section"><h2>A note on privacy.</h2><p>No account is needed. Saved courses and daily game progress stay in your browser. The site is unofficial and does not collect professor reviews directly.</p><p>Website votes and feedback are saved privately. No name or email is requested. A random browser cookie remembers your vote and helps limit repeat submissions; it lasts up to six months. We don’t add your IP address to the feedback record. The hosting provider may keep its own technical logs. Please leave personal information out of your message.</p></section>
   </div>;
 }

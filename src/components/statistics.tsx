@@ -31,7 +31,7 @@ export function Statistics() {
   const hardest = rankDifficultyCourses(courses, period).slice(0, 5);
   return <>
     <section className="page-heading"><div><div className="eyebrow">The statistics</div><h1>A few reasonable questions.</h1><p>I’m very extra.</p></div><PeriodToggle/></section>
-    <nav className="notebook-index" aria-label="Statistics questions">{[['01', 'Most-reviewed class'], ['02', 'One-star reviews'], ['03', 'Harder = lower quality ratings?'], ['04', 'Who forgives hard classes?'], ['05', 'Which classes are GOATED?'], ['06', 'Robins vs. Gotty'], ['07', 'When do we post?'], ['08', 'Are we getting bitchier?'], ['09', 'Intro vs. advanced classes'], ['10', 'Highest reported difficulty']].map(([n, label]) => <a key={n} href={`#question-${n}`}>{n} · {label}</a>)}</nav>
+    <nav className="notebook-index" aria-label="Statistics questions">{[['01', 'Most-reviewed class'], ['02', 'One-star reviews'], ['03', 'Harder = lower ratings?'], ['04', 'Who forgives hard classes?'], ['05', 'Goated classes'], ['06', 'Robins vs. Gotty'], ['07', 'When do people post?'], ['08', 'Are we getting bitchier?'], ['09', 'Intro vs. advanced classes'], ['10', 'Highest reported difficulty']].map(([n, label]) => <a key={n} href={`#question-${n}`}>{n} · {label}</a>)}</nav>
     <p className="statistics-context">Anonymous and probably biased. Use your brain.</p>
     <ResearchSection number="01" title="What is the most reviewed class?">
       <p className="period-note">{periodLabel} · Most-reviewed named courses</p>
@@ -60,24 +60,24 @@ export function Statistics() {
       <div className="hard-review-chart" role="group" aria-label="Share of hard-class reviews giving quality four or five out of five"><h3>Hard reviews that still give high quality ratings</h3>{hardDepartments.map(d => {const positive = d.distribution[3] + d.distribution[4]; const pct = positive / d.reviews * 100; return <div className="hard-review-row" key={d.department}><div><b>{d.department}</b><small>{positive} of {d.reviews} reviews</small></div><div className="hard-review-track" aria-hidden="true"><i style={{width: `${pct}%`}}/></div><strong>{fmt(pct, 1)}%</strong></div>;})}</div>
       <details className="method"><summary>Other departments and the exact counts</summary><p>This compares reviews reporting difficulty 4 or 5. The percentage is the share also giving quality 4 or 5. The gap is real in this archive; it doesn’t tell us whether students are more forgiving or whether their courses and experiences differ.</p><div className="table-scroll"><table><caption className="sr-only">Quality ratings among reviews reporting difficulty four or five</caption><thead><tr><th>Department</th><th>Quality 4–5</th><th>Hard reviews</th></tr></thead><tbody>{research.hardDepartments.filter(d => d.reviews >= (period === 'all' ? 50 : 20)).sort((a, b) => (b.distribution[3] + b.distribution[4]) / b.reviews - (a.distribution[3] + a.distribution[4]) / a.reviews).map(d => <tr key={d.department}><td>{d.department}</td><td>{fmt((d.distribution[3] + d.distribution[4]) / d.reviews * 100, 1)}%</td><td>{d.reviews}</td></tr>)}</tbody></table></div><p>Departments with at least {period === 'all' ? 50 : 20} hard reviews in this period. Department labels come from the review export.</p></details>
     </ResearchSection>
-    <ResearchSection number="05" title="Which classes are GOATED?">
+    <ResearchSection number="05" title="Which classes are Goated?">
       <p className="period-note">{periodLabel} · Zero one-star reviews · At least 30 reviews in this period</p>
-      <p className="plain-english">By GOATED, I mean no one-star reviews. If I’m picking my actual GOATED classes: whichever makes you happy, man.</p>
+      <p className="plain-english">By Goated, I mean no one-star reviews. Personally, a goated class is one you actually enjoyed. Don’t let a one-star review talk you out of it. {period === 'all' ? 'But apparently Intensive Intermediate French is where it’s at.' : 'The all-time reviews say Intensive Intermediate French is where it’s at.'}</p>
       <div className="positive-course-examples">{positiveExamples.map(c => {const s = c[period]; return <article key={c.code}><Link href={`/courses/?course=${c.code}&period=${period}`}><span className="eyebrow">{c.code}</span><h3>{c.title}</h3></Link>{s ? <><strong>{s.distribution[0]}<span> of {s.reviews}</span></strong><p>reviews gave one star</p><dl><div><dt>Average quality</dt><dd>{fmt(s.quality)} / 5</dd></div><div><dt>Professors</dt><dd>{s.professors}</dd></div></dl></> : <p>No reviews in this period.</p>}</article>;})}</div>
       {!positiveExamples.length && <p className="notice">No named courses meet both conditions in this period.</p>}
       <details className="method"><summary>What qualifies?</summary><p>Every named course in the eligible pool with 30+ reviews in this period and zero quality scores of 1/5. That doesn’t mean every review is five stars.</p></details>
     </ResearchSection>
     <ResearchSection number="06" title="Robins vs. Gotty">
       <p className="period-note">{periodLabel} · Average reported difficulty</p>
-      <p className="plain-english">An all-time debate. Basically LeBron vs. MJ.</p>
+      <p className="plain-english">A classic debate. And apparently Jepson is harder than both.</p>
       <SchoolComparison/>
-      <p className="aside-copy">Apparently Jepson comes out just above both. I think Robins and Gotty can agree that this is simply not true.</p>
+      <p className="aside-copy">I think Robins and Gotty can agree that this is simply not true.</p>
       <p className="author-backstory">Personal bias: I still think my math/stats classes are probably harder anyway.</p>
       <details className="method"><summary>Check it with Math & CS included</summary><SchoolComparison broad/></details>
     </ResearchSection>
-    <ResearchSection number="07" title="When do we suddenly have all these opinions?">
+    <ResearchSection number="07" title="When do people write the reviews?">
       <p className="period-note">{research.monthlyYears} · Complete calendar years</p>
-      <p className="plain-english">{fmt(peakShare, 1)}% of reviews come from April, November and December. Three months. We had shit to say.</p>
+      <p className="plain-english">{fmt(peakShare, 1)}% of reviews come from April, November and December. Around the end of the semester. Makes sense. But the September reviews? Bro, the class just started.</p>
       <div className="posting-months" role="group" aria-label={`Review counts by month, ${research.monthlyYears}`}>{research.months.map(m => <div key={m.month}><span>{['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][m.month - 1]}</span><div aria-hidden="true"><i style={{width: `${m.reviews / maxMonth * 100}%`}}/></div><b>{fmt(m.reviews, 0)}</b></div>)}</div>
       <details className="method"><summary>Dates and counts</summary><p>{fmt(research.peakMonthReviews, 0)} of {fmt(research.monthlyReviews, 0)} reviews fall in those three months. Partial boundary years are excluded so the scrape date doesn’t distort the pattern. Posting dates don’t establish why people posted.</p></details>
     </ResearchSection>
