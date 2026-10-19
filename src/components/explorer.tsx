@@ -1,7 +1,7 @@
 'use client';
 import {useMemo, useState, useCallback, useEffect} from 'react';
 import Link from 'next/link';
-import {Search, ArrowUpRight} from 'lucide-react';
+import {Search} from 'lucide-react';
 import {ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, ZAxis} from 'recharts';
 import {data, fmt, departments, groups, alphaText, profURL, Professor, Metrics} from '@/lib/model';
 import {usePeriod} from './shell';
@@ -22,8 +22,8 @@ export function ProfessorScatter({points, search = ''}: {points: Point[]; search
       <div className="quadrant q3">Lower ratings · lower difficulty</div><div className="quadrant q4">Lower ratings · higher difficulty</div>
       <ResponsiveContainer width="100%" height="100%" minWidth={0}><ScatterChart margin={{top: 30, right: 22, bottom: 36, left: 2}}>
         <CartesianGrid stroke="#e8e7ed" strokeDasharray="2 4"/>
-        <XAxis type="number" dataKey="difficulty" domain={[1, 5]} ticks={[1, 2, 3, 4, 5]} name="Average difficulty" tickLine={false} axisLine={false} label={{value: 'Reported difficulty →', position: 'bottom', offset: 15}}/>
-        <YAxis type="number" dataKey="quality" domain={[1, 5]} ticks={[1, 2, 3, 4, 5]} name="Average quality" width={48} tickLine={false} axisLine={false} label={{value: 'Average quality →', angle: -90, position: 'insideLeft', offset: 8}}/>
+        <XAxis type="number" dataKey="difficulty" domain={[1, 5]} ticks={[1, 2, 3, 4, 5]} name="Average difficulty" tickLine={false} axisLine={false} label={{value: 'Reported difficulty', position: 'bottom', offset: 15}}/>
+        <YAxis type="number" dataKey="quality" domain={[1, 5]} ticks={[1, 2, 3, 4, 5]} name="Average quality" width={48} tickLine={false} axisLine={false} label={{value: 'Average quality', angle: -90, position: 'insideLeft', offset: 8}}/>
         <ZAxis type="number" dataKey="reviews" range={[65, 230]} domain={[1, 200]}/>
         <ReferenceLine x={data.means[period].difficulty} stroke="#aaaab9" strokeDasharray="5 5"/><ReferenceLine y={data.means[period].quality} stroke="#aaaab9" strokeDasharray="5 5"/>
         <Tooltip cursor={{strokeDasharray: '3 3'}} content={({active, payload}) => {
@@ -36,7 +36,7 @@ export function ProfessorScatter({points, search = ''}: {points: Point[]; search
       </ScatterChart></ResponsiveContainer>
     </div>
     <div className="chart-caption"><span><i className="dot"/> One dot = one professor · Size = review count</span><span>Dashed lines = Richmond review averages</span></div>
-    {chosen && <div className="selected-professor" aria-live="polite"><div><strong>{chosen.name}</strong><p>{chosen.department} · {chosen.reviews} reviews</p><p>Quality {fmt(chosen.quality)} · Difficulty {fmt(chosen.difficulty)}</p></div><Link className="button" href={profURL(chosen)}>View professor →</Link><CompareButton id={chosen.id} name={chosen.name}/></div>}
+    {chosen && <div className="selected-professor" aria-live="polite"><div><strong>{chosen.name}</strong><p>{chosen.department} · {chosen.reviews} reviews</p><p>Quality {fmt(chosen.quality)} · Difficulty {fmt(chosen.difficulty)}</p></div><Link className="button" href={profURL(chosen)}>View professor</Link><CompareButton id={chosen.id} name={chosen.name}/></div>}
     {matches.length > 0 && <div className="search-matches">Matching professors: {matches.slice(0, 8).map(p => <button className="text-button" key={p.id} onClick={() => setSelectedId(p.id)}>{p.name}</button>)}</div>}
     <p className="micro">Both scales run from 1 to 5. Tap or click a dot for details. You can also find names in the <Link href="/professors/">professor list</Link>.</p>
     {points.length === 0 && <p className="empty">No professors match these filters. Try fewer restrictions.</p>}
@@ -55,16 +55,16 @@ export function ProfessorTable({points, sort = 'best'}: {points: Point[]; sort?:
   });
   return <>
     <div className="professor-cards">{sorted.slice(0, limit).map(p => <article className="professor-card" key={p.id}>
-      <Link className="prof-link" href={profURL(p)}>{p.name}<ArrowUpRight size={18}/></Link>
+      <Link className="prof-link" href={profURL(p)}>{p.name}</Link>
       <p>{p.department} · {p.reviews} {p.reviews === 1 ? 'review' : 'reviews'}</p>
       <dl className="professor-card-metrics"><div><dt>Quality</dt><dd>{fmt(p.quality, 1)}<small>/5</small></dd></div><div><dt>Difficulty</dt><dd>{fmt(p.difficulty, 1)}<small>/5</small></dd></div></dl>
-      {p.reviews < 5 && <p className="sample-note">Small sample. Read the reviews before deciding.</p>}
+      {p.reviews < 5 && <p className="sample-note">Only a few reviews. Don’t read too much into the average.</p>}
       <details className="card-extra"><summary>More numbers</summary><dl><div><dt>Adjusted quality</dt><dd>{fmt(p.bayesianQuality)}</dd></div><div><dt>Adjusted difficulty</dt><dd>{fmt(p.bayesianDifficulty)}</dd></div>{p.alpha != null && <div><dt>Alpha</dt><dd>{fmt(p.alpha)}</dd></div>}<div><dt>Rating spread (SD)</dt><dd>{fmt(p.polarization)}</dd></div></dl>{p.bayesianQuality == null && <p>No eligible adjusted score in this period. The original ratings are still here.</p>}</details>
       <CompareButton id={p.id} name={p.name}/>
     </article>)}</div>
     <div className="table-scroll professor-table"><table><thead><tr><th>Professor</th><th>Quality</th><th>Difficulty</th><th>Reviews</th><th>Adjusted quality</th><th>{field === 'alpha' ? 'Relative rating (Alpha)' : field === 'polarization' ? 'Rating spread (SD)' : 'Adjusted difficulty'}</th><th>Compare</th></tr></thead><tbody>
       {sorted.slice(0, limit).map(p => <tr key={p.id}>
-        <td><Link className="prof-link" href={profURL(p)}>{p.name}<ArrowUpRight size={15}/></Link><span className="subcell">{p.department}</span></td>
+        <td><Link className="prof-link" href={profURL(p)}>{p.name}</Link><span className="subcell">{p.department}</span></td>
         <td data-label="Quality"><span className="rating">{fmt(p.quality)}</span></td><td data-label="Difficulty">{fmt(p.difficulty)}</td><td data-label="Reviews">{fmt(p.reviews, 0)}</td><td data-label="Adjusted quality">{fmt(p.bayesianQuality)}</td>
         <td data-label={field === 'alpha' ? 'Relative rating' : field === 'polarization' ? 'Rating spread' : 'Adjusted difficulty'}>{fmt(field === 'alpha' ? p.alpha : field === 'polarization' ? p.polarization : p.bayesianDifficulty)}</td>
         <td><CompareButton id={p.id} name={p.name}/></td>
@@ -72,7 +72,7 @@ export function ProfessorTable({points, sort = 'best'}: {points: Point[]; sort?:
     </tbody></table></div>
     {sorted.length === 0 && <p className="empty">No professors match. Try clearing a filter or lowering the minimum review count.</p>}
     {sorted.length > limit && <button className="button" onClick={() => setLimit(limit + 40)}>Show 40 more</button>}
-    <p className="micro">Quality and difficulty sorts use scores adjusted for review count. Missing adjusted scores appear last. <Link href="/about/#methodology">How ratings work ↗</Link></p>
+    <p className="micro">Quality and difficulty sorts use scores adjusted for review count. Missing adjusted scores appear last. <Link href="/about/#methodology">How ratings work</Link></p>
     {(sort === 'alpha' || sort === 'lowAlpha') && <p className="micro">{alphaText}</p>}
   </>;
 }
@@ -117,7 +117,7 @@ export function Explorer({fixedDepartment, table = false}: {fixedDepartment?: st
       {table && <label><span>Sort by</span><select aria-label="Sort professors" value={sort} onChange={e => setSort(e.target.value)}>{sortOptions.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>}
     </div>
     <div className="results-meta"><span role="status">{fmt(filtered.length, 0)} {filtered.length === 1 ? 'professor' : 'professors'} · {period === 'all' ? 'All time' : '2022–2026'} · {min}+ reviews</span><button onClick={() => {setSearch(''); setDepartment(fixedDepartment || ''); setGroup(''); setMin(null); setSort('best');}}>Reset filters</button></div>
-    {table && <p className="search-help">Everyone with a review is searchable. Rankings still require more evidence.</p>}
+    {table && <p className="search-help">Search includes everyone with at least one review.</p>}
     {table && search.trim() && filtered.length === 0 && <button className="button" onClick={() => {setPeriod('all'); setMin(1); setDepartment(fixedDepartment || ''); setGroup('');}}>Search all time with 1+ reviews</button>}
     {table ? <ProfessorTable points={filtered} sort={sort}/> : <ProfessorScatter points={points} search={search}/>}
   </div>;

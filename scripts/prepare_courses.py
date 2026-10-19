@@ -36,12 +36,18 @@ def generate():
             if re.fullmatch(r'[A-Z]{2,5}\d{3}[A-Z]?', code):
                 courses[code].append((professor['id'], row))
     output = []
+    verified_titles = json.loads((ROOT / 'src/lib/course-titles.json').read_text())
+    catalog = json.loads((ROOT / 'src/lib/catalog-titles.json').read_text())
     for code, entries in sorted(courses.items()):
         rows = [r for _, r in entries]
         by_professor = collections.defaultdict(list)
         for ident, row in entries:
             by_professor[ident].append(row)
         output.append({
+            'titles': list(dict.fromkeys(([verified_titles[code]['title']] if verified_titles.get(code, {}).get('title') else [])
+                                        + catalog['courses'].get(code, {}).get('titles', []))),
+            'titleSourceUrl': verified_titles[code]['sourceUrl'] if verified_titles.get(code, {}).get('title')
+                              else catalog['meta']['sourceUrl'] if code in catalog['courses'] else None,
             'code': code, 'subject': re.match(r'[A-Z]+', code).group(),
             'reviewDepartment': sorted(collections.Counter(prof_departments[ident] for ident, _ in entries).items(), key=lambda t: (-t[1], t[0]))[0][0],
             'all': summary(rows), 'recent': summary([r for r in rows if 2022 <= r['year'] <= 2026]),
@@ -52,6 +58,8 @@ def generate():
             'latestReview': max(v['latest'] for v in evidence.values()), 'courseCount': len(output),
             'source': 'Existing anonymous Rate My Professors review archive',
             'normalization': 'Uppercase; remove spaces and hyphens; require a 2–5 letter subject and 3-digit number. No inferred aliases.'}
+    meta['namedCourseCount'] = sum(bool(c['titles']) for c in output)
+    meta['titleSource'] = catalog['meta']
     # Exclude generic/special-topic labels and require enough evidence for the game.
     titles = json.loads((ROOT / 'src/lib/course-titles.json').read_text())
     for code, entry in titles.items():

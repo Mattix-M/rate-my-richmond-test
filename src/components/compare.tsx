@@ -77,7 +77,7 @@ export function Compare() {
             <RatingDistribution counts={summary.distribution.map(r => r.quality)}/>
             <h3>Common review tags</h3><ul className="tag-counts">{summary.tags.slice(0, 5).map(t => <li key={t.tag}>{t.tag} <span>{t.count}/{summary.count}</span></li>)}</ul>{!summary.tags.length && <p className="micro">No tags in these reviews.</p>}
             <h3>Reviewed courses</h3><ul className="course-counts">{summary.courses.slice(0, 5).map(c => <li key={c.course}>{c.course}<span>{c.count} reviews</span></li>)}</ul>
-            <Link className="button" href={`${profURL(p)}?period=${period}${selectedCourse?'&course='+selectedCourse:''}#reviews`}>Read reviews →</Link>
+            <Link className="button" href={`${profURL(p)}?period=${period}${selectedCourse?'&course='+selectedCourse:''}#reviews`}>Read reviews</Link>
           </>}
         </article>;
       })}</div><p className="micro">Quality and difficulty are separate 1–5 review scores. Adjusted quality accounts for review count; it does not adjust for the specific course. Tags count reviews mentioning each tag.</p>

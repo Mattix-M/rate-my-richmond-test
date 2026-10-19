@@ -31,5 +31,5 @@ export function ComparisonTray() {
     return () => document.body.classList.remove('has-comparison');
   }, [show]);
   if (!show) return null;
-  return <aside className="comparison-tray" aria-label="Selected professors"><span aria-live="polite">{ids.length} of 3 selected</span><Link className="button dark" href={`/compare/?ids=${ids.join(',')}`}>Compare professors →</Link><button type="button" className="text-button" onClick={() => setIds([])}>Clear</button></aside>;
+  return <aside className="comparison-tray" aria-label="Selected professors"><span aria-live="polite">{ids.length} of 3 selected</span><Link className="button dark" href={`/compare/?ids=${ids.join(',')}`}>Compare professors</Link><button type="button" className="text-button" onClick={() => setIds([])}>Clear</button></aside>;
 }

@@ -4,7 +4,7 @@ export const metadata = {title: 'About'};
 
 export default function Page() {
   return <div className="about">
-    <section className="page-heading"><div>
+    <section className="page-heading centered-heading"><div>
       <div className="eyebrow">About this thing</div>
       <h1>Why does this exist?</h1>
     </div></section>
@@ -17,22 +17,22 @@ export default function Page() {
 
     <section id="methodology" className="section">
       <h2>How the numbers work.</h2>
-      <p className="method-intro">Two ratings. One review count. The rest is context.</p>
+      <p className="method-intro">The short version.</p>
       <div className="method-summary">
         <article><span>01</span><h3>Quality ≠ difficulty</h3><p>Both run from 1 to 5. One is how students rated the experience; the other is how hard they said it was. A hard class can get a great rating.</p></article>
         <article><span>02</span><h3>Count the reviews</h3><p>A 5.0 from one person is one person’s opinion. Everyone is searchable, but adjusted rankings need at least 20 all-time reviews, or 15 recent reviews.</p></article>
         <article><span>03</span><h3>Adjusted ≠ unbiased</h3><p>Adjusted scores pull small samples toward the campus average. Alpha compares ratings with what a model expected. Neither can fix who chose to post.</p></article>
       </div>
-      <p className="notice">Use this to find reviews worth reading. Anonymous ratings are context, not a verdict on a professor.</p>
+      <p className="notice">Read a few reviews. A number on its own doesn’t tell you much.</p>
       <details className="method methodology-deep"><summary>Show the calculations and methodology</summary>
       <div className="methodology-grid">
-        <article><h3>Where this came from</h3><p>{data.meta.reviews.toLocaleString('en-US')} anonymous Rate My Professors reviews from 2002–2026. People choose whether to post, so this is not a scientific survey or an official evaluation. It is a large pile of student opinions.</p></article>
+        <article><h3>Where this came from</h3><p>{data.meta.reviews.toLocaleString('en-US')} anonymous Rate My Professors reviews from 2002–2026. People choose whether to post, so this is not a scientific survey or an official evaluation. It’s student opinions. Treat it that way.</p></article>
         <article><h3>The one-review problem</h3><p>A single five-star review should not make someone number one. The all-time rankings only include the 219 professors with at least 20 reviews, then pull extreme scores toward the Richmond average. More reviews means less pulling.</p></article>
-        <article><h3>What “recent” means</h3><p>Recent means 2022–2026. It requires at least 15 reviews and uses a lighter adjustment worth 10 average reviews. Also, 2026 is still happening, which feels obvious but apparently needs to be written down.</p></article>
-        <article><h3>The Alpha thing</h3><p>Alpha is a custom score for ratings compared with what the model expected after difficulty, department, and year. Positive means higher than expected. It sounds more dramatic than it is, and it is not an official RMP score.</p></article>
+        <article><h3>What “recent” means</h3><p>Recent means 2022–2026. It requires at least 15 reviews and uses a lighter adjustment worth 10 average reviews. 2026 is only a partial year.</p></article>
+        <article><h3>The Alpha thing</h3><p>Alpha is a custom score for ratings compared with what the model expected after difficulty, department, and year. Positive means higher than expected. It is not an official RMP score.</p></article>
         <article><h3>When students disagree</h3><p>The disagreement score looks at how spread out the quality ratings are. A high number means students had very different experiences. It does not automatically mean the professor was bad.</p></article>
         <article><h3>Departments and schools</h3><p>The department and school averages come from the supplied summaries. Economics stays separate from Robins. “Broad STEM” means Gottwald plus Math &amp; CS. Review-weighted averages give every review equal weight; professor-weighted averages give every professor equal weight.</p></article>
-        <article><h3>What we do not have</h3><p>Some analyses were never supplied, including recent Alpha and recent department summaries. I am not making numbers up to fill the space. If the data is missing, the site says so.</p></article>
+        <article><h3>What we do not have</h3><p>Some analyses were never supplied, including recent Alpha and recent department summaries. If we don’t have the data, we don’t show a number.</p></article>
         <article><h3>Names and reviews</h3><p>Fourteen documented name variations are combined so the same professor does not appear twice. The original review comments are shown exactly as posted. That does not make every claim in them true.</p></article>
         <article><h3>The extra comparisons</h3><p>The time comparison uses 2002–2021 versus 2022–2026, with at least 15 reviews in each. Course comparisons also need 15 reviews per course. They show what changed in the reviews, not why it changed.</p></article>
       </div>
@@ -43,6 +43,6 @@ export default function Page() {
         <p>The Robins comparison controls for course level and review year. Its confidence interval shows the model’s uncertainty, and its p-value tests compatibility with no difference. It still describes self-selected reviews; it does not prove that attending one school causes anything.</p>
       </details>
     </section>
-    <section className="section"><h2>A note on privacy.</h2><p>No account is needed. Saved courses and daily game progress stay in your browser. The site is unofficial and does not collect reviews directly.</p></section>
+    <section className="section"><h2>A note on privacy.</h2><p>No account is needed. Saved courses and daily game progress stay in your browser. The site is unofficial and does not collect professor reviews directly.</p><p>Website votes and feedback are saved privately. No name or email is requested. A random browser cookie remembers your vote and helps limit repeat submissions; it lasts up to six months. We don’t add your IP address to the feedback record. The hosting provider may keep its own technical logs. Please leave personal information out of your message.</p></section>
   </div>;
 }

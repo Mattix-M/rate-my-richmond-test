@@ -1,10 +1,10 @@
 # Rate My Richmond
 
-A local, static Next.js / TypeScript website exploring the supplied University of Richmond Rate My Professors dataset. No database, authentication, scraping, backend, or API keys.
+A Next.js / TypeScript website exploring the supplied University of Richmond Rate My Professors dataset. Ratings pages are prerendered. A small server endpoint saves private website votes and feedback in Vercel Blob. No accounts or live scraping.
 
 ## Run locally
 
-Requires Node.js 20.9+ and Python 3 (standard library only).
+Use Node.js 24 and Python 3 (standard library only).
 
 ```sh
 npm install
@@ -22,19 +22,29 @@ npm run typecheck
 npm run build
 ```
 
-`npm test` checks generated data against all source outputs and original comments. The build regenerates JSON and exports all pages to `out/`. To preview the production export:
+`npm test` checks generated data against all source outputs and original comments, plus game logic and feedback validation. The build regenerates JSON and prerenders the ratings pages. To preview the production build:
 
 ```sh
-python3 -m http.server 3001 --directory out
+npm start
 ```
 
-`next start` is not used with static exports.
+Open http://127.0.0.1:3001. A static file server cannot run the feedback endpoint.
 
 ## Deploy to Vercel
 
-Push this folder to a Git repository, import it into Vercel, and select the Next.js framework preset. Use `npm run build`, with output directory `out`. No environment variables or database setup are needed. Commit `data/`, `scripts/`, source files, and the lockfile. Python 3 must be available for the prebuild step; alternatively generate and commit the JSON locally, and override Vercel's build command with `npx next build`.
+Use the Next.js framework preset and its default output directory (clear any old `out` override). Use `npm run build`. Commit `data/`, `scripts/`, source files, and the lockfile. Python 3 must be available for the prebuild step; alternatively generate and commit the JSON locally, and override Vercel's build command with `npx next build`.
 
-A static export can also be hosted by any static web host. Nothing has been published from this local task.
+Connect a **private** Vercel Blob store and provide the server-only `BLOB_READ_WRITE_TOKEN` for each intended environment. Copy `.env.example` to `.env.local` for local feedback testing. Without the credential, the rest of the site works and feedback reports that it is unavailable. Never commit `.env.local` or use a `NEXT_PUBLIC_` token.
+
+## Private feedback
+
+Votes rate the website overall. A signed random browser cookie keeps one current vote per browser; changing the vote replaces the earlier one. This is not proof of one vote per person. No name, email, or IP address is added to stored feedback records. Hosting logs are separate.
+
+Messages are private, capped at 1,500 characters, one per minute, and ten per browser record. Votes have a three-second cooldown. Cross-origin posts and oversized or malformed bodies are rejected. Concurrent changes use conditional writes. Clearing cookies can bypass browser-based limits; these are basic spam controls.
+
+Read submissions in the private Blob store through the hosting dashboard. No public endpoint lists submissions or totals. Keep any downloads private.
+
+Vercel Hobby Blob has a free allowance and pauses on quota exhaustion; check the current plan limits before launch. This local UI revision has not been published.
 
 ## Data integrity
 
@@ -56,7 +66,7 @@ The original files in `data/` are never edited. `scripts/prepare_data.py` produc
 - The 27 department summaries cover only part of the review corpus. Their supplied professor counts can differ from alias-merged explorer counts. Academic mappings are only used where supplied.
 - Statistics-page course comparisons require at least 15 reviews per course. The course explorer shows raw means with explicit sample-size labels and a configurable review minimum. Earlier/recent changes use nonoverlapping 2002–2021 and 2022–2026 windows with at least 15 reviews in each. These are descriptive comparisons, not causal estimates.
 - Department standouts are clearly labeled subsets of eligible supplied / documented recent scores, distinct from the official campus-wide awards.
-- No building mapping, Unhinged taxonomy, accounts, submissions, or live scraping.
+- No building mapping, Unhinged taxonomy, accounts, new professor-review submissions, or live scraping.
 - Fonts use Georgia and system sans-serif. All data and review files are local.
 
 ## Implementation
@@ -74,3 +84,5 @@ Compare up to three professors, filter by shared course, and copy the comparison
 See [UPGRADE_NOTES.md](UPGRADE_NOTES.md) for the October 16 feature plan, implementation and data-access findings. New routes are `/courses/`, `/planner/`, `/games/` and `/data/`. URdle now uses five daily reported-difficulty matchups; see [URDLE.md](URDLE.md).
 
 `prepare_courses.py` builds the course index and review-date metadata from the existing archive. The planner runs locally in the browser with CSV/TSV imports or entered sections; it needs no private Richmond integration. There is no live RMP or official schedule feed. Dates, evidence counts and import limitations are visible in the interface.
+
+Course search accepts names, partial words, codes, and mixed queries. `catalog-titles.json` stores exact-code names extracted from Richmond's public 2026 catalog PDF; `course-titles.json` supplies the separately verified game names. The 583 name-matched archived codes cover 7,076 of 10,193 indexed reviews. Unmatched historical labels remain searchable by code. No subject aliases or course availability are inferred. `import_catalog_titles.py` is a manual owner tool requiring the public PDF, public CSV export, and the bundled Python with pdfplumber; it is not part of builds. The URdle pool is unchanged.

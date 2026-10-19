@@ -6,22 +6,23 @@
     "dev": "next dev --hostname 0.0.0.0",
     "prebuild": "python3 scripts/prepare_data.py && python3 scripts/prepare_insights.py && python3 scripts/prepare_courses.py",
     "build": "next build",
-    "start": "python3 -m http.server 3001 --directory out",
+    "start": "next start --hostname 127.0.0.1 --port 3001",
     "data": "python3 scripts/prepare_data.py && python3 scripts/prepare_insights.py && python3 scripts/prepare_courses.py",
-    "test": "python3 scripts/prepare_data.py --check && python3 scripts/prepare_insights.py --check && python3 scripts/prepare_urdle.py --check && python3 scripts/prepare_courses.py --check && node --test scripts/review-stats.test.mjs scripts/urdle.test.mjs scripts/planner.test.mjs scripts/daily-matchups.test.mjs",
+    "test": "python3 scripts/prepare_data.py --check && python3 scripts/prepare_insights.py --check && python3 scripts/prepare_urdle.py --check && python3 scripts/prepare_courses.py --check && node --test scripts/review-stats.test.mjs scripts/urdle.test.mjs scripts/planner.test.mjs scripts/daily-matchups.test.mjs scripts/feedback.test.mjs scripts/course-search.test.mjs scripts/statistics-research.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^16.0.0",
+    "@vercel/blob": "^2.8.2",
+    "lucide-react": "^0.577.0",
+    "next": "^16.4.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "recharts": "^3.0.0",
-    "lucide-react": "^0.577.0"
+    "recharts": "^3.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.9.0",
     "@types/node": "^24.0.0",
     "@types/react": "^19.2.0",
-    "@types/react-dom": "^19.2.0"
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.0"
   }
 }

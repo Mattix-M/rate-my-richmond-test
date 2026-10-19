@@ -3,8 +3,10 @@
 No regressions or original rankings are refitted. Run after prepare_data.py.
 """
 import collections
+import csv
 import json
 import pathlib
+import re
 import statistics
 import sys
 
@@ -16,6 +18,68 @@ def summarize(rows):
         'quality': statistics.mean(r['quality'] for r in rows),
         'difficulty': statistics.mean(r['difficulty'] for r in rows),
     }
+
+def research_summary(rows):
+    if not rows:
+        return None
+    return {**summarize(rows), 'professors': len({r['pid'] for r in rows}),
+            'distribution': [sum(r['quality'] == n for r in rows) for n in range(1, 6)]}
+
+def research(all_rows):
+    """Reproducible descriptive findings; no exploratory regression estimates shipped."""
+    departments = {r['review_key']: r['department'] for r in csv.DictReader(
+        (ROOT / 'data/reviews_clean.csv').open(encoding='utf-8-sig'))}
+    corpus = [{**row, 'pid': pid, 'department': departments[row['key']],
+               'code': re.sub(r'[\s-]+', '', row['course'].upper())}
+              for pid, rows in all_rows.items() for row in rows]
+    verified = json.loads((ROOT / 'src/lib/course-titles.json').read_text())
+    catalog = json.loads((ROOT / 'src/lib/catalog-titles.json').read_text())
+    by_course = collections.defaultdict(list)
+    for row in corpus:
+        if re.fullmatch(r'[A-Z]{2,5}\d{3}[A-Z]?', row['code']):
+            by_course[row['code']].append(row)
+    courses = []
+    for code, rows in sorted(by_course.items()):
+        titles = ([verified[code]['title']] if verified.get(code, {}).get('title') else []) + catalog['courses'].get(code, {}).get('titles', [])
+        generic = code.startswith(('FYS', 'CORE')) or code.endswith(('199', '299', '399'))
+        if len(rows) < 30 or not titles or generic:
+            continue
+        courses.append({'code': code, 'title': titles[0], 'all': research_summary(rows),
+                        'recent': research_summary([r for r in rows if 2022 <= r['year'] <= 2026])})
+    periods = {}
+    for period in ('all', 'recent'):
+        rows = corpus if period == 'all' else [r for r in corpus if 2022 <= r['year'] <= 2026]
+        hard = collections.defaultdict(list)
+        for row in rows:
+            if row['difficulty'] >= 4:
+                hard[row['department']].append(row)
+        hard_departments = [{'department': dept, **research_summary(rs)} for dept, rs in sorted(hard.items()) if len(rs) >= 20]
+        levels = []
+        for dept in ('History', 'Computer Science'):
+            groups = collections.defaultdict(lambda: [[], []])
+            for row in rows:
+                match = re.fullmatch(r'[A-Z]{2,5}([1-4])\d{2}[A-Z]?', row['code'])
+                if row['department'] == dept and match and not row['code'].startswith(('FYS', 'CORE')):
+                    groups[row['pid']][int(match[1] in ('3', '4'))].append(row)
+            paired = [v for v in groups.values() if len(v[0]) >= 3 and len(v[1]) >= 3]
+            if not paired:
+                continue
+            low = [r for a, _ in paired for r in a]
+            high = [r for _, b in paired for r in b]
+            differences = [statistics.mean(r['quality'] for r in b) - statistics.mean(r['quality'] for r in a) for a, b in paired]
+            levels.append({'department': dept, 'professors': len(paired),
+                           'lower': research_summary(low), 'upper': research_summary(high),
+                           'meanWithinProfessorDifference': statistics.mean(differences)})
+        # Exclude partial boundary years so seasonality is not skewed by the scrape date.
+        monthly_rows = [r for r in rows if 2003 <= r['year'] <= 2025]
+        months = collections.Counter(int(r['date'][5:7]) for r in monthly_rows)
+        periods[period] = {'reviews': len(rows), 'hardDepartments': hard_departments, 'levels': levels,
+                           'months': [{'month': m, 'reviews': months[m]} for m in range(1, 13)],
+                           'monthlyReviews': len(monthly_rows),
+                           'monthlyYears': '2003–2025' if period == 'all' else '2022–2025',
+                           'peakMonthReviews': sum(months[m] for m in (4, 11, 12)),
+                           'fys': research_summary([r for r in rows if r['code'] == 'FYS100'])}
+    return {'courses': courses, 'periods': periods}
 
 def build():
     data = json.loads((ROOT / 'src/lib/data.json').read_text())
@@ -62,6 +126,7 @@ def build():
             'courses': sorted(course_comparisons, key=lambda r: (-r['difference'], r['id']))[:3],
             'difficultyQuality': [{'difficulty': d, **summarize([r for r in corpus if r['difficulty'] == d])} for d in range(1, 6)],
         }
+    output['research'] = research(all_rows)
     return output
 
 if __name__ == '__main__':
