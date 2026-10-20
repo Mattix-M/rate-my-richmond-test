@@ -1,0 +1,79 @@
+/* Useful housing context shares the stage, while the building remains primary. */
+.hall-guide{font:14px/1.55 Arial,Helvetica,sans-serif;color:#575b70;background:#fff;border:1px solid #d8dee9;border-radius:16px;min-width:0;align-self:start}
+.hall-guide>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;list-style:none;color:#17172f;min-height:44px}
+.hall-guide>summary::-webkit-details-marker{display:none}
+.hall-guide>summary .eyebrow{display:block;font:10px Arial,Helvetica,sans-serif;letter-spacing:1.6px;color:#626a7b;margin-bottom:4px}
+.hall-guide>summary strong{font:24px/1.2 Georgia,'Times New Roman',serif;color:#000066}
+.guide-toggle{font-size:24px;font-weight:400;line-height:1;color:#294987}
+.hall-guide[open] .guide-toggle{transform:rotate(45deg)}
+.hall-guide>summary:focus-visible,.hall-guide a:focus-visible,.hall-guide button:focus-visible,.hall-guide details>summary:focus-visible{outline:3px solid #355991;outline-offset:3px}
+.hall-guide-body{padding:0 20px 18px}
+.guide-metrics{display:grid;grid-template-columns:1fr 1fr;gap:16px 14px;margin:0 0 18px;padding-top:16px;border-top:1px solid #e4e7ee}
+.guide-metrics>div:last-child:nth-child(odd){grid-column:1/-1}
+.guide-metrics dt{font-size:11px;color:#626a7b;margin:0 0 3px}
+.guide-metrics dd{font-size:21px;line-height:1.3;font-weight:600;margin:0;color:#20233a}
+.guide-metrics dd small{display:block;font-size:11px;font-weight:400;color:#626a7b;margin-top:3px}
+.guide-section{margin:0 0 16px}
+.hall-guide h3{font:600 12px/1.4 Arial,Helvetica,sans-serif;margin:0 0 5px;color:#24263c}
+.hall-guide .guide-section p,.hall-guide .guide-history p,.hall-guide .guide-sources p{font:14px/1.55 Arial,Helvetica,sans-serif;color:#575b70;margin:0}
+.hall-guide .guide-detail{margin-top:6px!important}
+.hall-guide ul{padding-left:17px;margin:7px 0 0}
+.hall-guide li{margin:3px 0}
+.hall-guide a{font:inherit;color:#294987;text-underline-offset:3px}
+.hall-guide .guide-program{border-left:3px solid #a00000;padding-left:12px}
+.hall-guide .guide-program a{display:inline-block;font-size:12px;margin-top:6px}
+.guide-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0}
+.hall-guide .guide-save{background:#294987;color:#fff;border:1px solid #294987;border-radius:9px;padding:10px 13px;min-height:44px;font:600 12px Arial,Helvetica,sans-serif;cursor:pointer}
+.hall-guide .guide-save[aria-pressed=true]{background:#edf1f8;color:#294987}
+.hall-guide .guide-actions>a{font-size:12px}
+.guide-history,.guide-sources{border-top:1px solid #e4e7ee;margin:0;padding-top:11px}
+.guide-history+.guide-sources{margin-top:11px}
+.hall-guide details>summary{font-size:12px;color:#294987;cursor:pointer;padding:3px 0}
+.hall-guide .guide-history p,.hall-guide .guide-sources p{font-size:12px;margin:8px 0}
+.guide-sources a{display:block;font-size:12px;margin:7px 0}
+.building-dialog.has-hall-guide:not(.ufa-immersive) .hall-guide{grid-row:3}
+.building-dialog.has-hall-guide:not(.ufa-immersive) .building-intro{grid-row:1}
+.building-dialog.has-hall-guide:not(.ufa-immersive) .hall-stage,
+.building-dialog.has-hall-guide:not(.ufa-immersive) .building-content>.building-scene{grid-row:2}
+.building-dialog.has-hall-guide:not(.ufa-immersive) .building-choice{grid-row:4}
+.ufa-main{display:flex;flex-direction:column;flex:1;min-height:0}
+.ufa-main>.hall-guide{margin:4px 24px 18px;align-self:stretch}
+.ufa-main>.ufa-space{min-height:390px}
+.ufa-immersive.has-hall-guide{overflow:auto}
+.ufa-expanded .ufa-main>.hall-guide{display:none}
+@media(min-width:1100px){
+ .building-dialog.has-hall-guide{width:min(1320px,96vw)}
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .building-content{grid-template-columns:minmax(0,1fr) 310px;grid-template-rows:auto minmax(390px,1fr) auto;gap:14px 28px;align-content:start}
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .building-intro{grid-column:1;grid-row:1}
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .hall-stage,
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .building-content>.building-scene{grid-column:1;grid-row:2;width:100%;max-width:720px;align-self:start}
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .hall-guide{grid-column:2;grid-row:1/4}
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .building-choice{grid-column:1;grid-row:3}
+ .ufa-main{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:20px;padding-right:32px;min-height:430px}
+ .ufa-main>.hall-guide{margin:0;max-height:none}
+ .ufa-main>.ufa-space{align-self:stretch;min-width:0}
+ .ufa-expanded .ufa-main{grid-template-columns:minmax(0,1fr);padding-right:0}
+ .ufa-main .ufa-floor-callouts{left:24px}
+}
+@media(max-width:600px){
+ .hall-guide>summary{padding:15px 16px}
+ .hall-guide-body{padding:0 16px 16px}
+ .hall-guide>summary strong{font-size:22px}
+ .ufa-main>.hall-guide{margin:4px 16px 16px}
+ .ufa-main>.ufa-space{flex:none;min-height:350px}
+ .ufa-heading{flex:none}
+}
+.guide-selection-link{display:inline-block;font-size:12px!important;margin:0 0 12px}
+@media(min-width:1100px){
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .hall-stage,
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .building-content>.building-scene{height:470px;min-height:470px}
+ .building-dialog.has-hall-guide:not(.ufa-immersive) .interactive-building{height:440px;max-width:600px}
+}
+@media(min-width:1100px){
+ .ufa-immersive.has-hall-guide .ufa-main{min-height:0;grid-template-rows:minmax(0,1fr)}
+ .ufa-immersive.has-hall-guide .ufa-main>.hall-guide{max-height:100%;overflow-y:auto;box-sizing:border-box}
+ .ufa-immersive.has-hall-guide:not(.ufa-expanded) .ufa-controls,
+ .ufa-immersive.has-hall-guide:not(.ufa-expanded) .ufa-evidence{margin-right:342px}
+}
+.residence-spatial-arrival .hall-guide,.ufa-spatial-arrival .hall-guide{animation:ufa-controls-arrive .65s .15s both}
+@media(prefers-reduced-motion:reduce){.residence-spatial-arrival .hall-guide,.ufa-spatial-arrival .hall-guide{animation:none}}

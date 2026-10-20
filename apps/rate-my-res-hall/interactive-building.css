@@ -53,7 +53,7 @@
  .building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab{transform:none}
 }
 /* Trace the visible facade too, including the roof of the uppermost floor. */
-.building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor:is(:hover,:focus-visible,.preview,.active) .floor-face:not([data-window]){
+.building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor:is(:hover,:focus-visible,.preview,.active) .floor-face:not([data-window]):not([data-roof]){
  stroke:#990000;stroke-width:2;vector-effect:non-scaling-stroke;
 }
 /* Selection isolates a floor while its apartment/wing choices remain nearby.

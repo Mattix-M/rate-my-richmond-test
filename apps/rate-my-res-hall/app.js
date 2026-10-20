@@ -15,7 +15,7 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 function toggleSave(id) {
   saved.has(id)?saved.delete(id):saved.add(id);
   try { localStorage.setItem('res-hall-saved',JSON.stringify([...saved])); } catch {}
-  renderList(); if(selected) renderDetail(selected);
+  renderList(); if(selected&&!document.querySelector('.building-dialog[open]')) renderDetail(selected);
 }
 function results() {
  return places.filter(p=>{
@@ -136,7 +136,7 @@ async function start() {
  [places,,manifest,residenceFacts]=data;const geo=data[1];
  residenceStats=await fetch('data/housing/residence-stats.json').then(r=>r.ok?r.json():{}).catch(()=>({}));
  const housingResponse=await fetch('data/housing/index.json');
- if(housingResponse.ok){housing=await housingResponse.json();blocks=(await (await fetch('data/apartment-buildings.json')).json()).blocks;buildingExplorer=createBuildingExplorer(housing,(p,b,route)=>planViewer.open(p.id,{...route,block:b.number}));hallExplorer=createHallExplorer(housing,(p,route)=>planViewer.open(p.id,route),{facts:residenceFacts,stats:residenceStats});planViewer=createPlanViewer(housing,places,{onPlace:id=>{if(selected?.id!==id)selectPlace(places.find(p=>p.id===id),{focus:false});},onHall:(id,plan)=>{const p=places.find(p=>p.id===id);if(blocks.some(b=>b.placeId===id)){selectPlace(p,{focus:false});showBlocks(p);}else hallExplorer.open(p,{plan});},onBuilding:(id,number)=>{const b=blocks.find(b=>b.placeId===id&&b.number===number);if(b)buildingExplorer.open(places.find(p=>p.id===id),b);}});}
+ if(housingResponse.ok){housing=await housingResponse.json();blocks=(await (await fetch('data/apartment-buildings.json')).json()).blocks;buildingExplorer=createBuildingExplorer(housing,(p,b,route)=>planViewer.open(p.id,{...route,block:b.number}),{facts:residenceFacts,stats:residenceStats,isSaved:id=>saved.has(id),onSave:toggleSave});hallExplorer=createHallExplorer(housing,(p,route)=>planViewer.open(p.id,route),{facts:residenceFacts,stats:residenceStats,isSaved:id=>saved.has(id),onSave:toggleSave});planViewer=createPlanViewer(housing,places,{onPlace:id=>{if(selected?.id!==id)selectPlace(places.find(p=>p.id===id),{focus:false});},onHall:(id,plan)=>{const p=places.find(p=>p.id===id);if(blocks.some(b=>b.placeId===id)){selectPlace(p,{focus:false});showBlocks(p);}else hallExplorer.open(p,{plan});},onBuilding:(id,number)=>{const b=blocks.find(b=>b.placeId===id&&b.number===number);if(b)buildingExplorer.open(places.find(p=>p.id===id),b);}});}
  saved=new Set([...saved].filter(id=>places.some(p=>p.id===id)));
  if(!window.L)throw new Error('The local map library did not load.');
  // 3,695 static vector layers otherwise rewrite individual SVG paths on every
@@ -176,7 +176,7 @@ async function start() {
  $('#search').addEventListener('keydown',e=>{if(e.key==='Enter'&&results().length)selectPlace(results()[0]);});
  document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;renderList();});
  $('#coverage').innerHTML=`<span><b>${manifest.uniquePlaces}</b>campus places</span><span><b>${manifest.residentialPlaces}</b>residential groups</span><span><b>${manifest.officialBuildingRecords}</b>official building records</span>`;
- function applyRoute(){const hash=new URLSearchParams(location.hash.slice(1));const initial=places.find(p=>p.id===hash.get('place'));if(initial){selectPlace(initial,{focus:false});if(hash.get('plan')||hash.get('room'))planViewer?.open(initial.id,{plan:hash.get('plan'),room:hash.get('room'),block:hash.get('block'),unit:hash.get('unit')});else if(hash.get('block')){showBlocks(initial);const b=blocks.find(b=>b.placeId===initial.id&&b.number===hash.get('block'));if(b)openBlock(initial,b,{animate:false});}}}
+ function applyRoute(){const hash=new URLSearchParams(location.hash.slice(1));const initial=places.find(p=>p.id===hash.get('place'));if(initial){selectPlace(initial,{focus:false});if(hash.get('plan')||hash.get('room'))planViewer?.open(initial.id,{plan:hash.get('plan'),room:hash.get('room'),block:hash.get('block'),unit:hash.get('unit')});else if(hash.get('block')){showBlocks(initial);const b=blocks.find(b=>b.placeId===initial.id&&b.number===hash.get('block'));if(b)openBlock(initial,b,{animate:false});}else if(housing?.places[initial.id]&&!blocks.some(b=>b.placeId===initial.id))hallExplorer.open(initial);}}
  applyRoute();window.addEventListener('hashchange',()=>{document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());applyRoute();});
  new ResizeObserver(()=>map.invalidateSize()).observe($('#map'));
 }

@@ -10,7 +10,8 @@ try{
  }
  document.querySelectorAll('[name=scope]').forEach(el=>el.onchange=ranking);ranking();
  for(const id of ['hall-a','hall-b'])document.getElementById(id).innerHTML=entries.map(([key,s])=>`<option value="${key}">${esc(s.name)}</option>`).join('');
- document.getElementById('hall-a').value='571565';document.getElementById('hall-b').value='572483';
+ const requestedHall=new URLSearchParams(location.search).get('hall');
+ document.getElementById('hall-a').value=stats[requestedHall]?requestedHall:'571565';document.getElementById('hall-b').value=requestedHall==='571565'?'571574':'571565';
  function compare(){const ids=['hall-a','hall-b'].map(id=>document.getElementById(id).value),[a,b]=ids.map(id=>stats[id]);
  const card=(s,id)=>`<article class="stat-side"><h3>${esc(s.name)}</h3><div class="big-number">${s.capacity??'—'}</div><small>${s.capacity==null?'Capacity not yet verified':communities.has(id)?'published capacity · whole community':'published resident capacity'}</small><p>${esc(s.roomTypes.join(' · '))}</p>${s.openedYear?`<p>Built / opened <strong>${s.openedYear}</strong></p>`:''}${source(s)} · <a href="./#place=${id}">Explore residence ↗</a></article>`;
  const result=Number.isFinite(a.capacity)&&Number.isFinite(b.capacity)?ids[0]===ids[1]?'Same hall. Same story.':a.capacity===b.capacity?'Same capacity. Different buildings.':`${a.capacity>b.capacity?a.name:b.name} has space for ${Math.abs(a.capacity-b.capacity).toLocaleString()} more residents than ${a.capacity>b.capacity?b.name:a.name}.${ids.some(id=>communities.has(id))?' Apartment figures cover the whole community.':''}`:'We need both published capacities before making a comparison.';

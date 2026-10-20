@@ -1,0 +1,18 @@
+import {housingProfiles} from './housing-profiles.js';
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function hallGuideMarkup(place,stats={},fact){
+ const profile=housingProfiles[place.id]||{};
+ const community=['572061','572073'].includes(String(place.id));
+ const metric=(label,value,note='')=>`<div><dt>${esc(label)}</dt><dd>${esc(value)}${note?`<small>${esc(note)}</small>`:''}</dd></div>`;
+ const count=Number.isInteger(stats.mappedRoomCount)&&stats.mappedRoomCount>0?stats.mappedRoomCount:null;
+ const sources=[...new Set([stats.sourceUrl,profile.sourceUrl,...(profile.sources||[]),fact?.url].filter(Boolean))];
+ return `<details class="hall-guide"><summary><span><span class="eyebrow">BEFORE YOU PICK</span><strong>Living here</strong></span><span class="guide-toggle" aria-hidden="true">+</span></summary><div class="hall-guide-body"><dl class="guide-metrics">${metric(community?'Community capacity':'Resident capacity',Number.isFinite(stats.capacity)?stats.capacity.toLocaleString():'Not verified')}${metric('Built / opened',stats.openedYear||'Not verified')}${profile.renovated?metric('Renovated / updated',profile.renovated):''}${count?metric('Room records',count.toLocaleString(),'Mapped records, not a verified room total.'):''}</dl>${profile.eligibility?`<section class="guide-section"><h3>Who lives here</h3><p>${esc(profile.eligibility)}</p></section>`:''}${profile.program?`<section class="guide-section guide-program"><h3>${esc(profile.program.name)}</h3><p>${esc(profile.program.text)}</p><a href="${esc(profile.program.url)}" target="_blank" rel="noopener">Program & housing ↗</a></section>`:''}<section class="guide-section"><h3>Rooms & setup</h3><p>${esc((stats.roomTypes||[]).join(' · ')||'See the floor plans for available layouts.')}</p>${profile.bathrooms?`<p class="guide-detail">${esc(profile.bathrooms)}</p>`:''}${profile.features?.length?`<ul>${profile.features.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}</section>${profile.selectionNote?`<section class="guide-section"><h3>Before selection</h3><p>${esc(profile.selectionNote)}</p></section>`:''}<div class="guide-actions"><button type="button" class="guide-save" data-save-hall="${esc(place.id)}" aria-pressed="false">Save to shortlist</button><a href="stats.html?hall=${esc(place.id)}#compare">Compare halls ↗</a></div><a class="guide-selection-link" href="${esc(profile.sourceUrl||stats.sourceUrl)}" target="_blank" rel="noopener">Official housing guide ↗</a>${fact?`<details class="guide-history"><summary>A little history</summary><p>${esc(fact.text)}</p></details>`:''}<details class="guide-sources"><summary>Sources & details</summary><p>Published capacity is not current occupancy. Room records may include staff rooms and shared records; they are not a certified bedroom count. Availability and assignments are confirmed in StarRez.</p>${sources.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener">${i===0?'University housing page':`Source ${i+1}`} ↗</a>`).join('')}<p>Housing guidance checked October 20, 2026. Check the university’s current selection process for your year.</p></details></div></details>`;
+}
+export function connectHallGuide(dialog,place,options={}){
+ const guide=dialog.querySelector('.hall-guide');if(!guide)return;
+ guide.open=matchMedia('(min-width: 1100px)').matches;
+ const save=guide.querySelector('.guide-save');
+ const update=()=>{const saved=Boolean(options.isSaved?.(place.id));save.setAttribute('aria-pressed',String(saved));save.textContent=saved?'Saved to shortlist':'Save to shortlist';};
+ update();save.onclick=()=>{options.onSave?.(place.id);update();};
+ if(!options.onSave)save.hidden=true;
+}
