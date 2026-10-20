@@ -32,3 +32,43 @@
  .site-tabs .tab-about-short{display:inline}
  .site-tabs{max-width:100%;min-width:0}
 }
+
+/* Phone navigation keeps the three everyday tools within thumb reach. */
+.mobile-bottom-nav{display:none}
+@media(max-width:600px){
+ :root{--mobile-nav-height:calc(66px + env(safe-area-inset-bottom,0px))}
+ html{scroll-padding-bottom:calc(var(--mobile-nav-height) + 18px)}
+ body{padding-bottom:var(--mobile-nav-height)}
+ .site-masthead{height:96px}
+ .site-masthead .site-tabs{height:36px;min-height:36px;padding:0 14px;justify-content:flex-end;gap:18px;border-top:0;background:#fff}
+ .site-masthead .site-tabs a[href="./"],.site-masthead .site-tabs a[href="stats.html"],.site-masthead .site-tabs a[href="room-compare.html"]{display:none}
+ .site-masthead .site-tabs a{flex:none;min-height:32px;padding:0 2px;border:0;font-size:11px;letter-spacing:0;text-transform:none;background:none;box-shadow:none}
+ .site-masthead .site-tabs [aria-current=page]{color:#294987;text-decoration:underline;text-underline-offset:5px}
+ .site-tabs .tab-about-long{display:inline}.site-tabs .tab-about-short{display:none}
+ .mobile-bottom-nav{position:fixed;inset:auto 0 0;z-index:800;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;box-sizing:border-box;height:var(--mobile-nav-height);margin:0;padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));background:#fff;border-top:1px solid #d7deea;box-shadow:0 -3px 16px #17234209;font-family:Arial,Helvetica,sans-serif}
+ .mobile-bottom-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;min-height:50px;padding:5px 2px;border-radius:10px;color:#626779;text-decoration:none;font:500 11px/1.2 Arial,Helvetica,sans-serif;letter-spacing:0;white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+ .mobile-bottom-nav svg{width:23px;height:23px;flex:none}
+ .mobile-bottom-nav a[aria-current=page]{background:#edf1f8;color:#294987;font-weight:700}
+ .mobile-bottom-nav a:hover{background:#f3f5fa;color:#294987}
+ .mobile-bottom-nav a:focus-visible{outline:3px solid #355991;outline-offset:-3px}
+ .workspace{height:auto;min-height:0}
+}
+
+/* Optional explanations are available without taking over the main task. */
+.data-disclosure{margin:14px 0;color:#575b70;font:14px/1.55 Arial,Helvetica,sans-serif;text-align:left}
+.data-disclosure>summary{width:fit-content;max-width:100%;padding:7px 0;cursor:pointer;color:#294987;font:500 13px/1.45 Arial,Helvetica,sans-serif;letter-spacing:0;text-transform:none}
+.data-disclosure>summary:focus-visible{outline:3px solid #355991;outline-offset:3px;border-radius:3px}
+.data-disclosure>p{font:14px/1.65 Arial,Helvetica,sans-serif;color:#575b70;margin:9px 0}
+.data-disclosure[open]{padding-bottom:6px}
+.room-panel>.data-disclosure{grid-column:1/-1;min-width:0;margin:0}
+.room-source-details{margin:7px 0 0}
+.room-source-details>summary{font-size:13px}
+.method>.data-disclosure{border-top:1px solid #dce2ed;padding-top:8px}
+.method>.data-disclosure>summary{font-size:16px;color:#20233a}
+.stat-source-details{margin:8px 0}.stat-source-details>summary{font-size:12px}
+.housing-fit-explanation{margin:5px 0 0;font-size:12px}.housing-fit-explanation>summary{font-size:11px}
+.building-scene>.model-note.data-disclosure{position:relative;display:block;inset:auto;text-align:center;grid-column:1/-1;width:100%;margin:10px 0 0}
+.model-note.data-disclosure>summary,.ufa-evidence.data-disclosure>summary{margin:0 auto;font-size:12px}
+.ufa-evidence.data-disclosure{max-width:680px;margin:12px auto 0;font-size:12px}
+.hall-stage>.model-note.data-disclosure{position:relative;inset:auto;grid-column:1/-1;width:100%;margin:8px 0 0;text-align:center}
+section.method:has(>.data-disclosure){margin-top:24px;margin-bottom:24px}

@@ -78,12 +78,13 @@ async function draw(a,b){
 }
 function measure(room,hall,key){
  const box=document.createElement('section');box.className='room-measure';
+ const extra=document.createElement('details');extra.className='data-disclosure room-source-details';const summary=document.createElement('summary');summary.textContent='Room details & source';extra.append(summary);
  const title=document.createElement('h2');title.textContent=`${key} / ${hall.name} · ${room.room}`;box.append(title);
  for(const text of [`${room.type[0].toUpperCase()+room.type.slice(1)}${room.occupancy?` · ${room.occupancy} ${room.occupancy===1?'resident':'residents'}`:''} · ${room.floor}`,`${room.basis==='published-type-default'?'Published double-room default':'Published'}: ${room.dimensions}`,`Rectangle estimate: ${fmt(room.width*room.height)} sq ft`]){const p=document.createElement('p');p.textContent=text;box.append(p);}
- if(room.basis==='published-type-default'){const note=document.createElement('p');note.className='dimension-basis';note.textContent='The university lists this size for doubles unless otherwise noted; this is not a separate measurement of this room.';box.append(note);}
- if(room.basis==='published-group-dimensions'){const note=document.createElement('p');note.className='dimension-basis';note.textContent='Dimensions are inherited from the university’s room-group description; this room is individually identified on the plan.';box.append(note);}
- const drawing=cleanPlanAssets.rooms[room.id];if(drawing){const planLink=document.createElement('a');planLink.href=drawing.url;planLink.target='_blank';planLink.rel='noopener';planLink.textContent='Open room drawing ↗';planLink.className='room-plan-link';box.append(planLink);}
- const link=document.createElement('a');link.href=room.source;link.target='_blank';link.rel='noopener';link.textContent='University room description ↗';box.append(link);return box;
+ if(room.basis==='published-type-default'){const note=document.createElement('p');note.className='dimension-basis';note.textContent='The university lists this size for doubles unless otherwise noted; this is not a separate measurement of this room.';extra.append(note);}
+ if(room.basis==='published-group-dimensions'){const note=document.createElement('p');note.className='dimension-basis';note.textContent='Dimensions are inherited from the university’s room-group description; this room is individually identified on the plan.';extra.append(note);}
+ const drawing=cleanPlanAssets.rooms[room.id];if(drawing){const planLink=document.createElement('a');planLink.href=drawing.url;planLink.target='_blank';planLink.rel='noopener';planLink.textContent='Open room drawing ↗';planLink.className='room-plan-link';extra.append(planLink);}
+ const link=document.createElement('a');link.href=room.source;link.target='_blank';link.rel='noopener';link.textContent='University room description ↗';extra.append(link);box.append(extra);return box;
 }
 function render(){
  const a=chosen(hallA,roomA),b=chosen(hallB,roomB);if(!a||!b)return;
@@ -91,7 +92,7 @@ function render(){
  const result=document.createElement('p');result.className='room-result';
  result.textContent=Math.abs(difference)<.05?'The listed dimensions give both rooms the same estimated area.':`From the listed dimensions, B is about ${fmt(Math.abs(difference))} sq ft ${difference>0?'larger':'smaller'} (${fmt(Math.abs(percent))}%).`;
  if(a.id===b.id)result.textContent='Choose a different room to compare it with this one.';
- const small=document.createElement('small');small.textContent='Percentage compares B with A. This length × width estimate is separate from the drawn outline; it is not measured usable floor area.';result.append(small);
+ const small=document.createElement('small');small.textContent='Percentage compares B with A. This length × width estimate is separate from the drawn outline; it is not measured usable floor area.';$('comparison-method-note').textContent=small.textContent;
  $('room-result').replaceChildren(result);
  $('room-measures').replaceChildren(measure(a,hallFor(hallA),'A'),measure(b,hallFor(hallB),'B'));draw(a,b);
  const params=new URLSearchParams({a:a.id,b:b.id});if($('rotate-b').checked)params.set('rotate','1');if(document.querySelector('[name="layout"]:checked').value==='beside')params.set('view','beside');history.replaceState(null,'',`#${params}`);
