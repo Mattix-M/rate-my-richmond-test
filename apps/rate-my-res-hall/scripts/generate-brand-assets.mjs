@@ -20,14 +20,15 @@ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vie
 <rect width="1200" height="630" fill="#faf9f7"/>
 <path d="M840-20 720 155 1100 175 1210 270M590 610 710 500 1180 560M1020-20 940 100 1210 120" fill="none" stroke="#e8ebf0" stroke-width="24"/>
 <path d="M840-20 720 155 1100 175 1210 270M590 610 710 500 1180 560M1020-20 940 100 1210 120" fill="none" stroke="#fff" stroke-width="15"/>
-<svg x="62" y="54" width="58" height="58" viewBox="0 0 64 64">${icon.toString().replace(/<svg[^>]*>|<\/svg>/g,'')}</svg>
-<text x="140" y="94" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#10143d">Rate My Res Hall<tspan fill="#990000">.</tspan></text>
+<svg x="62" y="54" width="64" height="64" viewBox="0 0 64 64" fill="none">${icon.toString().replace(/<svg[^>]*>|<\/svg>/g,'')}</svg>
+<text x="148" y="91" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="bold" fill="#10143d">Rate My Richmond<tspan fill="#990000">.</tspan></text>
+<text x="150" y="122" font-family="Arial, sans-serif" font-size="17" font-weight="bold" letter-spacing="4" fill="#990000">RES LIFE</text>
 <text x="65" y="227" font-family="Arial, sans-serif" font-size="16" font-weight="bold" letter-spacing="3" fill="#61667a">UNIVERSITY OF RICHMOND</text>
 <text x="60" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="73" font-weight="bold" fill="#10143d">Find your place.</text>
-<text x="65" y="365" font-family="Arial, sans-serif" font-size="25" fill="#545a70">A little exploring goes a long way.</text>
+<text x="65" y="365" font-family="Arial, sans-serif" font-size="25" fill="#545a70">A closer look at Richmond housing.</text>
 <path d="M65 409h66" stroke="#990000" stroke-width="4"/>
-<text x="65" y="457" font-family="Arial, sans-serif" font-size="23" fill="#252b49">Explore halls. Check floor plans.</text>
-<text x="65" y="492" font-family="Arial, sans-serif" font-size="23" fill="#252b49">Get ready for housing selection.</text>
+<text x="65" y="457" font-family="Arial, sans-serif" font-size="23" fill="#252b49">Floor plans, room sizes and hall details</text>
+<text x="65" y="492" font-family="Arial, sans-serif" font-size="23" fill="#252b49">to help you make your housing list.</text>
 <ellipse cx="915" cy="548" rx="228" ry="18" fill="#1e294d" opacity=".13" filter="url(#shadow)"/>
 <path d="m700 341 54-40v201l-54 31Z" fill="#7e3e36"/>
 <path d="M700 341h400v192H700Z" fill="url(#brick)" stroke="#793e35" stroke-width="2"/>

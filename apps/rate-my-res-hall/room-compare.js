@@ -89,8 +89,8 @@ function render(){
  const a=chosen(hallA,roomA),b=chosen(hallB,roomB);if(!a||!b)return;
  const {difference,percent}=compareRoomAreas(a.width*a.height,b.width*b.height);
  const result=document.createElement('p');result.className='room-result';
- result.textContent=Math.abs(difference)<.05?'Same rectangle area. Different room.':`From the listed dimensions, B is about ${fmt(Math.abs(difference))} sq ft ${difference>0?'larger':'smaller'} (${fmt(Math.abs(percent))}%).`;
- if(a.id===b.id)result.textContent='Same room. Same plan.';
+ result.textContent=Math.abs(difference)<.05?'The listed dimensions give both rooms the same estimated area.':`From the listed dimensions, B is about ${fmt(Math.abs(difference))} sq ft ${difference>0?'larger':'smaller'} (${fmt(Math.abs(percent))}%).`;
+ if(a.id===b.id)result.textContent='Choose a different room to compare it with this one.';
  const small=document.createElement('small');small.textContent='Percentage compares B with A. This length × width estimate is separate from the drawn outline; it is not measured usable floor area.';result.append(small);
  $('room-result').replaceChildren(result);
  $('room-measures').replaceChildren(measure(a,hallFor(hallA),'A'),measure(b,hallFor(hallB),'B'));draw(a,b);

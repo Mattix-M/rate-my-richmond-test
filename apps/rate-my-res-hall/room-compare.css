@@ -36,3 +36,5 @@
 @media(max-width:600px){.room-choice select{padding:10px 22px 10px 8px;min-height:44px}}
 
 .room-measure .room-plan-link{display:block;width:fit-content}
+/* At narrow phone widths, keep the selected hall and room readable. */
+@media(max-width:420px){.room-choice{grid-template-columns:1fr}.room-choice .site-select-value{white-space:normal}.room-choice label{gap:5px}}

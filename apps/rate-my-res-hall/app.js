@@ -183,12 +183,9 @@ async function start() {
  $('#search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();renderList();});
  $('#search').addEventListener('keydown',e=>{if(e.key==='Enter'&&results().length)selectPlace(results()[0]);});
  document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;renderList();});
- $('#coverage').innerHTML=`<span><b>${manifest.uniquePlaces}</b>campus places</span><span><b>${manifest.residentialPlaces}</b>residential groups</span><span><b>${manifest.officialBuildingRecords}</b>official building records</span>`;
  function applyRoute(){const hash=new URLSearchParams(location.hash.slice(1));const initial=places.find(p=>p.id===hash.get('place'));if(initial){selectPlace(initial,{focus:false});if(hash.get('plan')||hash.get('room'))planViewer?.open(initial.id,{plan:hash.get('plan'),room:hash.get('room'),block:hash.get('block'),unit:hash.get('unit')});else if(hash.get('block')){showBlocks(initial);const b=blocks.find(b=>b.placeId===initial.id&&b.number===hash.get('block'));if(b)openBlock(initial,b,{animate:false});}else if(housing?.places[initial.id]&&!blocks.some(b=>b.placeId===initial.id))hallExplorer.open(initial);}}
  applyRoute();window.addEventListener('hashchange',()=>{document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());applyRoute();});
  new ResizeObserver(()=>map.invalidateSize()).observe($('#map'));
 }
-const dialog=$('#sources-dialog');$('#sources-button').onclick=()=>dialog.showModal();$('#close-sources').onclick=()=>dialog.close();
-dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search').focus();}if(e.key==='Escape'&&selected&&!document.querySelector('dialog[open]'))closeDetail();});
+document.addEventListener('keydown',e=>{if(e.defaultPrevented)return;if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search').focus();}if(e.key==='Escape'&&selected&&!document.querySelector('dialog[open]'))closeDetail();});
 start().catch(e=>{console.error(e);$('#error').hidden=false;$('#error').textContent='Campus data could not be loaded. Try reloading. The university’s official map is available at maps.richmond.edu.';$('#place-list').innerHTML='<p class="empty">Campus places could not be loaded. Reload to try again.</p>';});
