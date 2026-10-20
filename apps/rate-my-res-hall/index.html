@@ -29,16 +29,16 @@
 
 <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="hall-explorer.css"><link rel="stylesheet" href="ufa-immersive.css"><link rel="stylesheet" href="exterior-models.css"><link rel="stylesheet" href="interactive-building.css"><link rel="stylesheet" href="spatial-transition.css"><link rel="stylesheet" href="richmond-theme.css">
 <script src="vendor/leaflet.js" defer></script><script type="module" src="app.js"></script>
-<link rel="stylesheet" href="site-navigation.css"><link rel="stylesheet" href="hall-guide.css"></head>
+<link rel="stylesheet" href="site-navigation.css"><link rel="stylesheet" href="hall-guide.css"><link rel="stylesheet" href="eligibility.css"></head>
 <body>
 <a class="skip" href="#search">Skip to building search</a>
-<header class="site-masthead"><div class="masthead-title"><a href="./" class="masthead-brand"><img class="masthead-icon" src="icon.svg" width="44" height="44" alt=""><span>Rate My <b>Res Hall</b><span class="brand-period">.</span><small>UNIVERSITY OF RICHMOND</small></span></a></div><nav class="site-tabs" aria-label="Primary"><a href="./" aria-current="page">Explore</a><a href="stats.html">Hall stats</a><a href="game.html">Hall quiz</a><button id="sources-button">About the data</button></nav></header>
+<header class="site-masthead"><div class="masthead-title"><a href="./" class="masthead-brand"><img class="masthead-icon" src="icon.svg" width="44" height="44" alt=""><span>Rate My <b>Res Hall</b><span class="brand-period">.</span><small>UNIVERSITY OF RICHMOND</small></span></a></div><nav class="site-tabs" aria-label="Primary"><a href="./" aria-current="page">Explore</a><a href="stats.html">Hall stats</a><a href="room-compare.html">Room sizes</a><a href="game.html">Hall quiz</a><button id="sources-button"><span class="tab-about-long">About the data</span><span class="tab-about-short">Data</span></button></nav></header>
 <main class="workspace">
 <aside class="sidebar" aria-label="Find campus places">
 <div class="intro"><span class="eyebrow">A LITTLE EXPLORING GOES A LONG WAY</span><h1>Find your place.</h1><p>Get to know the campus.<br>Start with a place to call home.</p></div>
 <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search halls, buildings, places…" aria-label="Search campus places" autocomplete="off"><kbd>/</kbd></div>
-<div class="filters" role="group" aria-label="Place filters"><button data-filter="residential" aria-pressed="true">Residences</button><button data-filter="all" aria-pressed="false">All campus</button><button data-filter="saved" aria-pressed="false">Saved <span id="saved-count">0</span></button></div>
-<div class="list-heading"><h2 id="list-title">Explore residences</h2><span id="result-count" aria-live="polite"></span></div>
+<div class="filters" role="group" aria-label="Place filters"><button data-filter="residential" aria-pressed="true">Residences</button><button data-filter="all" aria-pressed="false">All campus</button><button data-filter="saved" aria-pressed="false">Shortlist <span id="saved-count">0</span></button></div>
+<div id="housing-fit-guide"></div><div class="list-heading"><h2 id="list-title">Explore residences</h2><span id="result-count" aria-live="polite"></span></div>
 <div id="place-list" class="place-list" aria-label="Search results"><p class="empty">Loading campus places…</p></div>
 <div class="sidebar-footer"><span class="status-dot"></span><div><strong>Step inside your residence.</strong><p>96 plans · 19 residential groups</p></div></div>
 </aside>
@@ -47,7 +47,7 @@
 <div class="map-heading"><span class="eyebrow">THE BIG PICTURE</span><h2>Find your way around.</h2><p>University of Richmond, Virginia</p></div>
 <div class="map-actions"><button id="fit-campus" title="Fit whole campus"><span aria-hidden="true">⤢</span> Whole campus</button><button id="toggle-labels" aria-pressed="false" title="Toggle residence labels">Aa <span>Labels</span></button></div>
 <div class="compass" title="North is up"><span>N</span><b>↑</b></div>
-<div class="map-legend"><span><i class="residence-key"></i>Residence</span><span><i class="campus-key"></i>Campus place</span><span class="footprint-key">Outlined buildings: OpenStreetMap</span></div>
+<div class="map-legend"><span><i class="residence-key"></i>Residence</span><span><i class="campus-key"></i>Campus place</span><span id="housing-fit-legend" hidden>Blue ring: matches your profile</span><span class="footprint-key">Outlined buildings: OpenStreetMap</span></div>
 <div class="map-help">Drag to explore · Scroll to zoom · Zoom closer for names</div>
 <section id="detail" class="detail" hidden aria-label="Selected place details"></section>
 <div id="error" class="error" role="alert" hidden></div>

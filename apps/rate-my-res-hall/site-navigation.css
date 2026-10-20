@@ -26,3 +26,9 @@
 /* Stacked mobile map/list must size naturally; a fixed flex height covered the tabs. */
 @media(max-width:760px){.workspace{height:auto;min-height:0}.site-masthead{position:relative;z-index:600}}
 @media(max-width:360px){.site-tabs a,.site-tabs button{padding:0 5px;font-size:10px;letter-spacing:0}.masthead-title{padding-left:14px;padding-right:14px}.masthead-brand{gap:9px;font-size:24px}}
+.tab-about-short{display:none}
+@media(max-width:600px){
+ .site-tabs .tab-about-long{display:none}
+ .site-tabs .tab-about-short{display:inline}
+ .site-tabs{max-width:100%;min-width:0}
+}

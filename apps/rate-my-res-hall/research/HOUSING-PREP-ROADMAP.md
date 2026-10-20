@@ -32,3 +32,15 @@ Checked October20,2026. Official livinglearning pages support LoRo Endeavor and 
 - https://residencelife.richmond.edu/policies-and-services/services/index.html
 - https://residencelife.richmond.edu/policies-and-services/facilities-furniture/
 - https://universityfinance.richmond.edu/tuition/fees/index.html
+
+## Follow-up features implemented
+- Optional year/program guide: first-year, sophomore, junior, senior or law, plus Endeavor/SSIR. Matching halls appear first and gain a blue map ring. Every hall stays browsable. Explanations and source links are available with mouse, keyboard and touch. Preferences are stored only on the device.
+- Room-size comparison: 1,069 source records across 19 halls/buildings, in overlaid or side-by-side views, at one shared scale, with B rotation and area/percentage differences. URL preserves room choices, rotation and view.
+- Only explicit feet/inches pairs are parsed. Gray’s clearly stated double-room default is separately labeled. Ambiguous/additive dimensions and identified staff/accessible rooms are excluded. Moore A202’s suspicious published5×13-foot double is quarantined rather than corrected by guesswork.
+- These are dimension-based rectangles, not calibrated traces of irregular room perimeters; actual usable area may differ. Accurate irregular outlines remain a future step requiring verified wall geometry and scale.
+- Hall links retain context when opening the comparison; unavailable dimension data gets a visible explanation. Existing saved-place filter is labeled Shortlist.
+
+### Verification
+- Shared-scale arithmetic, Unicode feet/inches conversion, bad/incomplete dimensions, unique room identifiers, Gray default labeling and quarantine are covered by regression tests.
+- All19residence profile/year/program combinations and apartment/program exceptions are covered by rule tests.
+- Browser checked narrow320/390px layouts, optional guide persistence, SSIRmatchingonlySouth, all19remainvisible, visible reason/source,16px phone controls, scaledSVGrotationand side-by-side, contextpassing and deep links.

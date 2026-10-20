@@ -1,3 +1,4 @@
+import {evaluateHousing,mountEligibility} from './eligibility.js';
 import { installSmoothMapZoom } from './smooth-map-zoom.js';
 import { createPlanViewer } from './plans.js';
 import { createBuildingExplorer, createHallExplorer } from './building-explorer.js';
@@ -8,7 +9,7 @@ const bookmark = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let saved = new Set();
 try { const parsed = JSON.parse(localStorage.getItem('res-hall-saved') || '[]'); if(Array.isArray(parsed)) saved = new Set(parsed.filter(x=>typeof x==='string')); } catch {}
-let filter='residential', query='', selected=null, labels=false;
+let filter='residential', query='', selected=null, labels=false, housingFit={year:'',program:'none'};
 const markers = new Map(), footprintLayers = [];
 let residenceStats={},residenceFacts={}, places, map, manifest, housing, planViewer, buildingExplorer, hallExplorer, blocks=[], blockLayer, selectionEpoch=0;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -26,15 +27,21 @@ function results() {
  });
 }
 function renderList() {
- const list=results(); $('#result-count').textContent=`${list.length} places`; $('#saved-count').textContent=saved.size;
- $('#list-title').textContent=query?'Search results':({residential:'Explore residences',all:'Around campus',saved:'Your saved places'}[filter]);
+ const list=results();
+ if(housingFit.year){const rank=p=>({match:0,confirm:1,notmatch:2}[evaluateHousing(p.id,housingFit).status]??3);list.sort((a,b)=>rank(a)-rank(b));}
+ const matches=housingFit.year?list.filter(p=>p.residential&&evaluateHousing(p.id,housingFit).status==='match').length:0;
+ $('#result-count').textContent=housingFit.year?`${matches} ${matches===1?'match':'matches'} · ${list.length} places`:`${list.length} places`; $('#saved-count').textContent=saved.size;
+ $('#list-title').textContent=query?'Search results':({residential:'Explore residences',all:'Around campus',saved:'Your shortlist'}[filter]);
  $('#place-list').replaceChildren();
  if(!list.length) {
   $('#place-list').innerHTML=`<p class="empty"><strong>${filter==='saved'&&!saved.size?'A little shortlist for later.':'No places found.'}</strong>${filter==='saved'&&!saved.size?'Save a residence or campus place using the bookmark beside its name.':query&&filter!=='all'?'Try a different search, or switch to All campus.':'Try a shorter name or clear your search.'}</p>`;
  }
  for(const p of list) {
-  const row=document.createElement('div');row.className=`place-row ${p.residential?'residential':''} ${selected?.id===p.id?'selected':''}`;
-  row.innerHTML=`<button class="place-open" aria-label="Explore ${escape(p.name)}" ${selected?.id===p.id?'aria-current="true"':''}><span class="place-symbol">${p.residential?house:building}</span><span><strong>${escape(p.name)}</strong><small>${escape(p.kind)}${p.locations.length>1?` · ${p.locations.length} mapped locations`:''}</small></span></button><button class="save-button" aria-label="${saved.has(p.id)?'Unsave':'Save'} ${escape(p.name)}" aria-pressed="${saved.has(p.id)}">${bookmark}</button>`;
+  const fit=p.residential?evaluateHousing(p.id,housingFit):{status:null};
+  const fitLabel=fit.status?({match:'Matches your profile',confirm:'Confirm with Housing',notmatch:'Different housing group'}[fit.status]):'';
+  const row=document.createElement('div');row.className=`place-row ${p.residential?'residential':''} ${selected?.id===p.id?'selected':''} ${fit.status?`housing-${fit.status}`:''}`;
+  row.innerHTML=`<button class="place-open" aria-label="Explore ${escape(p.name)}" ${selected?.id===p.id?'aria-current="true"':''}><span class="place-symbol">${p.residential?house:building}</span><span><strong>${escape(p.name)}</strong><small>${escape(p.kind)}${p.locations.length>1?` · ${p.locations.length} mapped locations`:''}</small>${fitLabel?`<span class="housing-fit-badge" title="${escape(fit.reason)}">${escape(fitLabel)}</span>`:''}</span></button><button class="save-button" aria-label="${saved.has(p.id)?'Unsave':'Save'} ${escape(p.name)}" aria-pressed="${saved.has(p.id)}">${bookmark}</button>`;
+  if(fit.status){const why=document.createElement('details');why.className='housing-fit-why';why.innerHTML=`<summary>${fit.status==='confirm'?'What to confirm':'Why this result?'}</summary><p>${escape(fit.reason)}</p><a href="${escape(fit.sourceUrl)}" target="_blank" rel="noopener">Published housing guidance ↗</a>`;row.append(why);}
   row.querySelector('.place-open').onclick=()=>selectPlace(p);
   row.querySelector('.save-button').onclick=()=>toggleSave(p.id);
   $('#place-list').append(row);
@@ -50,7 +57,7 @@ function renderList() {
  updateLabels();
 }
 function icon(p) {
- return L.divIcon({className:`house-pin ${p.residential?'':'campus-pin'} ${selected?.id===p.id?'is-selected':''}`,html:`<span>${p.residential?house:''}</span>`,iconSize:p.residential?[29,29]:[10,10],iconAnchor:p.residential?[14.5,14.5]:[5,5]});
+ return L.divIcon({className:`house-pin ${p.residential?'':'campus-pin'} ${selected?.id===p.id?'is-selected':''} ${p.residential&&evaluateHousing(p.id,housingFit).status==='match'?'housing-match-pin':''}`,html:`<span>${p.residential?house:''}</span>`,iconSize:p.residential?[29,29]:[10,10],iconAnchor:p.residential?[14.5,14.5]:[5,5]});
 }
 let labelVisibilityState;
 function updateLabels() {
@@ -137,6 +144,7 @@ async function start() {
  residenceStats=await fetch('data/housing/residence-stats.json').then(r=>r.ok?r.json():{}).catch(()=>({}));
  const housingResponse=await fetch('data/housing/index.json');
  if(housingResponse.ok){housing=await housingResponse.json();blocks=(await (await fetch('data/apartment-buildings.json')).json()).blocks;buildingExplorer=createBuildingExplorer(housing,(p,b,route)=>planViewer.open(p.id,{...route,block:b.number}),{facts:residenceFacts,stats:residenceStats,isSaved:id=>saved.has(id),onSave:toggleSave});hallExplorer=createHallExplorer(housing,(p,route)=>planViewer.open(p.id,route),{facts:residenceFacts,stats:residenceStats,isSaved:id=>saved.has(id),onSave:toggleSave});planViewer=createPlanViewer(housing,places,{onPlace:id=>{if(selected?.id!==id)selectPlace(places.find(p=>p.id===id),{focus:false});},onHall:(id,plan)=>{const p=places.find(p=>p.id===id);if(blocks.some(b=>b.placeId===id)){selectPlace(p,{focus:false});showBlocks(p);}else hallExplorer.open(p,{plan});},onBuilding:(id,number)=>{const b=blocks.find(b=>b.placeId===id&&b.number===number);if(b)buildingExplorer.open(places.find(p=>p.id===id),b);}});}
+ const fitGuide=mountEligibility($('#housing-fit-guide'),next=>{housingFit=next;for(const p of places)markers.get(p.id)?.setIcon(icon(p));$('#housing-fit-legend').hidden=!next.year;renderList();});housingFit=fitGuide.state;$('#housing-fit-legend').hidden=!housingFit.year;
  saved=new Set([...saved].filter(id=>places.some(p=>p.id===id)));
  if(!window.L)throw new Error('The local map library did not load.');
  // 3,695 static vector layers otherwise rewrite individual SVG paths on every
@@ -183,4 +191,4 @@ async function start() {
 const dialog=$('#sources-dialog');$('#sources-button').onclick=()=>dialog.showModal();$('#close-sources').onclick=()=>dialog.close();
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search').focus();}if(e.key==='Escape'&&selected&&!document.querySelector('dialog[open]'))closeDetail();});
-start().catch(e=>{console.error(e);$('#error').hidden=false;$('#error').textContent='The campus data could not be loaded. Run this app using its local start command, then reload. The official map is available at maps.richmond.edu.';$('#place-list').innerHTML='<p class="empty">Campus data unavailable. Please reload after starting the local server.</p>';});
+start().catch(e=>{console.error(e);$('#error').hidden=false;$('#error').textContent='Campus data could not be loaded. Try reloading. The university’s official map is available at maps.richmond.edu.';$('#place-list').innerHTML='<p class="empty">Campus places could not be loaded. Reload to try again.</p>';});
