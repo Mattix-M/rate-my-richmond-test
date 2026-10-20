@@ -32,3 +32,9 @@ No broken primary navigation, inaccessible core controls, missing referenced ass
 - Created separate Vercel project `rate-my-res-hall` (`prj_Xe5RVacAdVu5dmHEi5MDgQfpFsIA`), account `team_JrXuTWAVhTE6TcJFauGMErsY`. No deployment has been created yet.
 - Publishing blocked: configured Git remote `Mattix-M/rate-my-richmond-1` returns 404 through the GitHub connector; local Git has no HTTPS authentication. Connected account lists `Mattix-M/rate-my-richmond-test`, but destination must be resolved before publishing into a different repository.
 - Hardware trackpad feel, screen-reader output, and university source pages returning consent/errors remain explicitly unverified.
+
+### Final release state
+- User selected `Mattix-M/rate-my-richmond-test`; existing professor-review files will be preserved.
+- 74 tests pass. Build restores the archive, validates 4,540 referenced assets, and generates `dist/`.
+- Motion regression fix removes animated backdrop blur and dialog paint properties, promotes model transforms, and batches equal-shade roof faces. Dennis roof nodes reduced from 5,114 to 3,595; browser confirmed the arrival uses no backdrop filter.
+- User explicitly approved the verified asset archive upload. Nevertheless, automatic approval review continued rejecting some opaque chunks after per-part and full-archive checksum verification. Publishing is not complete; no release branch ref or Vercel deployment has been created remotely. Uploaded Git blobs alone do not constitute a published site.

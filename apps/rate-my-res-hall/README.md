@@ -195,6 +195,6 @@ See [PLAN_ROLLOUT.md](PLAN_ROLLOUT.md) for the completed redraw batches and sour
 
 ## Production release
 
-Run `npm test` and `npm run build` in this directory. The standalone static output is `dist/`; no Next.js server or external runtime dependency is needed. Vercel settings are in `vercel.json`. Use a separate Vercel project with Root Directory `apps/rate-my-res-hall`, so the professor-review application remains independent.
+Run `npm run build` and then `npm test` in this directory. The build first restores the checksum-verified asset archive, including on a fresh clone. The standalone static output is `dist/`; no Next.js server or external runtime dependency is needed. Vercel settings are in `vercel.json`. Use a separate Vercel project with Root Directory `apps/rate-my-res-hall`, so the professor-review application remains independent.
 
 The final release audit prompt, results, and publishing status are recorded in `research/ULTIMATE-AUDIT.md`.

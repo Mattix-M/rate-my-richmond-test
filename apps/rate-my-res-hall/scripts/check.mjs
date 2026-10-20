@@ -16,4 +16,4 @@ JSON.parse(await readFile(new URL('data/housing/drawing-inventory.json',root),'u
 await access(new URL('hall-explorer.css',root));
 for(const asset of assets)await access(new URL(asset,root));
 console.log(`Validated ${assets.size} local source, floor-preview and room-layout assets.`);
-console.log('Static app ready: all local assets present; JavaScript and JSON valid. No build output is needed.');
+console.log('Asset validation passed: local references, JavaScript and JSON are valid.');
