@@ -34,3 +34,5 @@
  .room-choice{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:12px}
 }
 @media(max-width:600px){.room-choice select{padding:10px 22px 10px 8px;min-height:44px}}
+
+.room-measure .room-plan-link{display:block;width:fit-content}
