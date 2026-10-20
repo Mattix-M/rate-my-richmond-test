@@ -1,0 +1,28 @@
+/* Shared masthead and navigation, following Rate My Richmond's editorial header. */
+.site-masthead{display:block;height:118px;padding:0;background:#fff;border:0;font-family:Arial,Helvetica,sans-serif}
+.masthead-title{height:70px;padding:0 32px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.site-wordmark{font:400 36px/1.05 Georgia,'Times New Roman',serif;letter-spacing:-1.2px;color:#000066;text-decoration:none}
+.site-wordmark span{color:#990000}
+.masthead-title small{font-size:10px;font-weight:700;letter-spacing:1.4px;color:#575b70}
+.site-tabs{display:flex;align-items:stretch;justify-content:flex-start;gap:0;height:48px;padding:0 32px;margin:0;background:#fff;border-top:1px solid #e2e7ef;border-bottom:1px solid #d7deea}
+.site-tabs a,.site-tabs button{display:flex;align-items:center;justify-content:center;min-height:44px;margin:0;padding:0 24px;border:0;border-right:1px solid #e2e7ef;border-radius:0;background:transparent;color:#575b70;font:700 13px/1 Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.4px;text-decoration:none;cursor:pointer}
+.site-tabs [aria-current=page]{background:#f3f5fa;color:#172342;box-shadow:inset 0 -3px 0 #294987}
+.site-tabs a:hover,.site-tabs button:hover{background:#f3f5fa;color:#172342;filter:none}
+.site-tabs a:focus-visible,.site-tabs button:focus-visible{outline:2px solid #294987;outline-offset:-5px}
+.workspace{height:calc(100dvh - 118px)}
+@media(max-width:600px){.site-masthead{height:108px}.masthead-title{height:60px;padding:0 18px}.site-wordmark{font-size:29px}.masthead-title small{font-size:8px}.site-tabs{height:48px;padding:0 6px}.site-tabs a,.site-tabs button{padding:0 15px;font-size:11px;min-height:44px}.workspace{height:calc(100dvh - 108px)}}
+.site-masthead .site-tabs a{display:flex}
+
+.masthead-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#000066;font:400 21px Arial,Helvetica,sans-serif;letter-spacing:-.6px;white-space:nowrap}
+.masthead-brand b{font-weight:700}.masthead-brand small{display:block;margin-top:7px;font-size:9px;font-weight:600;letter-spacing:2px;color:#686879}
+.masthead-icon{display:grid;place-items:center;width:42px;height:44px;background:#990000;color:#fff;border-radius:12px;font-size:35px;line-height:1;box-shadow:0 4px 12px #99000020}
+/* Wordmark follows the hall-name typography; subtitle stays a UI label. */
+.masthead-brand{font-family:Georgia,'Times New Roman',serif;font-size:29px;font-weight:400;letter-spacing:-.8px}
+.masthead-brand b{font-weight:400}.masthead-brand small{font-family:Arial,Helvetica,sans-serif}
+@media(max-width:400px){.masthead-brand{font-size:25px}}
+
+.masthead-icon{width:44px;height:44px;box-shadow:none;background:none}.brand-period{color:#990000}
+@media(max-width:600px){.site-tabs{padding:0}.site-tabs a,.site-tabs button{padding:0 9px;font-size:10px;flex:1;white-space:nowrap}}
+/* Stacked mobile map/list must size naturally; a fixed flex height covered the tabs. */
+@media(max-width:760px){.workspace{height:auto;min-height:0}.site-masthead{position:relative;z-index:600}}
+@media(max-width:360px){.site-tabs a,.site-tabs button{padding:0 5px;font-size:10px;letter-spacing:0}.masthead-title{padding-left:14px;padding-right:14px}.masthead-brand{gap:9px;font-size:24px}}

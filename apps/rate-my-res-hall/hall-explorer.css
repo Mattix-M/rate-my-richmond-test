@@ -1,0 +1,88 @@
+/* A shared motion language. Keep opacity off the 3D stack and its slabs. */
+.building-dialog .floor-slab.preview .slab-top,
+.building-dialog .floor-slab.active .slab-top{background:#f0e7d5;border-color:#990000}
+.building-dialog .floor-slab.preview .slab-front,
+.building-dialog .floor-slab.active .slab-front{background:#95604a}
+.building-dialog button:focus-visible{outline:3px solid #990000;outline-offset:4px}
+.building-dialog .floor-rail button[aria-pressed=true]{background:var(--green);color:white}
+.hall-dialog .building-content{grid-template-columns:minmax(0,1fr) 245px;gap:18px 30px;padding:28px 32px}
+.hall-dialog .building-intro h2{font-size:34px}
+.hall-stage{position:relative;min-width:0;min-height:365px;display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;isolation:isolate}
+.hall-stage .building-scene{grid-column:2;height:350px;margin:0;perspective:1200px;overflow:visible}
+.hall-stage .floor-stack{width:205px;height:135px;transform:translateY(75px) rotateX(58deg) rotateZ(-35deg);animation:hall-stack-arrive .8s cubic-bezier(.16,1,.3,1) backwards}
+.hall-stage .floor-slab{transform:translateZ(calc(var(--level)*49px));transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.hall-stage .floor-slab.active,.hall-stage .floor-slab.preview{transform:translateZ(calc(var(--level)*49px + 15px)) translateX(-14px)}
+.hall-stage .slab-front{height:26px}
+.hall-stage .slab-side{width:26px}
+.hall-stage .slab-front i{height:15px;width:15px}
+.hall-stage .floor-rail{grid-column:1;grid-row:1;position:relative;top:auto;left:auto;gap:10px;align-self:center}
+.hall-stage .floor-rail button{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:12px 10px;min-height:44px;font-size:11px;line-height:1.4}
+.hall-stage .floor-rail span{margin:0}
+.hall-stage .floor-rail span+span{margin-left:5px}
+.hall-stage .model-note{bottom:0;left:0;right:0}
+.hall-dialog .building-choice{min-width:0}
+.hall-dialog .apartment-plans button{min-height:50px}
+.hall-archives{margin-top:20px;color:var(--muted);font-size:11px}
+.hall-archives summary{cursor:pointer;padding:9px 0}
+.hall-dialog.hall-entering .floor-stack{transform:translateY(75px) rotateX(25deg) rotateZ(0) scale(1.35);transition:transform .34s cubic-bezier(.4,0,.2,1)}
+.hall-dialog.hall-entering .floor-slab.active{transform:translateZ(calc(var(--level)*49px + 30px)) translateX(-14px)}
+@keyframes hall-stack-arrive{from{transform:translateY(110px) rotateX(42deg) rotateZ(-52deg) scale(.8)}to{transform:translateY(75px) rotateX(58deg) rotateZ(-35deg)}}
+@media(max-width:760px){.hall-dialog .building-content{grid-template-columns:minmax(0,1fr);padding:22px 26px}.hall-stage{width:100%;max-width:470px;justify-self:center;min-height:340px}.hall-stage .building-scene{height:325px}.hall-dialog .building-choice{width:100%;align-self:stretch}.hall-dialog .building-intro h2{font-size:30px}.hall-dialog .apartment-plans{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}}
+@media(max-width:380px){.hall-dialog .building-content{padding:20px 16px}.hall-stage{grid-template-columns:92px minmax(0,1fr)}.hall-stage .floor-stack{width:155px;height:110px}.hall-stage .floor-rail button{font-size:10px;padding:10px 8px}}
+@media(prefers-reduced-motion:reduce){.hall-dialog .floor-stack,.hall-dialog .floor-slab{animation:none;transition:none}}
+/* Carry the chosen floor forward into the plan, while the other floors recede.
+   Transform-only motion preserves the stack's CSS 3D depth. */
+.building-dialog .floor-stack{transition:transform .46s cubic-bezier(.22,1,.36,1)}
+.building-dialog .floor-slab{transition:transform .46s cubic-bezier(.22,1,.36,1)}
+.building-dialog.hall-entering .floor-stack{animation:none;transform:translateY(30px) rotateX(0deg) rotateZ(0deg) scale(1.2);transition:transform .46s cubic-bezier(.22,1,.36,1)}
+.building-dialog.hall-entering .floor-slab.active{transform:translateZ(120px) translateX(0)}
+.building-dialog.hall-entering .floor-slab:not(.active){transform:translateZ(-180px) translateX(540px) scale(.65)}
+.building-dialog.hall-entering .slab-front,.building-dialog.hall-entering .slab-side{visibility:hidden}
+.building-dialog.hall-entering .building-choice{transform:translateY(10px);opacity:.35;transition:transform .35s ease,opacity .35s ease}
+.building-dialog .building-choice{animation:floor-choice-arrive .24s ease backwards}
+.building-dialog .floor-rail button{min-height:44px;touch-action:manipulation}
+.building-dialog .floor-rail button:active{transform:scale(.97)}
+.building-dialog.hall-entering .building-back,.building-dialog.hall-entering .building-close{position:relative;z-index:3}
+@keyframes floor-choice-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.building-dialog .floor-stack,.building-dialog .floor-slab,.building-dialog .building-choice{animation:none!important;transition:none!important}}
+
+/* One centered architectural stage across residence and apartment selectors. */
+.building-dialog:not(.ufa-immersive){width:min(1160px,96vw);height:min(850px,94dvh);max-height:94dvh;background:#faf9f7}
+.building-dialog:not(.ufa-immersive) header{border-bottom:0}
+.building-dialog:not(.ufa-immersive) .building-content{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding:8px 32px 24px}
+.building-dialog:not(.ufa-immersive) .building-intro h2{font-size:36px;margin:7px 0}
+.building-dialog:not(.ufa-immersive) .building-intro p{font-size:12px;margin:0;color:#686879}
+.building-dialog:not(.ufa-immersive) .building-scene{width:min(640px,100%);height:390px;margin:0 auto;justify-self:center;background:radial-gradient(ellipse,#e2e8f288,transparent 68%)}
+.building-dialog:not(.ufa-immersive) .hall-stage{display:block;width:min(640px,100%);max-width:none;min-height:390px;margin:0 auto;justify-self:center}
+.building-dialog:not(.ufa-immersive) .floor-rail{position:absolute;left:0;top:50%;transform:translateY(-50%);display:flex;gap:12px;width:122px;z-index:4}
+.building-dialog:not(.ufa-immersive) .floor-rail button{padding:12px 11px;min-height:44px;font-size:12px;display:flex;justify-content:space-between;align-items:center;text-align:left;box-shadow:none}
+.building-dialog:not(.ufa-immersive) .floor-rail button:hover{transform:none}
+.building-dialog:not(.ufa-immersive) .floor-rail button.preview{background:#f5e5e5;border-color:#990000;color:#000066}
+.building-dialog:not(.ufa-immersive) .model-note{bottom:0;left:0;right:0;font-size:10px}
+.building-dialog:not(.ufa-immersive) .building-choice{width:min(680px,100%);justify-self:center;align-self:start;margin:8px 0 0}
+.building-dialog:not(.ufa-immersive):not(.has-floor-selection) .building-choice:not(:has(.unit-form)){display:none}
+.building-dialog:not(.ufa-immersive) .apartment-plans{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.building-dialog:not(.ufa-immersive) .building-choice h3{font-size:22px}
+/* Stable faces own the hit area; hover changes color without moving the target. */
+.building-dialog:not(.ufa-immersive) .floor-slab{pointer-events:none}
+.building-dialog:not(.ufa-immersive) .slab-top,
+.building-dialog:not(.ufa-immersive) .slab-front,
+.building-dialog:not(.ufa-immersive) .slab-side{pointer-events:auto;cursor:pointer}
+.building-dialog:not(.ufa-immersive) .slab-top *,
+.building-dialog:not(.ufa-immersive) .slab-front *,
+.building-dialog:not(.ufa-immersive) .slab-side *{pointer-events:none}
+.building-dialog:not(.ufa-immersive):not(.hall-entering) .floor-slab:is(:hover,:focus-visible,.preview,.active){transform:translateZ(calc(var(--level)*65px))}
+.building-dialog.hall-dialog:not(.hall-entering) .floor-slab:is(:hover,:focus-visible,.preview,.active){transform:translateZ(calc(var(--level)*49px))}
+.building-dialog:not(.ufa-immersive) .floor-slab.preview .slab-top{background:#f5e5e5;border-color:#990000;box-shadow:0 0 0 3px #99000033}
+.building-dialog:not(.ufa-immersive) .floor-slab.preview .slab-front,
+.building-dialog:not(.ufa-immersive) .floor-slab.preview .slab-side{background:#8d9b73;border-color:#990000}
+@media(max-width:600px){
+ .building-dialog:not(.ufa-immersive){width:100vw;height:100dvh;max-height:none;border-radius:0}
+ .building-dialog:not(.ufa-immersive) .building-content{padding:8px 16px 22px}
+ .building-dialog:not(.ufa-immersive) .building-intro h2{font-size:30px}
+ .building-dialog:not(.ufa-immersive) .building-scene,.building-dialog:not(.ufa-immersive) .hall-stage{height:345px;min-height:345px}
+ .building-dialog:not(.ufa-immersive) .floor-rail{width:94px;gap:8px;left:0}
+ .building-dialog:not(.ufa-immersive) .floor-rail button{padding:10px 8px;font-size:11px}
+ .building-dialog:not(.ufa-immersive) .floor-stack{margin-left:65px;width:160px;height:110px}
+ .building-dialog:not(.ufa-immersive) .model-note{font-size:9px}
+}

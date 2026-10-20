@@ -1,0 +1,99 @@
+/* Rate My Richmond palette: warm white, deep blue and red, with brick reserved for buildings. */
+:root{--ink:#171733;--muted:#686879;--paper:#faf9f7;--line:#dedee7;--wine:#990000;--wine-light:#f8e8e8;--green:#000066;--shadow:0 8px 32px #00006615}
+.topbar{border-top:4px solid #990000;background:#fff}
+.brand,.building-intro h2,.ufa-heading h2,.plan-header h2{color:#000066}
+.brand-icon{background:#990000;color:#fff;box-shadow:0 4px 12px #99000020}
+.brand small,.topbar nav button,.ufa-evidence,.model-note{color:#686879}
+.sidebar,.detail,.plan-dialog,.building-dialog,.ufa-immersive{background:#fff}
+.building-scene,.ufa-space{background:radial-gradient(ellipse,#eeeef688,transparent 68%)}
+.plan-canvas{background:#eeeef6}
+.house-pin>span{background:#365793;border-color:#fff;color:#fff}
+.house-pin.is-selected>span,.block-pin>span{background:#243f79;color:#fff}
+.floor-rail button.preview,.ufa-floor-callouts button.floor-preview{background:#f8e8e8;border-color:#990000;color:#990000}
+.floor-rail button.active,.floor-rail button[aria-pressed=true]{background:#000066;color:#fff}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline-color:#990000}
+.plan-toolbar,.plan-header,.building-dialog header{border-color:#dedee7}
+.building-back,.building-fold,.ufa-fold{color:#000066;background:#fff;border-color:#d2d2df}
+
+/* Muted sage landscape complements muted royal-blue map buildings. */
+.map-shell,#map{background:#edf0e8}
+
+.house-pin.is-selected>span{box-shadow:0 0 0 4px #fff,0 0 0 6px #243f79}
+.residence-key{background:#365793}
+
+/* Shared interaction palette; Richmond red is reserved for the brand. */
+:root{--green:#294987;--selection:#365793;--selection-soft:#e8eef8;--muted:#626c7d;--line:#dce2ec}
+.residential .place-symbol{background:#e8eef8;color:#294987}
+.place-symbol{background:#eef1f5;color:#626c7d}
+.place-row:hover{background:#f1f4fa}
+.place-row.selected{background:#e8eef8;box-shadow:inset 3px 0 #365793}
+.search-wrap,.map-actions button[aria-pressed=false]{background:#f5f6f9;border-color:#dce2ec;color:#626c7d}
+.search-wrap>span,input::placeholder,.filters button,.list-heading>span,.save-button,.eyebrow,.block-choices span{color:#626c7d}
+.save-button[aria-pressed=true],.detail-save[aria-pressed=true]{color:#294987;background:#e8eef8}
+.detail-top{background:linear-gradient(120deg,#e8eef8,#f7f8fb)}
+.detail .type-pill{color:#42608c;border-color:#cbd6e7}
+.detail .subtitle,.detail-description,.detail-sources,.detail-status,.interior p,.empty,dialog p,.plan-dialog label,.plan-caption,.plan-source-notes summary,.plan-source-notes p,.plan-source-notes li,.room-record summary span,.room-panel-heading>span,.room-extra summary{color:#626c7d}
+.interior,.room-record .room-context,#coverage span{background:#f0f3f8}
+.detail-links a.secondary{background:#e8eef8;color:#294987}
+.detail-save,.plan-caption a,.plan-toolbar a,.dialog-links a,#selected-room a,.empty strong{color:#294987}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline-color:var(--selection)}
+.floor-rail button.preview,.building-dialog:not(.ufa-immersive) .floor-rail button.preview,.ufa-floor-callouts button.floor-preview{background:#e8eef8;border-color:#365793;color:#294987}
+.floor-rail button.active,.floor-rail button[aria-pressed=true]{background:#294987;color:#fff}
+.building-dialog:not(.ufa-immersive) .interactive-building .floor-outline{fill:#365793;stroke:#365793}
+.building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor:is(:hover,:focus-visible,.preview,.active) .floor-face:not([data-window]){stroke:#365793}
+.building-fold:hover,.ufa-controls button:hover{background:#e8eef8;border-color:#365793}
+.ufa-surface.floor-preview .ufa-edge::after{background:#7fa2dd38}
+.room-selection-areas polygon{fill:#36579318;stroke:#36579377}
+.room-selection-areas polygon:hover{fill:#36579344;stroke:#294987}
+.room-hotspot,.room-hotspot.has-layout{background:#365793;color:#fff;border-color:#fff}
+.room-hotspot:hover,.room-hotspot:focus-visible,.room-hotspot[aria-pressed=true],.show-room-labels .room-hotspot,.room-hotspot.has-layout:hover,.room-hotspot.has-layout:focus-visible{background:#e8eef8;color:#243f79;border-color:#365793}
+.room-hotspot[aria-pressed=true]{box-shadow:0 0 0 4px #36579333}
+.room-facts span{border-color:#dce2ec}
+.block-pin:hover span,.block-pin:focus span{background:#243f79;border-color:#243f79;color:#fff}
+.leaflet-tooltip.place-label{color:#243f79;border-color:#dce2ec}
+.leaflet-tooltip.land-label{color:#536b87}
+.compass b,.leaflet-tooltip.road-label{color:#626c7d}
+dialog::backdrop{background:#172b4966}
+.ufa-surface:focus-visible,.ufa-townhouse:focus-visible{outline-color:#365793}
+.ufa-immersive:not(.ufa-expanded) .ufa-surface.floor-preview .ufa-face{border-color:#365793;box-shadow:0 0 0 3px #36579333,0 16px 40px #172b4920}
+.ufa-surface.floor-preview .ufa-edge{border-color:#365793}
+.building-dialog button:focus-visible,.building-fold:focus-visible,.range-rooms button:focus-visible{outline-color:var(--selection)}
+/* Compact residence summary: one primary action and optional source details. */
+.detail{width:280px;bottom:24px;max-height:calc(100% - 100px)}
+.detail-top{padding:18px 40px 0 18px;background:#fff}
+.detail-top h2{font-size:24px;margin:0;line-height:1.15}
+.detail-body{padding:12px 18px 18px}
+.residence-fact{font-size:12px;line-height:1.65;color:#526176;margin:0 0 12px}
+.summary-actions{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-top:12px}
+.summary-actions .detail-save{width:auto;margin:0;padding:6px 0;border:0;background:none;font-size:11px}
+.residence-links{flex:1;font-size:11px;color:#526176;padding-top:6px}
+.residence-links summary{cursor:pointer;white-space:nowrap}
+.residence-links a{display:block;margin-top:12px;color:#294987;line-height:1.5}
+.residence-links p{font-size:10px;line-height:1.5;margin:12px 0 0}
+@media(max-width:600px){.detail{left:12px;right:12px;bottom:12px;width:auto;max-height:40dvh}}
+
+/* Residence context belongs beside the model, without an extra map dialog. */
+.building-intro:has(.hall-fact){position:relative;padding-right:min(34%,360px)}
+.hall-fact{position:absolute;right:0;top:0;width:30%;max-width:330px;border-left:2px solid #dbe3f0;padding:4px 0 4px 20px;color:#626c7d;font-size:14px;line-height:1.55}
+.building-intro .hall-fact p{font-size:14px;margin:0 0 8px;line-height:1.55}
+.hall-fact a{font-size:12px;color:#294987;text-underline-offset:3px}
+@media(max-width:850px){
+ .building-intro:has(.hall-fact){padding-right:0}
+ .hall-fact{position:static;width:auto;max-width:580px;margin-top:14px;padding-left:12px}
+}
+.stats-nav{color:#294987;font-size:14px;text-decoration:none;margin-right:18px;font-weight:600}
+.hall-stat-line{display:flex;gap:8px 14px;flex-wrap:wrap;margin:10px 0;font-size:12px;color:#575b70}.hall-stat-line a{font-size:12px}.hall-stat-line strong{font-size:15px}
+
+/* Facts use one body style; only explicit actions receive link color. */
+.building-intro .hall-fact{font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:400;color:#575b70;line-height:1.55}
+.building-intro .hall-fact p,.building-intro .hall-stat-line,.building-intro .hall-stat-line span{font:inherit;color:inherit}
+.building-intro .hall-stat-line{gap:4px 18px;margin:10px 0}
+.hall-fact-links{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px}
+.building-intro .hall-fact-links a{font:inherit;color:#294987;text-decoration-thickness:1px;text-underline-offset:3px}
+/* Override compact explorer paragraph rules injected with the model view. */
+.building-dialog .building-intro .hall-fact p{font:inherit!important;color:inherit!important}
+
+:root{--viewer-paper:#fff}
+.building-dialog .floor-rail button{border-color:#c6cfdd}
+.building-dialog:not(.ufa-immersive) .building-intro>p{font-size:13px}
+.building-dialog:not(.ufa-immersive) .model-note{bottom:24px;font-size:10px}

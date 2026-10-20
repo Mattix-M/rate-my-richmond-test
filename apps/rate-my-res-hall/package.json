@@ -1,0 +1,13 @@
+{
+  "name": "rate-my-res-hall-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "data": "python3 scripts/prepare_data.py"
+  }
+}

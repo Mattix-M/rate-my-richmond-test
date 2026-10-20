@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rate My Res Hall · Richmond campus explorer</title>
+<meta name="description" content="An independent guide to University of Richmond residences, with an interactive campus map, floor plans and sourced hall statistics.">
+<link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="hall-explorer.css"><link rel="stylesheet" href="ufa-immersive.css"><link rel="stylesheet" href="exterior-models.css"><link rel="stylesheet" href="interactive-building.css"><link rel="stylesheet" href="spatial-transition.css"><link rel="stylesheet" href="richmond-theme.css">
+<script src="vendor/leaflet.js" defer></script><script type="module" src="app.js"></script>
+<link rel="stylesheet" href="site-navigation.css"></head>
+<body>
+<a class="skip" href="#search">Skip to building search</a>
+<header class="site-masthead"><div class="masthead-title"><a href="./" class="masthead-brand"><img class="masthead-icon" src="icon.svg" width="44" height="44" alt=""><span>Rate My <b>Res Hall</b><span class="brand-period">.</span><small>UNIVERSITY OF RICHMOND</small></span></a></div><nav class="site-tabs" aria-label="Primary"><a href="./" aria-current="page">Explore</a><a href="stats.html">Hall stats</a><a href="game.html">Hall quiz</a><button id="sources-button">About the data</button></nav></header>
+<main class="workspace">
+<aside class="sidebar" aria-label="Find campus places">
+<div class="intro"><span class="eyebrow">A LITTLE EXPLORING GOES A LONG WAY</span><h1>Find your place.</h1><p>Get to know the campus.<br>Start with a place to call home.</p></div>
+<div class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search halls, buildings, places…" aria-label="Search campus places" autocomplete="off"><kbd>/</kbd></div>
+<div class="filters" role="group" aria-label="Place filters"><button data-filter="residential" aria-pressed="true">Residences</button><button data-filter="all" aria-pressed="false">All campus</button><button data-filter="saved" aria-pressed="false">Saved <span id="saved-count">0</span></button></div>
+<div class="list-heading"><h2 id="list-title">Explore residences</h2><span id="result-count" aria-live="polite"></span></div>
+<div id="place-list" class="place-list" aria-label="Search results"><p class="empty">Loading campus places…</p></div>
+<div class="sidebar-footer"><span class="status-dot"></span><div><strong>Step inside your residence.</strong><p>96 plans · 19 residential groups</p></div></div>
+</aside>
+<section class="map-shell" aria-label="Interactive campus map">
+<div id="map" role="region" aria-label="Campus map. Use arrow keys to pan and plus or minus to zoom." tabindex="0"></div>
+<div class="map-heading"><span class="eyebrow">THE BIG PICTURE</span><h2>Find your way around.</h2><p>University of Richmond, Virginia</p></div>
+<div class="map-actions"><button id="fit-campus" title="Fit whole campus"><span aria-hidden="true">⤢</span> Whole campus</button><button id="toggle-labels" aria-pressed="false" title="Toggle residence labels">Aa <span>Labels</span></button></div>
+<div class="compass" title="North is up"><span>N</span><b>↑</b></div>
+<div class="map-legend"><span><i class="residence-key"></i>Residence</span><span><i class="campus-key"></i>Campus place</span><span class="footprint-key">Outlined buildings: OpenStreetMap</span></div>
+<div class="map-help">Drag to explore · Scroll to zoom · Zoom closer for names</div>
+<section id="detail" class="detail" hidden aria-label="Selected place details"></section>
+<div id="error" class="error" role="alert" hidden></div>
+</section>
+</main>
+<footer class="journey" aria-label="Explorer stages"><span class="journey-label">YOUR EXPLORER</span><span class="step current"><b>01</b> Campus</span><span class="step"><b>02</b> Residence</span><span class="step future"><b>03</b> Floor</span><span class="step future"><b>04</b> Room <small>Descriptions</small></span><span class="independent">Independent student project · Working title</span></footer>
+<dialog id="sources-dialog"><div class="dialog-head"><span class="eyebrow">ABOUT THE DATA</span><button id="close-sources" aria-label="Close data information">×</button></div><h2>A map with a paper trail.</h2><p>Official university locations, community-mapped surroundings. A local snapshot retrieved October 19, 2026.</p><div id="coverage"></div><ul class="source-list"><li><a href="https://maps.richmond.edu/?id=1949" target="_blank" rel="noopener">University of Richmond campus map ↗</a><p>Names and coordinates from its public Buildings and Residence Halls categories.</p></li><li><a href="https://residencelife.richmond.edu/housing/" target="_blank" rel="noopener">Residence Life housing directory ↗</a><p>Residence links, including Atlantic and Pacific Houses.</p></li><li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors · ODbL ↗</a><p>Building footprints, roads, paths, greenspace and water. These outlines are not university-verified.</p></li></ul><p class="note">Pins are source map locations, not verified entrances. Apartment groups contain multiple buildings. This is not a live feed or a guarantee of complete campus coverage. 96 source plans and 1,329 room-description records are available. Some plans are incomplete or older; review the notes in each residence. 1,436 reviewed room-area views are available. Apartment blocks use the official numbered map markers. The 3D floor chooser is an illustration, not a surveyed exterior. UFA templates do not locate individual unit entrances.</p><div class="dialog-links"><a href="data/manifest.json" target="_blank">Data manifest ↗</a><a href="data/sources/campus-map.pdf" target="_blank">Official PDF map ↗</a></div></dialog>
+<noscript><p class="error">Enable JavaScript to use this campus explorer. The official reference is available at <a href="https://maps.richmond.edu/?id=1949">maps.richmond.edu</a>.</p></noscript>
+</body></html>

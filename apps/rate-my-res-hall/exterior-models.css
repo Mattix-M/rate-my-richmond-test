@@ -1,0 +1,16 @@
+/* Decorative architecture never intercepts floor controls. */
+.exterior-model,.ufa-model-facade,.ufa-model-roof{pointer-events:none;user-select:none;overflow:visible}
+.exterior-model{display:block;width:100%;height:100%;max-height:540px;filter:drop-shadow(0 18px 20px #344b3615)}
+.ufa-model-facade,.ufa-model-roof{display:block;width:100%;height:100%;position:absolute;inset:0}
+.ufa-model-facade{backface-visibility:hidden}
+.ufa-model-roof{backface-visibility:hidden}
+@media(prefers-reduced-motion:reduce){.exterior-model{animation:none}}
+
+.exterior-intro{position:absolute;inset:0;transition:opacity .45s,transform .65s;pointer-events:none}.has-exterior:not(.has-floor-selection) .floor-stack{visibility:hidden}.has-exterior.has-floor-selection .exterior-intro{opacity:0;transform:scale(1.12) translateY(-20px)}
+/* Keep the building and its adjacent controls together, below the heading. */
+.building-dialog:not(.ufa-immersive) .exterior-intro{inset:0 0 22px 114px;display:grid;place-items:center}
+.building-dialog:not(.ufa-immersive) .exterior-intro .exterior-model{width:min(480px,100%);height:350px;max-height:100%;object-fit:contain}
+@media(max-width:600px){
+ .building-dialog:not(.ufa-immersive) .exterior-intro{inset:5px -8px 22px 90px}
+ .building-dialog:not(.ufa-immersive) .exterior-intro .exterior-model{height:295px}
+}

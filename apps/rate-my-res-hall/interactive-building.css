@@ -1,0 +1,128 @@
+/* The same calm, centered stage as UFA, with the architecture itself selectable.
+   SVG polygons share their rendered geometry with their hit areas. */
+.building-dialog:not(.ufa-immersive) .interactive-building{
+ display:block;width:calc(100% - 126px);height:350px;max-width:480px;
+ margin:0 0 22px 126px;overflow:visible;isolation:isolate;
+ user-select:none;-webkit-user-select:none;touch-action:manipulation;
+ filter:drop-shadow(0 16px 18px #344b3618);
+ animation:architecture-arrive .48s cubic-bezier(.22,1,.36,1) backwards;
+}
+/* Never inherit the CSS-3D slab transforms from the original rectangular model. */
+.building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab{
+ position:static;inset:auto;display:inline;transform:none;transform-style:flat;
+ transform-box:fill-box;transform-origin:center;opacity:1;outline:none;
+ pointer-events:visiblePainted;cursor:pointer;
+ transition:transform .46s cubic-bezier(.22,1,.36,1),opacity .36s ease;
+}
+.building-dialog:not(.ufa-immersive) .interactive-building .floor-outline{
+ pointer-events:none;fill:#990000;fill-opacity:0;stroke:#990000;
+ stroke-width:2.5;stroke-opacity:0;vector-effect:non-scaling-stroke;
+ transition:fill-opacity .16s ease,stroke-opacity .16s ease;
+}
+.building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor:is(:hover,:focus-visible,.preview,.active) .floor-outline{
+ fill-opacity:.13;stroke-opacity:1;
+}
+.building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor:focus-visible .floor-outline{
+ stroke-width:3.5;stroke-dasharray:5 3;
+}
+.building-dialog:not(.ufa-immersive) .interactive-building .floor-detail,
+.building-dialog:not(.ufa-immersive) .interactive-building text,
+.building-dialog:not(.ufa-immersive) .interactive-building .architecture-detail{
+ pointer-events:none;
+}
+/* Only move a level after activation; hovering leaves the hit geometry stable. */
+.building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab.active{
+ transform:translateY(-18px) rotate(-6deg) scale(1.22);opacity:1;
+}
+.building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab:not(.active){
+ transform:translateY(34px) scale(.94);opacity:.08;pointer-events:none;
+}
+@keyframes architecture-arrive{
+ from{opacity:0;transform:translateY(8px) scale(.96)}
+ to{opacity:1;transform:translateY(0) scale(1)}
+}
+@media(max-width:600px){
+ .building-dialog:not(.ufa-immersive) .interactive-building{
+  width:calc(100% - 98px);height:295px;margin:0 0 22px 98px;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .building-dialog:not(.ufa-immersive) .interactive-building,
+ .building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab,
+ .building-dialog:not(.ufa-immersive) .interactive-building .floor-outline{animation:none;transition:none}
+ .building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab{transform:none}
+}
+/* Trace the visible facade too, including the roof of the uppermost floor. */
+.building-dialog:not(.ufa-immersive) .interactive-building .architectural-floor:is(:hover,:focus-visible,.preview,.active) .floor-face:not([data-window]){
+ stroke:#990000;stroke-width:2;vector-effect:non-scaling-stroke;
+}
+/* Selection isolates a floor while its apartment/wing choices remain nearby.
+   Hover never changes the geometry; only an explicit selection moves a floor. */
+.building-dialog.has-floor-selection:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab.active{
+ transform:translateY(-8px) scale(1.06);opacity:1;
+}
+.building-dialog.has-floor-selection:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab:not(.active){
+ opacity:.24;
+}
+.building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab.active{
+ transform:translateY(-18px) rotate(-6deg) scale(1.22);
+}
+.building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab:not(.active){opacity:.08}
+.building-fold{
+ border:1px solid #d0d9e6;border-radius:10px;padding:10px 15px;
+ background:#ffffff;color:#000066;font:inherit;cursor:pointer;margin-bottom:12px;
+}
+.building-fold:hover{background:#f5e5e5;border-color:#990000}
+.building-fold:focus-visible{outline:3px solid #990000;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){
+ .building-dialog.has-floor-selection:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab{transform:none}
+}
+
+/* Keep the level recognizable as it turns towards the drawing. The complete
+   building uses the same short settle on return, without collapsing geometry. */
+.building-dialog:not(.ufa-immersive) .building-fold,
+.building-dialog:not(.ufa-immersive) .floor-rail button{min-height:44px}
+.building-dialog:not(.ufa-immersive) .building-choice{
+ transition:opacity .3s ease,transform .3s ease;
+}
+.building-dialog:not(.ufa-immersive):not(.hall-entering) .building-choice{
+ opacity:1;transform:translateY(0);
+}
+@media(max-width:600px){
+ .building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab.active{
+  transform:translateY(-12px) rotate(-4deg) scale(1.12);
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .building-dialog.hall-entering:not(.ufa-immersive) .interactive-building .architectural-floor.floor-slab.active{transform:none}
+}
+
+/* One entrance owns the camera motion. Nested opacity fades made the model
+   doubly translucent while Leaflet was moving beneath the blurred dialog. */
+.building-dialog:not(.ufa-immersive)[open]{
+ animation:hall-camera-arrive .48s cubic-bezier(.22,1,.36,1);
+}
+.building-dialog:not(.ufa-immersive) .interactive-building{
+ animation:none;
+}
+@keyframes hall-camera-arrive{
+ from{transform:translateY(12px) scale(.94)}
+ to{transform:translateY(0) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){
+ .building-dialog:not(.ufa-immersive)[open]{animation:none}
+}
+/* One composited model flight owns the spatial arrival. Animating the entire
+   dialog's background/shadow and blurring the moving Leaflet map were forcing
+   repeated viewport paints while the detailed SVG scaled. */
+.building-dialog:not(.ufa-immersive)[open]{animation:ufa-entry-fade .4s ease-out}
+.building-dialog:not(.ufa-immersive).residence-spatial-arrival[open],
+.building-dialog.ufa-immersive.ufa-spatial-arrival[open]{animation:none}
+.building-dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none;background:#172b4966}
+.residence-spatial-arrival::backdrop,.ufa-spatial-arrival::backdrop{animation:residence-scrim-arrive .85s ease-out}
+@keyframes residence-scrim-arrive{from{opacity:0}to{opacity:1}}
+.building-dialog.residence-spatial-arrival .interactive-building{filter:none}
+.residence-spatial-arrival .building-intro,.residence-spatial-arrival header,.residence-spatial-arrival .floor-rail,.residence-spatial-arrival .model-note{animation:ufa-controls-arrive .65s .15s both}
+@media(prefers-reduced-motion:reduce){.building-dialog:not(.ufa-immersive)[open],.residence-spatial-arrival::backdrop,.ufa-spatial-arrival::backdrop,.residence-spatial-arrival *{animation:none!important}}
+/* Ending the spatial class must not replay the fallback fade (a visible flash). */
+.building-dialog:not(.ufa-immersive).residence-arrival-finished[open],.ufa-immersive.ufa-arrival-finished[open]{animation:none}

@@ -1,0 +1,13 @@
+/* Scoped to the brief handoff; live floor plans and room targets remain intact. */
+.spatial-floor-flight{position:absolute;z-index:100;pointer-events:none;transform-origin:0 0;will-change:transform,opacity;backface-visibility:hidden}
+.spatial-floor-flight>svg,.spatial-floor-flight>img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.plan-dialog.spatial-transition-waiting .plan-stage{opacity:0}
+.spatial-transition-active .plan-header,.spatial-transition-active .plan-toolbar,.spatial-transition-active .plan-caption{animation:spatial-controls-in .7s ease both}
+@keyframes spatial-controls-in{from{opacity:.2}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.spatial-transition-active .plan-header,.spatial-transition-active .plan-toolbar,.spatial-transition-active .plan-caption{animation:none}}
+/* The scene flight owns motion; a second dialog entrance would move its origin. */
+dialog.spatial-transition-active{animation:none!important}
+.plan-dialog.spatial-transition-active .plan-canvas{pointer-events:none}
+
+/* The floor image fades as a cached layer while its snapshot flies in. */
+.spatial-transition-active .plan-stage{will-change:transform,opacity}

@@ -1,0 +1,128 @@
+{
+  "asOf": "2026-10-20",
+  "knownCapacityGroups": 17,
+  "totalGroups": 19,
+  "knownCapacitySubtotal": 2719,
+  "capacityMissing": [
+    {
+      "id": "571861",
+      "name": "Robins Hall"
+    },
+    {
+      "id": "571975",
+      "name": "Wood Hall"
+    }
+  ],
+  "hallCapacityRanking": [
+    {
+      "id": "571565",
+      "name": "Gray Court",
+      "capacity": 292,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/gray-court.html"
+    },
+    {
+      "id": "571574",
+      "name": "Lora Robins Court",
+      "capacity": 282,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/first%20years/lora-robins.html"
+    },
+    {
+      "id": "571575",
+      "name": "Marsh Hall",
+      "capacity": 229,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/first%20years/marsh-hall.html"
+    },
+    {
+      "id": "571760",
+      "name": "North Court",
+      "capacity": 221,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/north-court.html"
+    },
+    {
+      "id": "571866",
+      "name": "South Court",
+      "capacity": 162,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/south-court.html"
+    },
+    {
+      "id": "571973",
+      "name": "Westhampton Hall",
+      "capacity": 157,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/westhampton-hall.html"
+    },
+    {
+      "id": "571759",
+      "name": "Moore Hall",
+      "capacity": 156,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/first%20years/moore-hall.html"
+    },
+    {
+      "id": "571573",
+      "name": "Lakeview Hall",
+      "capacity": 141,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/lakeview-hall.html"
+    },
+    {
+      "id": "571561",
+      "name": "Dennis Hall",
+      "capacity": 98,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/first%20years/dennis.html"
+    },
+    {
+      "id": "571872",
+      "name": "Residence Hall No. 2",
+      "capacity": 86,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/thomas-hall.html"
+    },
+    {
+      "id": "571562",
+      "name": "Residence Hall No. 3",
+      "capacity": 86,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/mitchell-freeman-hall.html"
+    },
+    {
+      "id": "571570",
+      "name": "Residence Hall No. 1",
+      "capacity": 83,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/jeter-hall.html"
+    },
+    {
+      "id": "571571",
+      "name": "Keller Hall",
+      "capacity": 38,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/keller-hall.html"
+    },
+    {
+      "id": "572484",
+      "name": "Pacific House",
+      "capacity": 17,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/law-housing/pacific-house.html"
+    },
+    {
+      "id": "572483",
+      "name": "Atlantic House",
+      "capacity": 12,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/law-housing/atlantic-house.html"
+    }
+  ],
+  "communityCapacityRanking": [
+    {
+      "id": "572061",
+      "name": "University Forest Apartments",
+      "capacity": 483,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/ufa-gateway.html"
+    },
+    {
+      "id": "572073",
+      "name": "Gateway Village Apartments",
+      "capacity": 176,
+      "sourceUrl": "https://residencelife.richmond.edu/housing/upperclass/ufa-gateway.html"
+    }
+  ],
+  "caveats": [
+    "Capacity is published capacity, not occupancy.",
+    "Known subtotal excludes Robins and Wood; it is not total campus capacity.",
+    "Apartment communities and individual halls rank separately.",
+    "Building ages are approximate calendar-year differences."
+  ]
+}

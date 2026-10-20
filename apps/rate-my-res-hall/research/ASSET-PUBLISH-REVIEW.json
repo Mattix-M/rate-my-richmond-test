@@ -1,0 +1,16 @@
+{
+  "archiveSha256": "d8392719448e31be68e21fe26122cc0f7f412178b0b855fe6e39ddc940bdf015",
+  "files": 4938,
+  "parts": 108,
+  "allowedRoots": [
+    "data",
+    "vendor"
+  ],
+  "excluded": [
+    "macOS metadata/resource forks",
+    "Python scripts and bytecode",
+    "credentials/environment/configuration",
+    "research working files"
+  ],
+  "contents": "Public University of Richmond floor-plan sources and generated drawings; public campus geometry; sourced capacity/fact JSON; vendored Leaflet. No submitted user data or account data."
+}

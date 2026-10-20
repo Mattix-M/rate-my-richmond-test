@@ -1,0 +1,7 @@
+dist/
+.vercel/
+.DS_Store
+# Generated university plan assets are versioned in checksum-verified archive parts.
+data/
+vendor/
+.runtime-assets.tar.gz
