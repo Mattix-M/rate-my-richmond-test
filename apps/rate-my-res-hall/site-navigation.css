@@ -72,3 +72,6 @@
 .ufa-evidence.data-disclosure{max-width:680px;margin:12px auto 0;font-size:12px}
 .hall-stage>.model-note.data-disclosure{position:relative;inset:auto;grid-column:1/-1;width:100%;margin:8px 0 0;text-align:center}
 section.method:has(>.data-disclosure){margin-top:24px;margin-bottom:24px}
+
+/* Leave room for the beta tool on compact tablets without changing phone tabs. */
+@media(min-width:601px) and (max-width:820px){.site-tabs{padding:0 12px}.site-tabs a,.site-tabs button{padding:0 14px;font-size:12px;letter-spacing:.2px}}

@@ -2,6 +2,7 @@ import data from './room-size-data.js';
 import{compareRoomAreas}from'./room-dimensions.js';
 import{cleanPlanAssets,loadCleanPlanAssets}from'./clean-plan-assets.js';
 import{calibratePlan,safePlanDocument,transformPlanBounds}from'./room-plan-comparison.js';
+import{plannerRooms}from'./dorm-planner-data.js';
 const plansReady=loadCleanPlanAssets();
 const planCache=new Map();
 let drawingVersion=0;
@@ -81,6 +82,8 @@ function measure(room,hall,key){
  const extra=document.createElement('details');extra.className='data-disclosure room-source-details';const summary=document.createElement('summary');summary.textContent='Room details & source';extra.append(summary);
  const title=document.createElement('h2');title.textContent=`${key} / ${hall.name} · ${room.room}`;box.append(title);
  for(const text of [`${room.type[0].toUpperCase()+room.type.slice(1)}${room.occupancy?` · ${room.occupancy} ${room.occupancy===1?'resident':'residents'}`:''} · ${room.floor}`,`${room.basis==='published-type-default'?'Published double-room default':'Published'}: ${room.dimensions}`,`Rectangle estimate: ${fmt(room.width*room.height)} sq ft`]){const p=document.createElement('p');p.textContent=text;box.append(p);}
+ const plannerRoom=plannerRooms.find(candidate=>candidate.recordId===room.id);
+ if(plannerRoom){const plannerLink=document.createElement('a');plannerLink.href=`beta.html?room=${encodeURIComponent(plannerRoom.id)}`;plannerLink.textContent='Arrange this room in 3D ↗';plannerLink.className='room-plan-link';box.append(plannerLink);}
  if(room.basis==='published-type-default'){const note=document.createElement('p');note.className='dimension-basis';note.textContent='The university lists this size for doubles unless otherwise noted; this is not a separate measurement of this room.';extra.append(note);}
  if(room.basis==='published-group-dimensions'){const note=document.createElement('p');note.className='dimension-basis';note.textContent='Dimensions are inherited from the university’s room-group description; this room is individually identified on the plan.';extra.append(note);}
  const drawing=cleanPlanAssets.rooms[room.id];if(drawing){const planLink=document.createElement('a');planLink.href=drawing.url;planLink.target='_blank';planLink.rel='noopener';planLink.textContent='Open room drawing ↗';planLink.className='room-plan-link';extra.append(planLink);}
