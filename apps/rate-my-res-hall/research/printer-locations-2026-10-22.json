@@ -1,0 +1,153 @@
+{
+  "source": {
+    "title": "University of Richmond public printers",
+    "url": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+    "verifiedDate": "2026-10-22",
+    "note": "Pins mark buildings or communities, not exact machines. Counts follow the university printer directory; access, hours and machine status are not live."
+  },
+  "locations": [
+    {
+      "id": "printer-571523",
+      "name": "Boatwright Memorial Library",
+      "lat": 37.577194,
+      "lng": -77.538658,
+      "description": "Ground floor; B2; first floor; Technology Studio, room 152. Color and black-and-white.",
+      "printerCount": 5,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571523",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571524",
+      "name": "Booker Hall",
+      "lat": 37.574509,
+      "lng": -77.542183,
+      "description": "Music Library, room 201.",
+      "printerCount": 1,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571524",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571559",
+      "name": "Carole Weinstein International Center",
+      "lat": 37.579372,
+      "lng": -77.536972,
+      "description": "Spatial Analysis Lab, room 300; outside Global Studio, room 226. Color and black-and-white.",
+      "printerCount": 3,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571559",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-572073",
+      "name": "Gateway Village Apartments",
+      "lat": 37.571983,
+      "lng": -77.539421,
+      "description": "Room 5710. Black-and-white. Pin marks the apartment community, not the room.",
+      "printerCount": 1,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "community",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/592069",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571564",
+      "name": "Gottwald Center for the Sciences",
+      "lat": 37.574242,
+      "lng": -77.539948,
+      "description": "Biology, third floor; E100; Chemistry C201. Color and black-and-white.",
+      "printerCount": 4,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571564",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571569",
+      "name": "Jepson Hall",
+      "lat": 37.578438,
+      "lng": -77.537186,
+      "description": "Rooms G02, G03, G04, G06 and G08. Black-and-white.",
+      "printerCount": 5,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571569",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571757",
+      "name": "Millhiser Gymnasium",
+      "lat": 37.580379,
+      "lng": -77.538185,
+      "description": "Athletics lab, M410. Black-and-white. Listed under Robins Center Athletics Lab by IT.",
+      "printerCount": 1,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571757",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571578",
+      "name": "Richmond Hall",
+      "lat": 37.576256,
+      "lng": -77.53717,
+      "description": "Room 110. Black-and-white.",
+      "printerCount": 1,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571578",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571521",
+      "name": "Robins School of Business",
+      "lat": 37.578205,
+      "lng": -77.535576,
+      "description": "First-floor atrium near the dean’s office; rooms 100, Q160 and 239. Black-and-white.",
+      "printerCount": 4,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571521",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571871",
+      "name": "Westhampton Center",
+      "lat": 37.573963,
+      "lng": -77.540886,
+      "description": "Ground floor, by vending machines. Black-and-white.",
+      "printerCount": 1,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571871",
+      "verifiedDate": "2026-10-22"
+    },
+    {
+      "id": "printer-571851",
+      "name": "Whitehurst",
+      "lat": 37.578377,
+      "lng": -77.538841,
+      "description": "Ground floor, opposite the Richmond College office. Black-and-white.",
+      "printerCount": 1,
+      "sourceUrl": "https://spidertechnet.richmond.edu/TDClient/1955/Portal/KB/Article/88285/List-of-Public-Printers",
+      "locationPrecision": "building",
+      "coordinateSourceUrl": "https://maps.richmond.edu/?id=1949#!m/571851",
+      "verifiedDate": "2026-10-22"
+    }
+  ],
+  "notes": [
+    "Directory lists 27 printers at 11 building/community locations.",
+    "Deanery is not counted as a separate printer: the student printer service page lists it, while the detailed directory locates a printer at Westhampton Center. Official campus writing guidance identifies Deanery within Westhampton Center.",
+    "Booker printer color designation differs between search cache and live opened directory; omit color claim for Booker.",
+    "Millhiser pin uses the directory room description M410, despite its row heading Robins Center Athletics Lab.",
+    "Do not claim 24-hour access or live availability."
+  ],
+  "supportingSources": [
+    "https://spidertechnet.richmond.edu/TDClient/1955/Portal/Requests/Service/52362/Student-Printers",
+    "https://communications.richmond.edu/resources/writing/locations.html"
+  ]
+}

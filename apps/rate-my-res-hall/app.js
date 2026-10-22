@@ -1,3 +1,4 @@
+import { mountMapAmenities } from './map-amenities.js';
 import {evaluateHousing,mountEligibility} from './eligibility.js';
 import { installSmoothMapZoom } from './smooth-map-zoom.js';
 import { createPlanViewer } from './plans.js';
@@ -177,6 +178,7 @@ async function start() {
   const marker=L.marker([p.lat,p.lng],{icon:icon(p),title:p.name,alt:p.name,keyboard:true,riseOnHover:true,zIndexOffset:p.residential?200:0});
   marker.on('click',()=>selectPlace(p));marker.addTo(map);markers.set(p.id,marker);
  }
+ mountMapAmenities(map, document.querySelector('#map-amenities'));
  map.on('zoomend',updateLabels);fit();renderList();
  $('#fit-campus').onclick=fit;
  $('#toggle-labels').onclick=()=>{labels=!labels;$('#toggle-labels').setAttribute('aria-pressed',String(labels));updateLabels();};

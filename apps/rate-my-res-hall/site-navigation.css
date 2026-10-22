@@ -75,3 +75,7 @@ section.method:has(>.data-disclosure){margin-top:24px;margin-bottom:24px}
 
 /* Leave room for the beta tool on compact tablets without changing phone tabs. */
 @media(min-width:601px) and (max-width:820px){.site-tabs{padding:0 12px}.site-tabs a,.site-tabs button{padding:0 14px;font-size:12px;letter-spacing:.2px}}
+
+.nav-beta-badge{margin-left:6px;padding:3px 5px;border:1px solid #d7deea;border-radius:4px;color:#686879;font:600 9px/1 Arial,Helvetica,sans-serif;white-space:nowrap;text-transform:none;letter-spacing:0}
+@media(min-width:601px) and (max-width:1100px){.site-tabs{padding:0 12px}.site-tabs a,.site-tabs button{padding:0 12px;font-size:11px}}
+@media(max-width:600px){.site-masthead .site-tabs{gap:12px;overflow-x:auto;justify-content:flex-start}.site-masthead .site-tabs a{flex-shrink:0}.site-tabs .tab-about-long{display:none}.site-tabs .tab-about-short{display:inline}.nav-beta-badge{font-size:8px;margin-left:4px;padding:2px 4px}}

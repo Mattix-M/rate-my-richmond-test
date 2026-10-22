@@ -1,0 +1,100 @@
+{
+  "formula": "published resident capacity / listed washers",
+  "ranking": [
+    {
+      "hall": "Dennis Hall",
+      "capacity": 98,
+      "washers": 7,
+      "residentsPerWasher": 14.0
+    },
+    {
+      "hall": "Lakeview Hall",
+      "capacity": 141,
+      "washers": 10,
+      "residentsPerWasher": 14.1
+    },
+    {
+      "hall": "South Court",
+      "capacity": 162,
+      "washers": 9,
+      "residentsPerWasher": 18.0
+    },
+    {
+      "hall": "Keller Hall",
+      "capacity": 38,
+      "washers": 2,
+      "residentsPerWasher": 19.0
+    },
+    {
+      "hall": "Moore Hall",
+      "capacity": 156,
+      "washers": 8,
+      "residentsPerWasher": 19.5
+    },
+    {
+      "hall": "Residence Hall No. 2",
+      "capacity": 86,
+      "washers": 4,
+      "residentsPerWasher": 21.5
+    },
+    {
+      "hall": "Lora Robins Court",
+      "capacity": 282,
+      "washers": 13,
+      "residentsPerWasher": 21.692307692307693
+    },
+    {
+      "hall": "Marsh Hall",
+      "capacity": 229,
+      "washers": 10,
+      "residentsPerWasher": 22.9
+    },
+    {
+      "hall": "North Court",
+      "capacity": 221,
+      "washers": 9,
+      "residentsPerWasher": 24.555555555555557
+    },
+    {
+      "hall": "Westhampton Hall",
+      "capacity": 157,
+      "washers": 6,
+      "residentsPerWasher": 26.166666666666668
+    },
+    {
+      "hall": "Residence Hall No. 1",
+      "capacity": 83,
+      "washers": 3,
+      "residentsPerWasher": 27.666666666666668
+    },
+    {
+      "hall": "Residence Hall No. 3",
+      "capacity": 86,
+      "washers": 3,
+      "residentsPerWasher": 28.666666666666668
+    },
+    {
+      "hall": "Gray Court",
+      "capacity": 292,
+      "washers": 10,
+      "residentsPerWasher": 29.2
+    },
+    {
+      "hall": "Gateway Village Apartments",
+      "capacity": 176,
+      "washers": 6,
+      "residentsPerWasher": 29.333333333333332
+    },
+    {
+      "hall": "University Forest Apartments",
+      "capacity": 483,
+      "washers": 15,
+      "residentsPerWasher": 32.2
+    }
+  ],
+  "notes": [
+    "Full-capacity comparison, not actual occupancy or wait times. Includes error/offline washers.",
+    "UFA sums all three app laundry locations; access and catchment boundaries not verified.",
+    "Robins and Wood excluded: capacity not verified. Atlantic and Pacific excluded: washer count unknown."
+  ]
+}

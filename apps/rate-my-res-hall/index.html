@@ -29,10 +29,10 @@
 
 <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="hall-explorer.css"><link rel="stylesheet" href="ufa-immersive.css"><link rel="stylesheet" href="exterior-models.css"><link rel="stylesheet" href="interactive-building.css"><link rel="stylesheet" href="spatial-transition.css"><link rel="stylesheet" href="richmond-theme.css">
 <script src="vendor/leaflet.js" defer></script><script type="module" src="app.js"></script>
-<link rel="stylesheet" href="site-navigation.css"><link rel="stylesheet" href="hall-guide.css"><link rel="stylesheet" href="eligibility.css"><link rel="stylesheet" href="site-controls.css"><script type="module" src="site-controls.js"></script></head>
+<link rel="stylesheet" href="site-navigation.css"><link rel="stylesheet" href="map-amenities.css"><link rel="stylesheet" href="hall-guide.css"><link rel="stylesheet" href="eligibility.css"><link rel="stylesheet" href="site-controls.css"><script type="module" src="site-controls.js"></script></head>
 <body>
 <a class="skip" href="#search">Skip to building search</a>
-<header class="site-masthead"><div class="masthead-title"><a href="./" class="masthead-brand"><img class="masthead-icon" src="icon.svg" width="44" height="44" alt=""><span>Rate My <b>Richmond</b><span class="brand-period">.</span><small>RES LIFE · UNIVERSITY OF RICHMOND</small></span></a></div><nav class="site-tabs" aria-label="Primary"><a href="./" aria-current="page">Explore</a><a href="stats.html">Hall stats</a><a href="room-compare.html">Room sizes</a><a href="beta.html" title="Try the 3D room planner">Beta</a><a href="game.html">Hall quiz</a><a id="sources-button" href="data.html"><span class="tab-about-long">About the data</span><span class="tab-about-short">Data</span></a></nav></header>
+<header class="site-masthead"><div class="masthead-title"><a href="./" class="masthead-brand"><img class="masthead-icon" src="icon.svg" width="44" height="44" alt=""><span>Rate My <b>Richmond</b><span class="brand-period">.</span><small>RES LIFE · UNIVERSITY OF RICHMOND</small></span></a></div><nav class="site-tabs" aria-label="Primary"><a href="./" aria-current="page">Explore</a><a href="stats.html">Hall stats</a><a href="room-compare.html">Room sizes</a><a href="beta.html" title="Try the 3D room planner">Beta</a><a href="laundry.html">Laundry <span class="nav-beta-badge">Beta 2</span></a><a href="game.html">Hall quiz</a><a id="sources-button" href="data.html"><span class="tab-about-long">About the data</span><span class="tab-about-short">Data</span></a></nav></header>
 <main class="workspace">
 <aside class="sidebar" aria-label="Find campus places">
 <div class="intro"><span class="eyebrow">RICHMOND HOUSING</span><h1>Find your place.</h1><p>Explore the halls before housing selection.</p></div>
@@ -46,6 +46,7 @@
 <div id="map" role="region" aria-label="Campus map. Use arrow keys to pan and plus or minus to zoom." tabindex="0"></div>
 <div class="map-heading"><span class="eyebrow">THE BIG PICTURE</span><h2>Find your way around.</h2><p>University of Richmond, Virginia</p></div>
 <div class="map-actions"><button id="fit-campus" title="Fit whole campus"><span aria-hidden="true">⤢</span> Whole campus</button><button id="toggle-labels" aria-pressed="false" title="Toggle residence labels">Aa <span>Labels</span></button></div>
+<div id="map-amenities" class="map-amenities" aria-label="Water and printer map layers"></div>
 <div class="compass" title="North is up"><span>N</span><b>↑</b></div>
 <div class="map-legend"><span><i class="residence-key"></i>Residence</span><span><i class="campus-key"></i>Campus place</span><span id="housing-fit-legend" hidden>Blue ring: matches your profile</span><span class="footprint-key">Outlined buildings: OpenStreetMap</span></div>
 <div class="map-help">Drag to explore · Scroll to zoom · Zoom closer for names</div>

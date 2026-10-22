@@ -1,0 +1,209 @@
+{
+  "observedDate": "2026-10-22",
+  "source": "Speed Queen app via iPhone Mirroring and user-provided screenshots",
+  "scope": "All University of Richmond laundry locations listed in the observed app location menu. Counts include listed offline/error machines; not live availability or independently verified physical inventory.",
+  "complete": true,
+  "locations": [
+    {
+      "location": "Dennis Hall",
+      "washers": 7,
+      "labels": "2, 4, 6, 8, 10, 12, 14",
+      "dryers": 7,
+      "dryerLabels": "1, 3, 5, 7, 9, 11, 13"
+    },
+    {
+      "location": "Gateway Village",
+      "washers": 6,
+      "labels": "7, 8, 9, 10, 11, 12",
+      "dryers": 6,
+      "dryerLabels": "1, 2, 3, 4, 5, 6"
+    },
+    {
+      "location": "Gray Court",
+      "washers": 10,
+      "labels": "1–10",
+      "dryers": 10,
+      "dryerLabels": "11–20"
+    },
+    {
+      "location": "Keller Hall",
+      "washers": 2,
+      "labels": "3, 4",
+      "dryers": 2,
+      "dryerLabels": "1, 2"
+    },
+    {
+      "location": "Lakeview Hall 2nd FL",
+      "washers": 4,
+      "labels": "2, 4, 6, 8",
+      "dryers": 4,
+      "dryerLabels": "1, 3, 5, 7"
+    },
+    {
+      "location": "Lakeview Hall 3rd FL",
+      "washers": 4,
+      "labels": "2, 4, 6, 8",
+      "dryers": 4,
+      "dryerLabels": "1, 3, 5, 7"
+    },
+    {
+      "location": "Lakeview Hall 4th FL",
+      "washers": 2,
+      "labels": "1, 2",
+      "dryers": 2,
+      "dryerLabels": "3, 4"
+    },
+    {
+      "location": "Lora Robins Court",
+      "washers": 13,
+      "labels": "2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26",
+      "dryers": 13,
+      "dryerLabels": "1, 3, 5, 7, 9, 11, 13, 17, 19, 21, 23, 25, 31"
+    },
+    {
+      "location": "Marsh Hall",
+      "washers": 10,
+      "labels": "1, 2, 3, 4, 5, 6, 7, 8, 18, 20",
+      "dryers": 10,
+      "dryerLabels": "9, 10, 11, 12, 13, 17, 16, 13, 15, 19",
+      "notes": "App lists two separate Dryer 13 rows with different statuses; total is listed entries, physical inventory not independently verified."
+    },
+    {
+      "location": "Moore Hall",
+      "washers": 8,
+      "labels": "2, 4, 6, 8, 10, 12, 14, 16",
+      "dryers": 8,
+      "dryerLabels": "1, 3, 5, 7, 9, 11, 13, 15"
+    },
+    {
+      "location": "North Court Phase 1 3rd FL",
+      "washers": 3,
+      "labels": "1, 2, 3",
+      "dryers": 3,
+      "dryerLabels": "4, 5, 6"
+    },
+    {
+      "location": "North Court Phase 1 Basement",
+      "washers": 2,
+      "labels": "2, 4",
+      "dryers": 2,
+      "dryerLabels": "1, 3"
+    },
+    {
+      "location": "North Court Phase 2 Basement",
+      "washers": 4,
+      "labels": "2, 6, 8, 10",
+      "dryers": 5,
+      "dryerLabels": "1, 3, 5, 7, 9"
+    },
+    {
+      "location": "Residence Hall 1",
+      "washers": 3,
+      "labels": "3, 7, 9",
+      "dryers": 5,
+      "dryerLabels": "1, 2, 4, 6, 8"
+    },
+    {
+      "location": "Residence Hall 2",
+      "washers": 4,
+      "labels": "1, 2, 7, 8",
+      "dryers": 4,
+      "dryerLabels": "3, 4, 5, 6"
+    },
+    {
+      "location": "Residence Hall 3 1st FL",
+      "washers": 1,
+      "labels": "1",
+      "dryers": 1,
+      "dryerLabels": "2"
+    },
+    {
+      "location": "Residence Hall 3 2nd FL",
+      "washers": 1,
+      "labels": "1",
+      "dryers": 1,
+      "dryerLabels": "2"
+    },
+    {
+      "location": "Residence Hall 3 3rd FL",
+      "washers": 1,
+      "labels": "1",
+      "dryers": 1,
+      "dryerLabels": "2",
+      "sourceNote": "User-provided Speed Queen screenshot"
+    },
+    {
+      "location": "Robins Hall",
+      "washers": 4,
+      "labels": "1, 2, 3, 4",
+      "dryers": 4,
+      "dryerLabels": "5, 6, 7, 8",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    },
+    {
+      "location": "South Court",
+      "washers": 9,
+      "labels": "2, 4, 6, 8, 10, 12, 14, 16, 18",
+      "dryers": 9,
+      "dryerLabels": "1, 3, 5, 7, 9, 11, 13, 15, 17",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    },
+    {
+      "location": "University Forest #160-172",
+      "washers": 5,
+      "labels": "1, 2, 3, 4, 5",
+      "dryers": 8,
+      "dryerLabels": "6, 7, 8, 9, 10, 11, 12, 13",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    },
+    {
+      "location": "University Forest #191-193",
+      "washers": 5,
+      "labels": "1, 2, 3, 4, 5",
+      "dryers": 6,
+      "dryerLabels": "6, 7, 8, 9, 10, 11",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    },
+    {
+      "location": "University Forest #470-486",
+      "washers": 5,
+      "labels": "1, 2, 3, 4, 5",
+      "dryers": 6,
+      "dryerLabels": "6, 7, 8, 9, 10, 11",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    },
+    {
+      "location": "Westhampton Hall 2nd FL",
+      "washers": 3,
+      "labels": "2, 4, 6",
+      "dryers": 4,
+      "dryerLabels": "1, 3, 5, 7",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    },
+    {
+      "location": "Westhampton Hall 3rd FL",
+      "washers": 3,
+      "labels": "1, 2, 3",
+      "dryers": 3,
+      "dryerLabels": "4, 5, 6",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    },
+    {
+      "location": "Wood Hall",
+      "washers": 5,
+      "labels": "2, 4, 6, 8, 10",
+      "dryers": 5,
+      "dryerLabels": "1, 3, 5, 7, 9",
+      "sourceNote": "User-provided Speed Queen screenshots"
+    }
+  ],
+  "remaining": [],
+  "totals": {
+    "washers": 124,
+    "dryers": 133
+  },
+  "notes": [
+    "Marsh lists two Dryer 13 entries; both counted as app entries.",
+    "Atlantic and Pacific were not listed separately in the observed location menu; no zero count inferred."
+  ]
+}
