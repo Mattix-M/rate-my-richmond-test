@@ -1,3 +1,6 @@
+import {tourSuiteRooms} from './tour-rooms-suites.js';
+import {tourFirstyearRooms} from './tour-rooms-firstyear.js';
+import {tourApartmentRooms} from './tour-rooms-apartments.js';
 // Beta geometry is hand-selected from reviewed architectural traces, not crop bounds.
 // Feet; x/z are horizontal, object positions are centres, rotation is degrees.
 const transformOutline = (points, scale, left, bottom) => points.map(([x, y]) => [(x - left) * scale, (bottom - y) * scale]);
@@ -5,7 +8,7 @@ const tracedBox = (id, name, x1, y1, x2, y2, scale, left, bottom, height = 8) =>
 const dennisScale = (87 * 14.5 + 80 * 13.5) / (87 ** 2 + 80 ** 2);
 const northScale = (470 * 12.75 + 439 * 11.75) / (470 ** 2 + 439 ** 2);
 
-export const plannerRooms = [
+export const tracedRooms = [
   {
     id: 'dennis-0100', recordId: 'room-description-0001', hall: 'Dennis Hall', name: 'Room 0100',
     width: 87 * dennisScale, depth: 80 * dennisScale, height: 8,
@@ -32,6 +35,8 @@ export const plannerRooms = [
   }
 ];
 
+export const plannerRooms=[...tracedRooms,...tourFirstyearRooms,...tourSuiteRooms,...tourApartmentRooms].map(room=>({...room,doors:(room.doors||[]).map(door=>({...door,x:door.x??(door.wall==='east'?room.width:0),z:door.z??(door.wall==='north'?room.depth:0)}))}));
+
 // Generic planning objects, not verified Richmond-issued furniture specifications.
 export const furnitureCatalog = [
   { type: 'bed', name: 'Twin XL bed', width: 3.25, depth: 6.67, height: 2, color: '#849ac0' },
@@ -40,6 +45,7 @@ export const furnitureCatalog = [
   { type: 'dresser', name: 'Dresser', width: 3, depth: 1.7, height: 3, color: '#b28163' },
   { type: 'futon', name: 'Small sofa', width: 5, depth: 2.7, height: 2.6, color: '#a44b48' },
   { type: 'fridge', name: 'Mini fridge', width: 1.6, depth: 1.8, height: 2.7, color: '#64748b' },
+  { type: 'table', name: 'Table', width: 4, depth: 2.5, height: 2.5, color: '#ae8464' },
   { type: 'rug', name: 'Rug', width: 4, depth: 6, height: 0.025, color: '#b7c6da', floorLayer: true }
 ];
 export function initialItems() { return []; }

@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "reviewedDate": "2026-10-22",
+  "scope": "Six university-presented sample double-room tours. First-year is a research workstream label, not a verified current eligibility claim.",
+  "method": "Manually opened each Vivid Media tour through the browser, started the 3D viewer, visually inspected the interior and public floor-plan view, and saved screenshots. Model IDs read from the visible embedded iframe URL. No private model assets downloaded.",
+  "credits": {
+    "presenter": "University of Richmond",
+    "tourProvider": "Vivid Media LLC",
+    "viewer": "Matterport / MPEmbed"
+  },
+  "screenshotsUsage": "Local research evidence only; not cleared for republishing in the public website.",
+  "dimensionsPolicy": "No numeric room or furniture dimensions were inferred from perspective or screenshot pixels.",
+  "tours": [
+    {
+      "id": "dennis",
+      "hallName": "Dennis Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-dennis-double/fullscreen/",
+      "observedTitle": "Dennis Hall Double Room",
+      "modelId": "WXe7Xyqy9q2",
+      "reviewedDate": "2026-10-22",
+      "status": "reviewed",
+      "visitedViews": [
+        "interior",
+        "floorplan"
+      ],
+      "screenshots": [
+        "screenshots/firstyear-dennis-interior.png",
+        "screenshots/firstyear-dennis-floorplan.png"
+      ],
+      "verifiedFeatures": [
+        "Two separate beds in one bedroom; one runs along the side wall and the other is turned across the opposite side in this staged arrangement.",
+        "Two desk/chair stations and wooden drawer-storage pieces are visible.",
+        "A projecting multi-panel window bay is visible; the overhead scan also shows an entrance-side recess.",
+        "The middle of the sample room is kept open between furniture."
+      ],
+      "dimensions": [],
+      "bathroom": {
+        "status": "not-observed",
+        "note": "No bathroom verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "kitchen": {
+        "status": "not-observed",
+        "note": "No kitchen verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "uncertainties": [
+        "The sample room number is not displayed.",
+        "The scan does not establish dimensions or whether this outline matches every Dennis double."
+      ],
+      "plannerImplications": [
+        "Preserve the window-bay shape and entrance-side recess when an exact matching room plan is available.",
+        "Desk pull-out space and the central route between beds matter more than fitting furniture bounding boxes alone."
+      ],
+      "quizImplications": [
+        "Use the sample to explain shared-bedroom arrangements and storage options, not to score the hall’s social atmosphere.",
+        "Do not infer hosting capacity, noise, privacy, or a hall-wide room-size ranking from this sample."
+      ]
+    },
+    {
+      "id": "loro",
+      "hallName": "Lora Robins Court",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-lora-robins-double/fullscreen/",
+      "observedTitle": "Lora Robins Court Double Room",
+      "modelId": "C4Rpd8NfCZo",
+      "reviewedDate": "2026-10-22",
+      "status": "reviewed",
+      "visitedViews": [
+        "interior",
+        "floorplan"
+      ],
+      "screenshots": [
+        "screenshots/firstyear-loro-interior.png",
+        "screenshots/firstyear-loro-floorplan.png"
+      ],
+      "verifiedFeatures": [
+        "Two raised beds run along opposite side walls with a central open aisle.",
+        "Drawer storage is placed under raised beds in the staged sample.",
+        "Two separate desk/chair stations with shelving are near the entrance end.",
+        "A single window is on the far wall; the floor-plan view shows an entrance-side notch rather than a plain rectangular scanned outline."
+      ],
+      "dimensions": [],
+      "bathroom": {
+        "status": "not-observed",
+        "note": "No bathroom verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "kitchen": {
+        "status": "not-observed",
+        "note": "No kitchen verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "uncertainties": [
+        "Bed height and furniture dimensions were not measured.",
+        "This sample does not establish storage quantities or geometry for all LoRo rooms."
+      ],
+      "plannerImplications": [
+        "A raised-bed preset with storage below could reproduce this observed arrangement if the supplied furniture allows it.",
+        "Keep both desk-chair access and the central route clear; do not treat the entrance notch as usable furniture space."
+      ],
+      "quizImplications": [
+        "Use the sample to explain shared-bedroom arrangements and storage options, not to score the hall’s social atmosphere.",
+        "Do not infer hosting capacity, noise, privacy, or a hall-wide room-size ranking from this sample."
+      ]
+    },
+    {
+      "id": "marsh",
+      "hallName": "Marsh Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-marsh-double/fullscreen/",
+      "observedTitle": "Marsh Hall Double Room",
+      "modelId": "GUgaKE4NZRd",
+      "reviewedDate": "2026-10-22",
+      "status": "reviewed",
+      "visitedViews": [
+        "interior",
+        "floorplan"
+      ],
+      "screenshots": [
+        "screenshots/firstyear-marsh-interior.png",
+        "screenshots/firstyear-marsh-floorplan.png"
+      ],
+      "verifiedFeatures": [
+        "Two beds are placed along opposing side walls.",
+        "The left bed is raised above a drawer unit; a low shelving unit is visible at its foot.",
+        "One desk is positioned below the windows and a second workstation is near the entrance side.",
+        "An overhead service/bulkhead projection is visible along the window-side ceiling.",
+        "The top-down scan shows an entrance/storage-side recess in the room boundary."
+      ],
+      "dimensions": [],
+      "bathroom": {
+        "status": "not-observed",
+        "note": "No bathroom verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "kitchen": {
+        "status": "not-observed",
+        "note": "No kitchen verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "uncertainties": [
+        "The ceiling projection height was not measured.",
+        "Drawer units and shelves are observations of the staged sample, not a verified inventory for every Marsh room."
+      ],
+      "plannerImplications": [
+        "Keep the window-side desk and chair access in any recreation of the staged arrangement.",
+        "Do not assume full-height loft clearance under the ceiling projection.",
+        "Use the actual room boundary for placement rather than a generic rectangle."
+      ],
+      "quizImplications": [
+        "Use the sample to explain shared-bedroom arrangements and storage options, not to score the hall’s social atmosphere.",
+        "Do not infer hosting capacity, noise, privacy, or a hall-wide room-size ranking from this sample."
+      ]
+    },
+    {
+      "id": "moore",
+      "hallName": "Moore Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-moore-double/fullscreen/",
+      "observedTitle": "Moore Hall Double Room",
+      "modelId": "TBFov7xqWEv",
+      "reviewedDate": "2026-10-22",
+      "status": "reviewed",
+      "visitedViews": [
+        "interior",
+        "floorplan"
+      ],
+      "screenshots": [
+        "screenshots/firstyear-moore-interior.png",
+        "screenshots/firstyear-moore-floorplan.png"
+      ],
+      "verifiedFeatures": [
+        "Two raised beds sit along opposite side walls, with drawer/shelf storage below.",
+        "One desk sits below the multi-panel window and another desk with shelving is at the entrance end.",
+        "A wall/door-side projection narrows the entrance side of the room.",
+        "The floor-plan view shows the same nonrectangular entrance-side notch."
+      ],
+      "dimensions": [],
+      "bathroom": {
+        "status": "not-observed",
+        "note": "No bathroom verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "kitchen": {
+        "status": "not-observed",
+        "note": "No kitchen verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "uncertainties": [
+        "No measured dimensions or exact sample room number were displayed.",
+        "Bed adjustability and current permitted loft configuration require separate confirmation."
+      ],
+      "plannerImplications": [
+        "A model of this sample should preserve the entry-side projection and route around it.",
+        "Raised beds and under-bed storage are a plausible sample preset, pending dimensions and current furniture policy.",
+        "Leave chair movement space at both desks."
+      ],
+      "quizImplications": [
+        "Use the sample to explain shared-bedroom arrangements and storage options, not to score the hall’s social atmosphere.",
+        "Do not infer hosting capacity, noise, privacy, or a hall-wide room-size ranking from this sample."
+      ]
+    },
+    {
+      "id": "robins",
+      "hallName": "Robins Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-robins-double/fullscreen/",
+      "observedTitle": "Robins Hall Double Room",
+      "modelId": "gDpQ5wFAHWf",
+      "reviewedDate": "2026-10-22",
+      "status": "reviewed",
+      "visitedViews": [
+        "interior",
+        "floorplan"
+      ],
+      "screenshots": [
+        "screenshots/firstyear-robins-interior.png",
+        "screenshots/firstyear-robins-floorplan.png"
+      ],
+      "verifiedFeatures": [
+        "Two raised beds are visible, with wooden storage beneath them.",
+        "Two desk/chair stations have shelving above their desktops.",
+        "A separate tall drawer chest is visible near the entrance side.",
+        "A single window and a ceiling-side horizontal projection are visible.",
+        "The overhead scan shows a mostly rectangular bedroom with an entrance-side recess, furnished around an open center."
+      ],
+      "dimensions": [],
+      "bathroom": {
+        "status": "not-observed",
+        "note": "No bathroom verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "kitchen": {
+        "status": "not-observed",
+        "note": "No kitchen verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "uncertainties": [
+        "The overhead scan does not supply reliable absolute scale.",
+        "The sample room number and representation of other Robins rooms remain unknown."
+      ],
+      "plannerImplications": [
+        "Model the observed entry recess and retain a central route rather than filling the apparent spare area.",
+        "Allow drawer access under beds and chair pull-out at desks."
+      ],
+      "quizImplications": [
+        "Use the sample to explain shared-bedroom arrangements and storage options, not to score the hall’s social atmosphere.",
+        "Do not infer hosting capacity, noise, privacy, or a hall-wide room-size ranking from this sample."
+      ]
+    },
+    {
+      "id": "wood",
+      "hallName": "Wood Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-wood-double/fullscreen/",
+      "observedTitle": "Wood Hall Double",
+      "modelId": "rrH3p59UuCD",
+      "reviewedDate": "2026-10-22",
+      "status": "reviewed",
+      "visitedViews": [
+        "interior",
+        "floorplan",
+        "entry-side interior"
+      ],
+      "screenshots": [
+        "screenshots/firstyear-wood-interior.png",
+        "screenshots/firstyear-wood-floorplan.png"
+      ],
+      "verifiedFeatures": [
+        "Two lower-height beds are placed along opposite side walls in this staged sample.",
+        "Two drawer chests sit side by side below the window.",
+        "Two desk/chair stations with shelving are nearer the entrance end.",
+        "A pronounced entrance-side wall recess/projection is visible in the top-down view.",
+        "An additional entry-side interior view shows wall-mounted controls near the doorway."
+      ],
+      "dimensions": [],
+      "bathroom": {
+        "status": "not-observed",
+        "note": "No bathroom verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "kitchen": {
+        "status": "not-observed",
+        "note": "No kitchen verified in the inspected sample views; this does not establish absence from the hall."
+      },
+      "uncertainties": [
+        "No furniture or room measurements were verified.",
+        "The tour shows a sample bedroom, not a complete hall or bathroom audit.",
+        "Additional camera rotation/keyboard controls were unreliable in the embedded viewer; the initial interior, entry-side view, and overhead plan were visually inspected."
+      ],
+      "plannerImplications": [
+        "A sample preset should keep the drawer fronts and window-side area accessible.",
+        "Retain the entry-side recess and circulation space between desks and beds.",
+        "Do not import the raised-bed configuration seen in another hall as this room’s default without confirmation."
+      ],
+      "quizImplications": [
+        "Use the sample to explain shared-bedroom arrangements and storage options, not to score the hall’s social atmosphere.",
+        "Do not infer hosting capacity, noise, privacy, or a hall-wide room-size ranking from this sample."
+      ]
+    }
+  ]
+}

@@ -1,29 +1,75 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {makeQuiz,questionBank,shuffled} from '../game.js';
-const stats=JSON.parse(readFileSync(new URL('../data/housing/residence-stats.json',import.meta.url)));
-const research=JSON.parse(readFileSync(new URL('../data/housing/residence-stat-questions.json',import.meta.url)));
-test('all ten bank questions have one answer, unique options, and university evidence',()=>{
- const rounds=questionBank(stats,research);
- assert.equal(rounds.length,10);assert.equal(new Set(rounds.map(q=>q.id)).size,10);
- for(const q of rounds){assert.equal(q.options.length,4);assert.equal(new Set(q.options).size,4);assert.equal(q.options.filter(a=>a===q.correct).length,1);assert.ok(q.explanation);assert.ok(q.sources.length);for(const source of q.sources){const url=new URL(source);assert.equal(url.protocol,'https:');assert.ok(url.hostname.endsWith('.richmond.edu'));}}
+import {tourActions} from '../game.js';
+import {scoreDorms,distanceMeters,saveHall,mealPlanFor,validateAnswers} from '../dorm-match.js';
+const read=file=>JSON.parse(readFileSync(new URL(`../data/${file}`,import.meta.url)));
+const places=read('places.json'),stats=read('housing/residence-stats.json');
+const base={year:'junior',program:'none',group:'four',hosting:'elsewhere',privacy:'either',cooking:'dining',destination:'none',laundry:'neutral',priorities:[]};
+const run=changes=>scoreDorms({...base,...changes},places,stats);
+test('missing year and conflicting program fail closed',()=>{
+ assert.ok(run({year:''}).error);assert.equal(run({year:''}).matches.length,0);
+ assert.ok(run({program:'ssir'}).error);assert.ok(run({program:'endeavor'}).error);
+ assert.ok(validateAnswers({...base,priorities:['hosting','laundry','privacy']}));
 });
-test('capacity answers use published capacities, and historical explanations use verified records',()=>{
- const rounds=questionBank(stats,research),find=id=>rounds.find(q=>q.id===id);
- assert.equal(find('atlantic').correct,`${stats['572483'].capacity} residents`);
- assert.equal(find('gray-lora').correct,stats['571565'].capacity>stats['571574'].capacity?stats['571565'].name:stats['571574'].name);
- assert.equal(find('north').explanation,research.questions.find(q=>q.id==='new-old-north').answer);
- assert.equal(find('bedrooms').caveat,research.questions.find(q=>q.id==='apartment-comparison').caveat);
- assert.equal(stats['571872'].capacity,stats['571562'].capacity);
+test('year and program eligibility gate the ranking before preferences',()=>{
+ const first=run({year:'firstyear',hosting:'living',cooking:'regular'});
+ assert.ok(first.matches.every(r=>!['572061','572073'].includes(r.id)));
+ assert.deepEqual(run({year:'firstyear',program:'endeavor'}).matches.map(r=>r.id),['571574']);
+ assert.deepEqual(run({year:'sophomore',program:'ssir'}).matches.map(r=>r.id),['571866']);
+ assert.deepEqual(new Set(run({year:'law'}).matches.map(r=>r.id)),new Set(['572483','572484']));
+ assert.ok(run({year:'sophomore'}).uncertain.some(r=>r.id==='571866'));
 });
-test('shuffle preserves inputs while varying order; missing evidence fails closed',()=>{
- const values=['a','b','c','d'];assert.deepEqual(values,['a','b','c','d']);assert.notDeepEqual(shuffled(values,()=>0),shuffled(values,()=>.999));assert.deepEqual(values,['a','b','c','d']);
- assert.throws(()=>makeQuiz({},research));assert.throws(()=>makeQuiz(stats,{questions:[]}));
+test('unformed apartment groups and unknown program rules stay out of confirmed results',()=>{
+ const group=run({group:'forming',hosting:'living',cooking:'regular'});
+ assert.ok(group.matches.every(r=>!r.apartment));assert.equal(group.uncertain.filter(r=>r.apartment).length,2);
+ const unknown=run({program:'other'});assert.equal(unknown.matches.length,0);assert.ok(unknown.uncertain.length>0);
+});
+test('private bedroom plus separate living space distinguishes Gateway from UFA',()=>{
+ const result=run({hosting:'living',privacy:'own',cooking:'regular',priorities:['hosting','privacy']});
+ const gateway=result.matches.find(r=>r.id==='572073'),ufa=result.matches.find(r=>r.id==='572061');
+ assert.equal(result.matches[0].id,'572073');assert.ok(gateway.score>ufa.score);
+ assert.match(ufa.compromise,/double bedrooms/);assert.match(gateway.reasons.join(' '),/single bedrooms/);
+});
+test('laundry uses actual capacity ratios and never treats missing counts as zero',()=>{
+ const result=run({year:'firstyear',laundry:'important',priorities:['laundry']});
+ assert.equal(result.matches[0].id,'571561');assert.equal(result.matches[0].ratio,14);
+ assert.equal(result.matches.find(r=>r.id==='571861').ratio,null);
+ assert.match(result.matches.find(r=>r.id==='571861').compromise,/unavailable/);
+});
+test('distance uses campus pins and never outputs walking time',()=>{
+ assert.equal(distanceMeters({lat:37,lng:-77},{lat:37,lng:-77}),0);
+ assert.equal(distanceMeters(null,{}),null);
+ const result=run({destination:'571951',priorities:['location']});
+ const closest=Math.min(...result.matches.map(r=>r.meters));assert.equal(result.matches[0].meters,closest);
+ for(const r of result.matches){assert.match(r.reasons.join(' '),/straight-line/);assert.ok(!/minute/.test(r.reasons.join(' ')));}
+});
+test('priorities have threefold weight; unselected preferences produce no personality claims',()=>{
+ const result=run({hosting:'living',laundry:'important',priorities:['laundry']});
+ assert.equal(result.matches[0].metrics.find(m=>m.key==='laundry').weight,3);
+ assert.equal(result.matches[0].metrics.find(m=>m.key==='hosting').weight,1);
+ assert.equal(run({}).hasPreferences,false);
+});
+test('shortlist saves append and remain idempotent',()=>{
+ let value='["571561"]';const storage={getItem:()=>value,setItem:(key,v)=>{assert.equal(key,'res-hall-saved');value=v;}};
+ assert.equal(saveHall(storage,'572073'),true);assert.equal(saveHall(storage,'572073'),true);
+ assert.deepEqual(JSON.parse(value),['571561','572073']);
+ assert.equal(saveHall({getItem(){throw new Error('blocked');}},'572073'),false);
+});
+test('meal plans distinguish apartment choice and law-house exceptions',()=>{
+ assert.match(mealPlanFor('572061'),/no meal plan/);assert.match(mealPlanFor('572073'),/Spider 50/);
+ assert.match(mealPlanFor('571561'),/Unlimited is required/);
+ assert.match(mealPlanFor('572483'),/meal plan is required.*Spider 50/);
 });
 
-test('replays draw five distinct questions from the larger bank',()=>{
- const first=makeQuiz(stats,research,()=>0),second=makeQuiz(stats,research,()=>.999);
- for(const run of [first,second]){assert.equal(run.length,5);assert.equal(new Set(run.map(q=>q.id)).size,5);}
- assert.notDeepEqual(new Set(first.map(q=>q.id)),new Set(second.map(q=>q.id)));
+test('Endeavor does not advertise ordinary singles as a privacy match',()=>{
+ const result=run({year:'firstyear',program:'endeavor',privacy:'own',priorities:['privacy']});
+ assert.equal(result.matches.length,1);assert.match(result.matches[0].compromise,/Endeavor uses doubles/);
+ assert.ok(!result.matches[0].reasons.some(reason=>/include singles/.test(reason)));
+});
+
+test('law houses without tours never link to a default apartment model',()=>{
+ assert.deepEqual(tourActions('572483'),[]);assert.deepEqual(tourActions('572484'),[]);assert.deepEqual(tourActions('missing'),[]);
+ const actions=tourActions('572061');assert.equal(actions.length,2);
+ assert.ok(actions.every(action=>action.href.includes('hall=572061')));
 });

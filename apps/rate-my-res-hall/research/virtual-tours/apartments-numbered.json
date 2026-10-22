@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "reviewedDate": "2026-10-22",
+  "reviewMethod": "Manual browser inspection of public university-presented Vivid Media / Matterport tours using visible floorplan, dollhouse, floor selector, and interior controls. No private model or texture extraction.",
+  "sourceIndex": "https://richmond.starrezhousing.com/StarRezPortalX/ADAB3F4D/9/480/Home-Housing_Virtual_Tour",
+  "credit": "Presented by University of Richmond Residence Life & Housing; tour presentation \u00a9 Vivid Media LLC; Matterport platform.",
+  "evidenceUse": "Screenshots saved locally for research/reference only; not approved for republication. Link users to the provider tours.",
+  "reviewedCount": 5,
+  "tours": [
+    {
+      "hall": "Gateway Apartments",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-gateway-apartment/fullscreen/",
+      "title": "Gateway Apartment",
+      "modelId": "9VqnosfVCDw",
+      "visibleIframeUrl": "https://mpembed.com/show/?m=9VqnosfVCDw&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "reviewedDate": "2026-10-22",
+      "status": "visually-reviewed",
+      "visitedViews": [
+        "Dollhouse/cutaway",
+        "Overhead floorplan",
+        "Interior panorama; turned through sofa and kitchen/dining sightline"
+      ],
+      "verifiedLayoutFeatures": [
+        "Single-level example apartment with four distinct bedrooms, each showing one bed and desk/storage furniture.",
+        "A continuous shared living/dining/kitchen zone runs along the opposite side of the apartment from the bedrooms.",
+        "The kitchen has a range, refrigerator, cabinets, sink, and an island; a round dining table and chairs occupy the adjoining shared area.",
+        "An L-shaped sofa occupies the living end near windows.",
+        "Two centrally positioned enclosed bathroom compartments show toilets and bathing fixtures. Separate vanity/sink zones are visible toward the two bedroom-access sides.",
+        "Bedrooms are separated from the living space by walls and intervening bathroom/access areas; no bedroom is the only route between kitchen and living area."
+      ],
+      "layoutGraph": {
+        "scope": "Example apartment only; conceptual adjacency, no scale or compass orientation",
+        "levels": [
+          {
+            "id": "level-1",
+            "bedroomCount": 4,
+            "visibleBedCount": 4,
+            "bathroomCompartmentCount": 2,
+            "sharedLivingArea": true,
+            "kitchen": true
+          }
+        ],
+        "nodes": [
+          "entry",
+          "shared-living",
+          "shared-dining",
+          "kitchen",
+          "left-access-and-vanity",
+          "right-access-and-vanity",
+          "bathroom-left",
+          "bathroom-right",
+          "bedroom-1",
+          "bedroom-2",
+          "bedroom-3",
+          "bedroom-4"
+        ],
+        "connections": [
+          [
+            "entry",
+            "shared-living"
+          ],
+          [
+            "shared-living",
+            "shared-dining"
+          ],
+          [
+            "shared-dining",
+            "kitchen"
+          ],
+          [
+            "shared-living",
+            "right-access-and-vanity"
+          ],
+          [
+            "kitchen",
+            "left-access-and-vanity"
+          ],
+          [
+            "left-access-and-vanity",
+            "bedroom-1"
+          ],
+          [
+            "left-access-and-vanity",
+            "bedroom-2"
+          ],
+          [
+            "left-access-and-vanity",
+            "bathroom-left"
+          ],
+          [
+            "right-access-and-vanity",
+            "bedroom-3"
+          ],
+          [
+            "right-access-and-vanity",
+            "bedroom-4"
+          ],
+          [
+            "right-access-and-vanity",
+            "bathroom-right"
+          ]
+        ],
+        "connectionNote": "Left/right labels refer only to saved overhead view. Access routes are visually observed qualitative topology; exact door positions and swing geometry are not measured."
+      },
+      "measurements": [],
+      "uncertainties": [
+        "The scan shows one example unit/suite, not every layout or current assigned room in this hall.",
+        "No measurement was taken. Screenshots and adjacency notes are not calibrated geometry and must not be used to assign dimensions, floor area, ceiling height, or furniture clearance.",
+        "Tour furniture and finishes are visible at scan time; present inventory and permitted alterations were not verified.",
+        "Social atmosphere, noise transmission, demand, room eligibility, and meal-plan requirements cannot be established from this tour."
+      ],
+      "plannerQuizImplications": [
+        "Score separate shared living space independently of bedroom area.",
+        "A preference for hosting while retaining a separate bedroom has visible physical support in this example.",
+        "Kitchen and dining furniture should be separate planner zones; keep the entry-to-bedroom circulation path free.",
+        "Do not represent the entire apartment as a large rectangular bedroom or combine its shared area into individual bedroom area."
+      ],
+      "screenshots": [
+        "apartments-gateway-dollhouse.png",
+        "apartments-gateway-floorplan.png",
+        "apartments-gateway-interior.png"
+      ]
+    },
+    {
+      "hall": "University Forest Apartments",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-university-forest-apt/fullscreen/",
+      "title": "University Forest Apartment",
+      "modelId": "hfyCT7asm4X",
+      "visibleIframeUrl": "https://mpembed.com/show/?m=hfyCT7asm4X&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "reviewedDate": "2026-10-22",
+      "status": "visually-reviewed",
+      "visitedViews": [
+        "Entry/kitchen/dining interior panorama",
+        "Floor selector: Floor 1",
+        "Floor selector: Floor 2",
+        "All-floor dollhouse/cutaway"
+      ],
+      "verifiedLayoutFeatures": [
+        "Two-level example apartment with an internal staircase connecting the shared lower level and bedroom upper level.",
+        "Lower floor has a separate living zone with L-shaped sofa and low tables, and a kitchen/dining zone with range, refrigerator, sink, cabinets, rectangular table, and chairs.",
+        "A small lower-level toilet-and-sink room sits beside the entrance/stair area.",
+        "Upper floor has two bedrooms, each showing two beds plus desks/storage.",
+        "A central upper bathroom zone sits between the bedrooms and shows toilet, bathing fixture, and sink.",
+        "Upper stair landing/corridor connects the two bedroom sides and shared bathroom; bedrooms are upstairs rather than in the lower living area.",
+        "A glazed exterior opening is visible at the living end."
+      ],
+      "layoutGraph": {
+        "scope": "Two-level example only; conceptual adjacency, no scale or compass orientation",
+        "levels": [
+          {
+            "id": "floor-1",
+            "bedroomCount": 0,
+            "sharedLivingArea": true,
+            "kitchen": true,
+            "bathroomType": "toilet-and-sink half bath"
+          },
+          {
+            "id": "floor-2",
+            "bedroomCount": 2,
+            "visibleBedCount": 4,
+            "bathroomCount": 1
+          }
+        ],
+        "nodes": [
+          "entry",
+          "kitchen-dining",
+          "lower-living",
+          "lower-half-bath",
+          "stair-lower",
+          "stair-upper-landing",
+          "bedroom-left",
+          "bedroom-right",
+          "upper-bathroom"
+        ],
+        "connections": [
+          [
+            "entry",
+            "kitchen-dining"
+          ],
+          [
+            "entry",
+            "lower-half-bath"
+          ],
+          [
+            "entry",
+            "stair-lower"
+          ],
+          [
+            "kitchen-dining",
+            "lower-living"
+          ],
+          [
+            "stair-lower",
+            "stair-upper-landing"
+          ],
+          [
+            "stair-upper-landing",
+            "bedroom-left"
+          ],
+          [
+            "stair-upper-landing",
+            "bedroom-right"
+          ],
+          [
+            "stair-upper-landing",
+            "upper-bathroom"
+          ]
+        ],
+        "stairRelationship": "Stair occupies the front/central boundary between living side and kitchen/dining side in saved lower-floor view; upper landing lies in the central corridor between bedroom sides. Exact stair footprint/direction is not calibrated."
+      },
+      "measurements": [],
+      "uncertainties": [
+        "The scan shows one example unit/suite, not every layout or current assigned room in this hall.",
+        "No measurement was taken. Screenshots and adjacency notes are not calibrated geometry and must not be used to assign dimensions, floor area, ceiling height, or furniture clearance.",
+        "Tour furniture and finishes are visible at scan time; present inventory and permitted alterations were not verified.",
+        "Social atmosphere, noise transmission, demand, room eligibility, and meal-plan requirements cannot be established from this tour."
+      ],
+      "plannerQuizImplications": [
+        "Distinguish shared living downstairs from shared bedrooms upstairs; do not imply that UFA means a private bedroom.",
+        "A living-room preference and bedroom-sharing preference need separate quiz questions.",
+        "Support floor selection in planner and preserve stair/landing/bathroom zones as fixed circulation.",
+        "Use this tour as a two-level visual reference only, not proof that every UFA unit has this layout."
+      ],
+      "screenshots": [
+        "apartments-ufa-kitchen-entry.png",
+        "apartments-ufa-floor1.png",
+        "apartments-ufa-floor2.png",
+        "apartments-ufa-dollhouse.png"
+      ]
+    },
+    {
+      "hall": "Residence Hall No. 1",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-res-hall-1-suite/fullscreen/",
+      "title": "Residence Hall #1 Single & Double with Suite Bath",
+      "modelId": "SfjsfA4KM66",
+      "visibleIframeUrl": "https://mpembed.com/show/?m=SfjsfA4KM66&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "reviewedDate": "2026-10-22",
+      "status": "visually-reviewed",
+      "visitedViews": [
+        "Bedroom interior panorama",
+        "Overhead floorplan",
+        "Dollhouse/cutaway"
+      ],
+      "verifiedLayoutFeatures": [
+        "Example suite contains one double bedroom with two beds and one single bedroom with one bed.",
+        "A shared bathroom lies between the two bedrooms, with toilet, sink, and shower visible.",
+        "Bedroom footprints include window/dormer recesses; sloping ceiling planes are visible in the interior.",
+        "Desks, chairs, and wooden storage furniture are present; some beds are raised with storage beneath.",
+        "The scanned suite has no separate furnished living room or kitchen visible."
+      ],
+      "layoutGraph": {
+        "scope": "Single/double example suite only",
+        "bedroomCount": 2,
+        "visibleBedCount": 3,
+        "bathroomCount": 1,
+        "nodes": [
+          "double-bedroom",
+          "suite-bathroom",
+          "single-bedroom"
+        ],
+        "connections": [
+          [
+            "double-bedroom",
+            "suite-bathroom"
+          ],
+          [
+            "suite-bathroom",
+            "single-bedroom"
+          ]
+        ],
+        "connectionNote": "Bathroom centrally joins suite bedrooms in overhead view; verify door swings against official plan before modeling."
+      },
+      "measurements": [],
+      "uncertainties": [
+        "The scan shows one example unit/suite, not every layout or current assigned room in this hall.",
+        "No measurement was taken. Screenshots and adjacency notes are not calibrated geometry and must not be used to assign dimensions, floor area, ceiling height, or furniture clearance.",
+        "Tour furniture and finishes are visible at scan time; present inventory and permitted alterations were not verified.",
+        "Social atmosphere, noise transmission, demand, room eligibility, and meal-plan requirements cannot be established from this tour.",
+        "The tour title specifies single and double with suite bath. It does not establish the proportion of these room types throughout the hall."
+      ],
+      "plannerQuizImplications": [
+        "Offer single versus double room choices within this hall, rather than a single hall-level bedroom assumption.",
+        "Retain dormer recesses in room outlines; flat floor area alone does not describe sloped-ceiling usability.",
+        "Do not invent a separate suite lounge or score apartment-style hosting space from the word suite."
+      ],
+      "screenshots": [
+        "apartments-hall1-interior.png",
+        "apartments-hall1-floorplan.png",
+        "apartments-hall1-dollhouse.png"
+      ]
+    },
+    {
+      "hall": "Residence Hall No. 2",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-res-hall-2-suites/fullscreen/",
+      "title": "Residence Hall #2 Single/Double Suite",
+      "modelId": "LSV826QwvMQ",
+      "visibleIframeUrl": "https://mpembed.com/show/?m=LSV826QwvMQ&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "reviewedDate": "2026-10-22",
+      "status": "visually-reviewed",
+      "visitedViews": [
+        "Bathroom/bedroom doorway interior panorama",
+        "Overhead floorplan",
+        "Dollhouse/cutaway"
+      ],
+      "verifiedLayoutFeatures": [
+        "Example suite has one single bedroom and one double bedroom; three beds are visible in total.",
+        "A central connecting vestibule/vanity area has two sinks and connects the bedroom sides.",
+        "An enclosed central bathroom compartment contains toilet and shower, separate from the visible vanity area.",
+        "The single bedroom is narrower than the double in the saved overhead view, without any measured dimensions.",
+        "Beds, desks, chairs, dressers, and closet/storage areas are visible.",
+        "No separate furnished living room or kitchen is visible within this scanned suite."
+      ],
+      "layoutGraph": {
+        "scope": "Single/double example suite only",
+        "bedroomCount": 2,
+        "visibleBedCount": 3,
+        "bathroomCompartmentCount": 1,
+        "visibleVanitySinkCount": 2,
+        "nodes": [
+          "single-bedroom",
+          "shared-vestibule-vanity",
+          "double-bedroom",
+          "toilet-shower"
+        ],
+        "connections": [
+          [
+            "single-bedroom",
+            "shared-vestibule-vanity"
+          ],
+          [
+            "double-bedroom",
+            "shared-vestibule-vanity"
+          ],
+          [
+            "shared-vestibule-vanity",
+            "toilet-shower"
+          ]
+        ]
+      },
+      "measurements": [],
+      "uncertainties": [
+        "The scan shows one example unit/suite, not every layout or current assigned room in this hall.",
+        "No measurement was taken. Screenshots and adjacency notes are not calibrated geometry and must not be used to assign dimensions, floor area, ceiling height, or furniture clearance.",
+        "Tour furniture and finishes are visible at scan time; present inventory and permitted alterations were not verified.",
+        "Social atmosphere, noise transmission, demand, room eligibility, and meal-plan requirements cannot be established from this tour."
+      ],
+      "plannerQuizImplications": [
+        "Bathroom arrangement can be described more precisely than simply suite bath: vanity and toilet/shower areas are separated in this example.",
+        "Quiz should distinguish bedroom sharing from bathroom sharing.",
+        "Keep vestibule and bath circulation clear in room planner; do not count this passage as a lounge."
+      ],
+      "screenshots": [
+        "apartments-hall2-interior.png",
+        "apartments-hall2-floorplan.png",
+        "apartments-hall2-dollhouse.png"
+      ]
+    },
+    {
+      "hall": "Residence Hall No. 3",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-res-hall-3-suites/fullscreen/",
+      "title": "Residence Hall #3 Single & Double with Suite Bath",
+      "modelId": "XPNo8wUVdNq",
+      "visibleIframeUrl": "https://mpembed.com/show/?m=XPNo8wUVdNq&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "reviewedDate": "2026-10-22",
+      "status": "visually-reviewed",
+      "visitedViews": [
+        "Single-bedroom interior panorama",
+        "Overhead floorplan",
+        "Dollhouse/cutaway"
+      ],
+      "verifiedLayoutFeatures": [
+        "Example suite contains one single bedroom on one side and one double bedroom on the other; three beds in total.",
+        "A central enclosed bathroom shows toilet, sink, and shower.",
+        "A short connecting passage runs beside/behind the central bathroom between the bedroom sides.",
+        "Bedroom entry/storage recesses and built-in closet areas are visible.",
+        "Wooden desks, chairs, dressers, and separate single beds are visible.",
+        "No separate furnished living room or kitchen is visible in this scan."
+      ],
+      "layoutGraph": {
+        "scope": "Single/double example suite only",
+        "bedroomCount": 2,
+        "visibleBedCount": 3,
+        "bathroomCount": 1,
+        "nodes": [
+          "single-bedroom",
+          "connecting-passage",
+          "double-bedroom",
+          "suite-bathroom"
+        ],
+        "connections": [
+          [
+            "single-bedroom",
+            "connecting-passage"
+          ],
+          [
+            "double-bedroom",
+            "connecting-passage"
+          ],
+          [
+            "connecting-passage",
+            "suite-bathroom"
+          ]
+        ]
+      },
+      "measurements": [],
+      "uncertainties": [
+        "The scan shows one example unit/suite, not every layout or current assigned room in this hall.",
+        "No measurement was taken. Screenshots and adjacency notes are not calibrated geometry and must not be used to assign dimensions, floor area, ceiling height, or furniture clearance.",
+        "Tour furniture and finishes are visible at scan time; present inventory and permitted alterations were not verified.",
+        "Social atmosphere, noise transmission, demand, room eligibility, and meal-plan requirements cannot be established from this tour."
+      ],
+      "plannerQuizImplications": [
+        "Suite does not imply a separate entertaining room; distinguish shared bath from shared living area.",
+        "Single and double choices should have separate furnishing presets and privacy explanations.",
+        "Preserve closet/entry recesses and passage routing when refining room outlines."
+      ],
+      "screenshots": [
+        "apartments-hall3-interior.png",
+        "apartments-hall3-floorplan.png",
+        "apartments-hall3-dollhouse.png"
+      ]
+    }
+  ]
+}

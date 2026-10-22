@@ -1,42 +1,66 @@
-export function shuffled(values, random = Math.random) {
- const copy = [...values];
- for (let i = copy.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [copy[i], copy[j]] = [copy[j], copy[i]]; }
- return copy;
+import {scoreDorms,saveHall,destinations,priorityLabels,MEAL_SOURCE,MEAL_OVERVIEW} from './dorm-match.js';
+import {tourForHall} from './housing-tours.js';
+export function tourActions(id){
+ if(!tourForHall(id))return [];
+ const hall=encodeURIComponent(String(id));
+ return [{href:`tours.html?hall=${hall}`,label:'Look inside ↗'},{href:`beta.html?hall=${hall}`,label:'Try a layout →'}];
 }
-export function questionBank(stats, research) {
- const fact = id => { const item = research.questions.find(q => q.id === id); if (!item) throw new Error('Missing verified quiz fact'); return item; };
- const hall = id => { if (!Number.isFinite(stats[id]?.capacity)) throw new Error('Missing published capacity'); return stats[id]; };
- const atlantic = hall('572483'), gray = hall('571565'), lora = hall('571574');
- const twins = fact('twins-capacity'), apartment = fact('apartment-comparison'), north = fact('new-old-north');
- const historical = (id,question,correct,options) => { const source=fact(id); return {id,question,correct,options,explanation:source.answer,caveat:source.caveat,sources:source.sources}; };
- const bank = [
-  {id:'atlantic',question:'How many residents does Atlantic House list?',correct:`${atlantic.capacity} residents`,options:[12,17,83,98].map(n=>`${n} residents`),explanation:`${atlantic.name} lists ${atlantic.capacity} residents. Small enough that “I’ve never seen them before” is a little suspicious.`,sources:[atlantic.metricSources?.capacity||atlantic.sourceUrl]},
-  {id:'gray-lora',question:'Which has the larger published capacity?',correct:gray.capacity>lora.capacity?gray.name:lora.name,options:[gray.name,lora.name,'Exactly the same','Neither publishes a capacity'],explanation:`${gray.name}: ${gray.capacity}. ${lora.name}: ${lora.capacity}. A difference of ${Math.abs(gray.capacity-lora.capacity)} residents. The margin is not enormous.`,sources:[gray.metricSources?.capacity||gray.sourceUrl,lora.metricSources?.capacity||lora.sourceUrl]},
-  {id:'bedrooms',question:'Four residents. Which typical apartment gives each one a single bedroom?',correct:'Gateway Village',options:['Gateway Village','University Forest Apartments','Both','Neither'],explanation:apartment.answer,caveat:apartment.caveat,sources:apartment.sources},
-  {id:'twins',question:'Which numbered halls list the same resident capacity?',correct:'No. 2 and No. 3',options:['No. 2 and No. 3','No. 1 and No. 2','No. 1 and No. 3','All three'],explanation:twins.answer,sources:twins.sources},
-  historical('infirmary','Which hall originally included a 16-bed infirmary?','Robins Hall',['Robins Hall','Wood Hall','Dennis Hall','Marsh Hall']),
-  historical('former-lodges','Which two houses started as fraternity lodges?','Atlantic and Pacific',['Atlantic and Pacific','North and South Court','Gray and Lora Robins Court','Lakeview and Westhampton']),
-  historical('early-pair','Which numbered halls were completed in 1913, before campus opened?','No. 1 and No. 2',['No. 1 and No. 2','No. 2 and No. 3','No. 1 and No. 3','All three']),
-  historical('ufa-exceptions','How many UFA apartments does the university list as one-level exceptions?','Four',['Four','None','Two','All of them']),
-  historical('modern-pair','Which pair dates to 2014?','Gateway Village and Westhampton Hall',['Gateway Village and Westhampton Hall','Wood and Robins Hall','North and South Court','Atlantic and Pacific House']),
-  {id:'north',question:'Which hall gained 63 beds when its former academic wing became housing in 2024?',correct:'North Court',options:['North Court','South Court','Gray Court','Lakeview Hall'],explanation:north.answer,sources:north.sources}
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const option=(value,label,detail='')=>({value,label,detail});
+function questions(a){
+ const programs=[option('none','None / not sure')];
+ if(a.year==='firstyear')programs.unshift(option('endeavor','Richmond Endeavor','The program places students in LoRo.'));
+ if(a.year==='sophomore')programs.unshift(option('ssir','SSIR','The program places students in South Court.'));
+ programs.push(option('other','Another program or assignment arrangement','Keep results separate until Housing confirms the rules.'));
+ const activePriorities=Object.entries(priorityLabels).filter(([k])=>k==='hosting'?a.hosting==='living':k==='privacy'?a.privacy==='own':k==='cooking'?['regular','sometimes'].includes(a.cooking):k==='location'?a.destination!=='none':a.laundry==='important');
+ return [
+ {id:'year',title:'What year are you choosing housing for?',hint:'Your upcoming year, not the one you’re in right now.',options:[option('firstyear','First year'),option('sophomore','Sophomore'),option('junior','Junior'),option('senior','Senior'),option('law','Law student')]},
+ {id:'program',title:'Does a program decide where you live?',options:programs},
+ ...(['junior','senior'].includes(a.year)?[{id:'group',title:'What’s the roommate situation?',hint:'Apartment selection requires four eligible juniors or seniors, with every bed filled.',options:[option('four','We have a group of four','Everyone in the group will be a junior or senior.'),option('forming','Still assembling the group'),option('smaller','It’s just me / a smaller group')]}]:[]),
+ {id:'hosting',title:'Your friends are coming over. Where are they sitting?',options:[option('living','Ideally, a living room','I want somewhere to hang out that isn’t my bedroom.'),option('bedroom','My bedroom is fine','Show me the actual room sizes afterward.'),option('elsewhere','We usually meet somewhere else')]},
+ {id:'privacy',title:'At the end of the day, do you want your own bedroom?',hint:'This is about bedroom sharing. We can’t predict how quiet your neighbors will be.',options:[option('own','Yes. A door I can close.'),option('share','I’m happy sharing with a roommate'),option('either','Either works')]},
+ {id:'cooking',title:'Be honest. Are you actually cooking?',options:[option('regular','Yes. I want a kitchen.'),option('sometimes','Sometimes. I still want dining.'),option('dining','I’m going to D-hall.')]},
+ {id:'destination',title:'Which walk would you most like to shorten?',hint:'Choose one place you expect to visit often.',options:destinations.map(d=>option(d.id,d.label,d.detail))},
+ {id:'laundry',title:'How much does laundry influence the decision?',hint:'We can compare people per washer. We don’t have live queues or reliable room-to-laundry walking distances.',options:[option('important','I want fewer people sharing each washer.'),option('neutral','I’ll work around it.')]},
+ {id:'priorities',title:'What matters most?',hint:activePriorities.length?'Pick up to two of the preferences you just chose. These get extra weight.':'You haven’t picked a preference that separates the halls. We’ll show the eligible options without naming a winner.',multi:true,options:activePriorities.map(([value,label])=>option(value,label))}
  ];
- return bank;
 }
-export function makeQuiz(stats, research, random = Math.random) {
- return shuffled(questionBank(stats,research),random).slice(0,5).map(q=>({...q,options:shuffled(q.options,random)}));
+async function startQuiz(){
+ const root=document.querySelector('#quiz');let answers={program:'none',priorities:[]},step=0,places,stats;
+ const load=async url=>{const r=await fetch(url);if(!r.ok)throw new Error('Data unavailable');return r.json();};
+ try{[places,stats]=await Promise.all([load('data/places.json'),load('data/housing/residence-stats.json')]);}catch{root.innerHTML='<h2>Housing details didn’t load.</h2><p>Try again in a moment.</p><button class="next">Try again</button>';root.querySelector('button').onclick=startQuiz;return;}
+ const focusHeading=()=>root.querySelector('h2')?.focus({preventScroll:true});
+ function render(){
+  const qs=questions(answers),q=qs[step];
+  root.innerHTML=`<div class="round-meta"><span>Question ${step+1} of ${qs.length}</span><button class="text-button" data-restart>Start over</button></div><div class="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="${qs.length}" aria-valuenow="${step}"><span style="width:${step/qs.length*100}%"></span></div><h2 tabindex="-1">${esc(q.title)}</h2>${q.hint?`<p class="question-hint">${esc(q.hint)}</p>`:''}<div class="answers${q.options.length>6?' answers-many':''}" role="group" aria-label="${esc(q.title)}">${q.options.map(o=>`<button class="answer" data-value="${esc(o.value)}" aria-pressed="${q.multi?(answers.priorities||[]).includes(o.value):answers[q.id]===o.value}"><span>${esc(o.label)}</span>${o.detail?`<small>${esc(o.detail)}</small>`:''}</button>`).join('')}</div><p class="choice-status" role="status" aria-live="polite">${q.multi?`${answers.priorities.length} of 2 priorities selected`:''}</p><div class="quiz-actions"><button class="back" ${step===0?'hidden':''}>← Back</button><button class="next" ${!q.multi&&!answers[q.id]?'disabled':''}>${step===qs.length-1?'Find my options →':'Continue →'}</button></div>`;
+  root.querySelectorAll('[data-value]').forEach(btn=>btn.onclick=()=>{
+   if(q.multi){const selected=new Set(answers.priorities);if(selected.has(btn.dataset.value))selected.delete(btn.dataset.value);else if(selected.size<2)selected.add(btn.dataset.value);else {root.querySelector('.choice-status').textContent='Unselect a priority before adding another.';return;}answers.priorities=[...selected];}
+   else {if(q.id==='year'&&answers.year!==btn.dataset.value){answers.program='none';delete answers.group;}answers[q.id]=btn.dataset.value;answers.priorities=answers.priorities.filter(p=>questions(answers).at(-1).options.some(o=>o.value===p));}
+   root.querySelectorAll('[data-value]').forEach(b=>b.setAttribute('aria-pressed',String(q.multi?answers.priorities.includes(b.dataset.value):answers[q.id]===b.dataset.value)));
+   root.querySelector('.next').disabled=false;
+   root.querySelector('.choice-status').textContent=q.multi?`${answers.priorities.length} of 2 priorities selected`:'';
+  });
+  root.querySelector('.back').onclick=()=>{step--;render();};
+  root.querySelector('.next').onclick=()=>{if(step===qs.length-1)finish();else {step++;render();}};
+  root.querySelector('[data-restart]').onclick=restart;focusHeading();
+ }
+ function restart(){answers={program:'none',priorities:[]};step=0;render();}
+ function card(r,index,uncertain=false){
+  const label=uncertain?'Confirm eligibility':index===0?'Start here':'Another option';
+  return `<article class="match-card ${index===0&&!uncertain?'primary-match':''}"><div class="match-label">${label}</div><h3>${esc(r.name)}</h3><ul class="match-reasons">${r.reasons.map(reason=>`<li>${esc(reason)}</li>`).join('')}</ul><p class="compromise"><strong>${uncertain?'Check first':'The trade-off'}</strong> ${esc(uncertain?r.eligibility.reason:r.compromise)}</p><div class="match-actions"><a class="explore-link" href="./#place=${esc(r.id)}">Explore hall →</a>${tourActions(r.id).map(action=>`<a href="${esc(action.href)}">${esc(action.label)}</a>`).join('')}<button data-save="${esc(r.id)}">Save to shortlist</button></div><details class="match-details"><summary>Rules &amp; details</summary><p>${esc(r.eligibility.reason)}</p><p>${esc(r.mealPlan)}</p>${r.meters!==null?`<p>${Math.round(r.meters/10)*10} m to ${esc(r.targetLabel)} in a straight line. This is not a walking route.</p>`:''}${r.ratio!==null?`<p>${r.ratio.toFixed(1)} residents per listed washer at full capacity.</p>`:''}${r.profile.bathrooms?`<p>${esc(r.profile.bathrooms)}</p>`:''}${r.id==='572061'?'<p>UFA’s washer ratio covers the whole community; laundry is in separate buildings. It does not tell you the distance from a specific apartment.</p>':''}${r.apartment?'<p>A matching layout does not mean an apartment will be available at your selection slot. Keep backups.</p>':''}<div class="source-links"><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">Hall source ↗</a><a href="${esc(r.eligibility.sourceUrl)}" target="_blank" rel="noopener">Housing rules ↗</a><a href="${MEAL_SOURCE}" target="_blank" rel="noopener">Dining rules ↗</a>${r.apartment?`<a href="${MEAL_OVERVIEW}" target="_blank" rel="noopener">Apartment meal-plan exemption ↗</a>`:''}</div></details></article>`;
+ }
+ function finish(){
+  const result=scoreDorms(answers,places,stats);
+  if(result.error){root.innerHTML=`<h2 tabindex="-1">Check your answers</h2><p>${esc(result.error)}</p><button class="back">Edit answers</button>`;root.querySelector('button').onclick=()=>{step=0;render();};focusHeading();return;}
+  const title=result.programDetermined?'Your program points to one hall.':!result.matches.length?'A few things to confirm first.':result.hasPreferences?'Here’s where I’d start.':'Your eligible options.';
+  const notice=result.programDetermined?'Your program’s housing rule determines the match. Your preferences still help you decide what to look for in the room.':answers.year==='firstyear'?'First-year housing is assigned by the university. These options help you understand the fit; they aren’t a promise that you can choose the hall.':'These fit the published rules and your preferences. Housing confirms the actual options at selection.';
+  const tied=result.matches.length>1&&Math.abs(result.matches[0].score-result.matches[1].score)<.0001;
+  root.innerHTML=`<div class="round-meta"><span>Your housing shortlist</span><button class="text-button" data-restart>Start over</button></div><h2 tabindex="-1">${title}</h2><p class="question-hint">${notice}</p>${tied?'<p class="tie-note">Your answers don’t separate the leading options. They’re shown alphabetically where they tie.</p>':''}${answers.hosting==='bedroom'?'<p class="tie-note">For bedroom hangouts, compare the actual rooms next. A hall name won’t tell you how much space you get.</p>':''}<div class="match-list">${result.matches.slice(0,3).map((r,i)=>card(r,i)).join('')}</div>${result.uncertain.length?`<details class="uncertain-options" ${!result.matches.length?'open':''}><summary>Check with Housing (${result.uncertain.length})</summary><p>These are separate because the published rules don’t confirm your situation.</p>${result.uncertain.slice(0,3).map((r,i)=>card(r,i,true)).join('')}</details>`:''}<div class="quiz-actions"><button class="back" data-edit>← Edit answers</button><a href="room-compare.html">Compare room sizes ↗</a></div><p class="save-status" role="status" aria-live="polite"></p>`;
+  root.querySelector('[data-restart]').onclick=restart;
+  root.querySelector('[data-edit]').onclick=()=>{step=0;render();};
+  root.querySelectorAll('[data-save]').forEach(b=>b.onclick=()=>{let ok=false;try{ok=saveHall(localStorage,b.dataset.save);}catch{}root.querySelector('.save-status').textContent=ok?'Saved to your shortlist on this device.':'Couldn’t save in this browser. You can still explore the hall.';if(ok){b.textContent='Saved ✓';b.disabled=true;}});
+  focusHeading();
+ }
+ render();
 }
-const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-async function startQuiz() {
- const root=document.querySelector('#quiz');let rounds=[],index=0,score=0,answered=false;
- const load = async url => { const response=await fetch(url);if(!response.ok)throw new Error('Could not load quiz');return response.json(); };
- try {
-  const [stats,research]=await Promise.all([load('data/housing/residence-stats.json'),load('data/housing/residence-stat-questions.json')]);
-  function begin(){rounds=makeQuiz(stats,research);index=0;score=0;render();}
-  function render(){answered=false;const q=rounds[index];root.innerHTML=`<div class="round-meta"><span>Question ${index+1} of ${rounds.length}</span><span data-score>${score} correct</span></div><div class="progress" aria-hidden="true"><span style="width:${index/rounds.length*100}%"></span></div><h2 tabindex="-1">${esc(q.question)}</h2><div class="answers">${q.options.map((answer,i)=>`<button class="answer" data-answer="${i}">${esc(answer)}</button>`).join('')}</div><div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div><button class="next" hidden>${index===rounds.length-1?'See your score →':'Next question →'}</button>`;root.querySelector('h2').focus({preventScroll:true});root.querySelectorAll('[data-answer]').forEach(button=>button.onclick=()=>answer(Number(button.dataset.answer)));root.querySelector('.next').onclick=()=>{index++;if(index===rounds.length)finish();else render();};}
-  function answer(choice){if(answered)return;answered=true;const q=rounds[index],right=q.options[choice]===q.correct;if(right)score++;root.querySelector('[data-score]').textContent=`${score} correct`;root.querySelectorAll('[data-answer]').forEach((button,i)=>{button.disabled=true;const correct=q.options[i]===q.correct;button.classList.toggle('is-correct',correct);button.classList.toggle('is-chosen',i===choice);if(correct||i===choice)button.insertAdjacentHTML('beforeend',`<small>${correct?'Correct answer':'Your answer'}</small>`);});const feedback=root.querySelector('#feedback');feedback.hidden=false;feedback.innerHTML=`<h3>${right?'Correct.':'Not quite.'}</h3><p>${esc(q.explanation)}</p>${q.caveat?`<p class="caveat">${esc(q.caveat)}</p>`:''}<details class="sources data-disclosure"><summary>Answer sources</summary>${q.sources.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener">University source${q.sources.length>1?` ${i+1}`:''} ↗</a>`).join('')}</details>`;const next=root.querySelector('.next');next.hidden=false;next.focus({preventScroll:true});}
-  function finish(){const comment=score===5?'You know an unreasonable amount about campus housing.':score>=3?'Respectable. Nobody was taking attendance.':'The buildings will forgive you.';root.innerHTML=`<span class="eyebrow">THAT’S ALL FIVE</span><h2 tabindex="-1">The results are in.</h2><p class="score">${score} <small>/ ${rounds.length}</small></p><p>${comment}</p><button class="retry">Play again ↻</button>`;root.querySelector('h2').focus({preventScroll:true});root.querySelector('.retry').onclick=begin;}
-  begin();
- } catch {root.innerHTML='<h2>Questions temporarily unavailable.</h2><p>We couldn’t load the verified data. Refresh to try again.</p><button class="retry">Try again</button>';root.querySelector('.retry').onclick=startQuiz;}
-}
-if (typeof document !== 'undefined') startQuiz();
+if(typeof document!=='undefined')startQuiz();

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "reviewedDate": "2026-10-22",
+  "sourceDirectory": "https://richmond.starrezhousing.com/StarRezPortalX/ADAB3F4D/9/480/Home-Housing_Virtual_Tour",
+  "reviewedHallCount": 17,
+  "editableTourViewCount": 18,
+  "ufaFloors": "One apartment choice, with independently saved downstairs and upstairs layouts.",
+  "savedReferences": "Local screenshots and JSON observations. Provider-hosted 3D models were not downloaded.",
+  "modelAccuracy": "Original hand-built reconstructions from visible tour views. Coordinates and furniture sizes are nominal, not measured. No room-number identity or fit guarantee.",
+  "records": [
+    "firstyear.json",
+    "suites.json",
+    "apartments-numbered.json"
+  ],
+  "validation": [
+    "Every toured hall maps to an editable reconstruction.",
+    "Starter furniture fits model boundaries without overlapping fixed features or other pieces.",
+    "Finite WebGL geometry and storage round-trips tested for every model.",
+    "Independent visual critique corrected bathroom openings and furniture orientations."
+  ],
+  "knownLimits": [
+    "Example units may differ from assigned rooms.",
+    "Residence Hall No. 1 sloping ceilings are not modeled.",
+    "No current exact room dimensions were extracted from tours.",
+    "Atlantic and Pacific Houses have no tour in this directory."
+  ]
+}

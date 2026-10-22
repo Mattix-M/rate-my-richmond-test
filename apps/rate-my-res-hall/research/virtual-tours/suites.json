@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-10-22",
+  "method": "Manual browser inspection of the public Vivid Media/Matterport viewer: launch, dollhouse, floorplan, and interior views. No model geometry or private assets extracted.",
+  "credit": {
+    "presentedBy": "University of Richmond",
+    "tourProvider": "Vivid Media LLC",
+    "viewer": "Matterport / MPEmbed"
+  },
+  "scope": "Six example suites/rooms. Observations apply only to the scanned sample; room numbers, capture dates, dimensions, current furniture specifications, and representativeness across each hall are unverified.",
+  "screenshotsUsage": "Saved locally as visual audit references. Provider attribution retained. These are not permission to republish provider imagery.",
+  "records": [
+    {
+      "id": "gray",
+      "hall": "Gray Court",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-gray-court-double/fullscreen/",
+      "observedTitle": "Gray Court Double Rooms with Suite Bath",
+      "modelId": "nqqdqpwzZzf",
+      "observedIframeUrl": "https://mpembed.com/show/?m=nqqdqpwzZzf&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "visitedViews": [
+        "dollhouse",
+        "floorplan",
+        "bedroom interior"
+      ],
+      "verifiedLayoutFeatures": [
+        "Two separate bedrooms, each furnished with two beds, appear in the scanned suite.",
+        "Bedrooms sit on opposite sides of a central connecting bathroom zone.",
+        "Bedroom interior shows desks with upper shelving, desk chairs, drawers/dressers, and raised bed frames with storage beneath.",
+        "Windows and a wall-mounted heating/cooling unit occupy the exterior bedroom wall.",
+        "An open center circulation area is visible between bedroom furniture."
+      ],
+      "titleDerivedFeatures": [
+        "Suite bath serving double rooms."
+      ],
+      "uncertainties": [
+        "Bathroom fixture boundaries are not fully resolved by the saved overhead view.",
+        "Exact room numbers, dimensions, door swings, closet boundaries, and allowed bed heights are unverified.",
+        "No dedicated living room is visible in the sample; this does not establish absence of hall-wide lounge spaces."
+      ],
+      "plannerImplications": [
+        "Treat each bedroom as a separate editable room; do not flatten the entire suite into one furniture area.",
+        "Keep the central bathroom connection and bedroom entry circulation clear.",
+        "Model window/HVAC wall as a fixed obstruction once measured; do not treat under-bed storage as extra floor area.",
+        "Do not assume the two bedrooms have identical dimensions."
+      ],
+      "quizImplications": [
+        "This sample supports explaining suite-bath sharing and bedroom-based hosting, not a hall social-vibe rating."
+      ],
+      "screenshots": [
+        "suites-gray-floorplan.jpg",
+        "suites-gray-interior.jpg"
+      ],
+      "measurementStatus": "not measured",
+      "matchedPlannerRoomId": null
+    },
+    {
+      "id": "keller",
+      "hall": "Keller Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-keller-double-bath/fullscreen/",
+      "observedTitle": "Keller Hall Double with Private Bath",
+      "modelId": "Xs3bJsWL4pk",
+      "observedIframeUrl": "https://mpembed.com/show/?m=Xs3bJsWL4pk&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "visitedViews": [
+        "dollhouse",
+        "floorplan",
+        "entry and bedroom interior"
+      ],
+      "verifiedLayoutFeatures": [
+        "One bedroom furnished with two beds is visible.",
+        "The footprint has an entry recess and a projecting bay-window area rather than a plain rectangle.",
+        "An enclosed bathroom area with visible toilet and shower lies beside the entrance.",
+        "Interior view shows a built-in closet opening with hanging rail and shelf.",
+        "The bedroom has a heater below the bay window, carpet, and wooden bed/drawer furniture."
+      ],
+      "titleDerivedFeatures": [
+        "The scanned double is described as having a private bath; private refers to the room, not a single occupant."
+      ],
+      "uncertainties": [
+        "Bathroom sharing beyond the provider title is not independently confirmed.",
+        "Exact closet dimensions and which exterior doors connect to the corridor are unverified.",
+        "Exact dimensions, room number, and current furniture inventory are unknown."
+      ],
+      "plannerImplications": [
+        "Preserve bay-window, bathroom, and entry recess geometry; a bounding rectangle would create false usable space.",
+        "Add fixed closet and window/heater zones before moving furniture.",
+        "Keep bathroom/closet/entry access clear."
+      ],
+      "quizImplications": [
+        "Distinguish sharing a bedroom from sharing a bathroom across multiple rooms; a private-bath double is not a private bedroom."
+      ],
+      "screenshots": [
+        "suites-keller-floorplan.jpg",
+        "suites-keller-interior.jpg"
+      ],
+      "measurementStatus": "not measured",
+      "matchedPlannerRoomId": null
+    },
+    {
+      "id": "lakeview",
+      "hall": "Lakeview Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-lakeview-double-suite/fullscreen/",
+      "observedTitle": "Lakeview Double/Double Suite",
+      "modelId": "qEc4p8h4dKn",
+      "observedIframeUrl": "https://mpembed.com/show/?m=qEc4p8h4dKn&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "visitedViews": [
+        "dollhouse",
+        "floorplan",
+        "shared bathroom/vanity passage interior"
+      ],
+      "verifiedLayoutFeatures": [
+        "Two adjacent bedrooms each contain two beds in the scan.",
+        "A tiled connecting passage runs beside both bedrooms.",
+        "The passage connects to separate fixture areas at its ends, including a visible toilet and a shower area.",
+        "Vanities/sinks and mirrors are visible both along the connecting passage and through a separate doorway in the interior view.",
+        "Bedroom doors open from the shared connecting area; furniture is placed around the bedroom perimeter."
+      ],
+      "titleDerivedFeatures": [
+        "Double/double suite sample."
+      ],
+      "uncertainties": [
+        "The title does not give exact room numbers.",
+        "Fixture access rules, lock operation, and whether the scan represents all suite configurations are not established.",
+        "No dimensions or permitted furniture arrangements measured."
+      ],
+      "plannerImplications": [
+        "Treat shared tiled bath/circulation area as fixed geometry, not additional bedroom space.",
+        "Preserve separate bedroom doors and bathroom compartment access.",
+        "Keep furniture layouts local to each bedroom unless the full suite is explicitly modeled."
+      ],
+      "quizImplications": [
+        "Show the actual bathroom arrangement as an example; do not call the tiled connecting passage a living room or hosting area."
+      ],
+      "screenshots": [
+        "suites-lakeview-dollhouse.jpg",
+        "suites-lakeview-floorplan.jpg",
+        "suites-lakeview-interior.jpg"
+      ],
+      "measurementStatus": "not measured",
+      "matchedPlannerRoomId": null
+    },
+    {
+      "id": "north",
+      "hall": "North Court",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-north-hall-suites/fullscreen/",
+      "observedTitle": "North Court Single/Double Suite",
+      "modelId": "KkoS8ctgDBd",
+      "observedIframeUrl": "https://mpembed.com/show/?m=KkoS8ctgDBd&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "visitedViews": [
+        "dollhouse",
+        "floorplan",
+        "single-bedroom interior"
+      ],
+      "verifiedLayoutFeatures": [
+        "The saved overhead view shows two beds in the left bedroom and one bed in the right bedroom.",
+        "The two bedrooms are separated by a central bathroom zone.",
+        "A central sink/vanity compartment is visually separate from an adjoining compartment containing a toilet and shower.",
+        "Bedroom footprints have entry-side recesses rather than forming two uninterrupted rectangles.",
+        "The single-bedroom interior shows a bed, desk with shelving, dresser under a window, a door toward the bath, and another closed door."
+      ],
+      "titleDerivedFeatures": [
+        "Provider labels the sample single/double suite."
+      ],
+      "uncertainties": [
+        "Room numbers are not established. This tour is NOT verified as planner room North0013.",
+        "Exact closet boundaries are not established; entry-side recesses must not be labeled closets without further evidence.",
+        "Door-to-corridor versus door-to-closet mapping is not fully verified.",
+        "Dimensions, furnishing rules, and all other North Court room configurations remain unknown."
+      ],
+      "plannerImplications": [
+        "Keep single and double bedrooms distinct in geometry, furnishing counts, and privacy descriptions.",
+        "Represent the bath as separate fixed compartments between bedrooms.",
+        "Do not insert North0013 dimensions or outline into this sample, or this sample furnishing into North0013, without room matching.",
+        "Future modeling requires door/closet measurements and clearance checks; preserve irregular entry recesses now as unknown areas rather than usable rectangles."
+      ],
+      "quizImplications": [
+        "Separate own-bedroom preference from suite-bath sharing; this sample shows that a single bedroom can still be part of a shared suite.",
+        "Avoid scoring all North rooms as private bedrooms."
+      ],
+      "screenshots": [
+        "suites-north-dollhouse.jpg",
+        "suites-north-floorplan.jpg",
+        "suites-north-interior.jpg"
+      ],
+      "measurementStatus": "not measured",
+      "matchedPlannerRoomId": null
+    },
+    {
+      "id": "south",
+      "hall": "South Court",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-south-double-suite/fullscreen/",
+      "observedTitle": "South Court Double Rooms with Suite Bath",
+      "modelId": "imyUWgtkDfm",
+      "observedIframeUrl": "https://mpembed.com/show/?m=imyUWgtkDfm&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "visitedViews": [
+        "dollhouse",
+        "floorplan",
+        "double-bedroom interior"
+      ],
+      "verifiedLayoutFeatures": [
+        "The scanned suite has two bedrooms with two beds visible in each.",
+        "A central bathroom zone lies between the bedrooms.",
+        "The overhead view shows a toilet and sink in the upper bathroom compartment and a separate shower footprint below.",
+        "Each room has desks, chairs, drawer units, windows, and an open middle circulation area.",
+        "The bedroom outlines have different entry-side recesses; they are not obviously identical rectangles."
+      ],
+      "titleDerivedFeatures": [
+        "Double rooms with suite bath."
+      ],
+      "uncertainties": [
+        "Exact closet boundaries and every door swing are unresolved.",
+        "Room numbers, dimensions, capture date, and current assignment rules are not established by the tour.",
+        "No dedicated living room is visible in this sample; hall lounge provision not audited."
+      ],
+      "plannerImplications": [
+        "Model bathroom and entry recesses as fixed geometry.",
+        "Do not mirror one bedroom outline automatically to create the other.",
+        "Check that bed and desk arrangements preserve routes to bathroom and bedroom entrance."
+      ],
+      "quizImplications": [
+        "This supports describing a suite bathroom between double bedrooms; it does not establish the social atmosphere of South Court."
+      ],
+      "screenshots": [
+        "suites-south-dollhouse.jpg",
+        "suites-south-floorplan.jpg",
+        "suites-south-interior.jpg"
+      ],
+      "measurementStatus": "not measured",
+      "matchedPlannerRoomId": null
+    },
+    {
+      "id": "westhampton",
+      "hall": "Westhampton Hall",
+      "sourceUrl": "https://tours.vividmediany.com/3d-model/richmond-westhampton-hall-suites/fullscreen/",
+      "observedTitle": "Westhampton Single/Double Suite",
+      "pageTitle": "Westhampton Hall Single/Double Suite",
+      "modelId": "5vZLDzk42Ym",
+      "observedIframeUrl": "https://mpembed.com/show/?m=5vZLDzk42Ym&play=1&brand=1&vr=0&wh=0&nozoom=1&title=2&tourcta=1&vrcoll=0&dh=1&mt=1&details=1&copyright=Vivid+Media+LLC&ga=G-CRFTE7Z3MZ&mt=1&mpu=26",
+      "visitedViews": [
+        "dollhouse",
+        "floorplan",
+        "shared passage interior"
+      ],
+      "verifiedLayoutFeatures": [
+        "The overhead scan shows one bed in the left bedroom and two in the right bedroom.",
+        "A shared tiled area connects the bedroom doors and bathroom fixtures.",
+        "Toilet/shower compartment lies off the shared area; a separate sink is visible at the lower edge of the overhead view.",
+        "Bedroom footprints include entry-side recesses and doorways; the single and double have distinct outlines.",
+        "Desks, chairs, bed frames, drawers, and windows appear in the furnished bedrooms."
+      ],
+      "titleDerivedFeatures": [
+        "Single/double suite sample."
+      ],
+      "uncertainties": [
+        "Exact room numbers, capture date, dimensions, and lock/access arrangements are not verified.",
+        "Some dark or missing areas in the scanned footprint may be scan gaps, not architectural voids.",
+        "No standalone living room is visible in the scanned sample; common rooms elsewhere not audited."
+      ],
+      "plannerImplications": [
+        "Model distinct single and double spaces plus fixed shared bath/circulation geometry.",
+        "Do not count tiled bathroom circulation as optional hosting area.",
+        "Do not trace black scan gaps as walls without matching official floorplans.",
+        "Preserve door access when proposing furniture layouts."
+      ],
+      "quizImplications": [
+        "Own-bedroom privacy and bathroom-sharing preference should be separate questions.",
+        "Offer the sample tour for students to judge layout rather than assigning a personality to the entire hall."
+      ],
+      "screenshots": [
+        "suites-westhampton-dollhouse.jpg",
+        "suites-westhampton-floorplan.jpg",
+        "suites-westhampton-interior.jpg"
+      ],
+      "measurementStatus": "not measured",
+      "matchedPlannerRoomId": null
+    }
+  ]
+}

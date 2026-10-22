@@ -77,3 +77,6 @@
 }
 .residence-spatial-arrival .hall-guide,.ufa-spatial-arrival .hall-guide{animation:ufa-controls-arrive .65s .15s both}
 @media(prefers-reduced-motion:reduce){.residence-spatial-arrival .hall-guide,.ufa-spatial-arrival .hall-guide{animation:none}}
+
+.guide-tour{padding:0 0 16px;display:flex;flex-direction:column;gap:5px}.guide-tour>a:first-child{font-weight:600;min-height:44px;display:flex;align-items:center}.guide-tour small{font-size:11px;color:#626a7b}.guide-tour .guide-all-tours{font-size:12px}
+.browse-tours{display:block;padding:12px 22px;color:#294987;font:600 12px/1.5 Arial,Helvetica,sans-serif;text-underline-offset:4px;min-height:44px}

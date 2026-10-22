@@ -13,7 +13,7 @@ test('3D renderer produces finite mesh geometry for both source-traced rooms and
     globalThis.document={createElement:element};globalThis.window={devicePixelRatio:1};globalThis.requestAnimationFrame=fn=>{queued=fn;return 1;};globalThis.cancelAnimationFrame=()=>{};globalThis.ResizeObserver=class{observe(){}disconnect(){}};globalThis.getComputedStyle=()=>({position:'relative'});
     let commits=0;const scene=createPlannerScene(element('div'),{onMove:()=>commits++});
     for(const room of plannerRooms){scene.setRoom(room);scene.setItems(furnitureCatalog.map((item,i)=>({...item,id:`item-${i}`,x:3+i*.5,z:4,rotation:45})), 'item-0');queued();assert.ok(mesh.length>1000);assert.ok([...mesh].every(Number.isFinite));scene.setView('top');queued();assert.ok([...mesh].every(Number.isFinite));}
-    assert.equal(draws,4);
+    assert.equal(draws,plannerRooms.length*2);
     scene.setRoom({width:14,depth:14,height:8});scene.setView('top');scene.setItems([{id:'test',type:'dresser',x:7,z:7,width:3,depth:3,height:2,color:'#123456'}]);queued();const baseline=[...mesh];
     const event=(x,y,id=1)=>({clientX:x,clientY:y,pointerId:id,pointerType:'touch',button:0});
     canvas.handlers.pointerdown(event(450,300));canvas.handlers.pointermove(event(510,300));queued();assert.notDeepEqual([...mesh],baseline,'drag visibly moves the furniture');

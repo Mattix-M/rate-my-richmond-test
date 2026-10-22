@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {plannerRooms,checkPlacement} from '../dorm-planner-data.js';
 import {readLayouts,starterLayout,findOpenPosition} from '../dorm-planner-state.js';
 test('starter furniture fits each actual outline and avoids fixed and movable obstacles',()=>{
- for(const room of plannerRooms){const items=starterLayout(room);assert.equal(items.length,4);for(const item of items)assert.deepEqual(checkPlacement(room,item,items),{inside:true,overlaps:[]});}
+ for(const room of plannerRooms){const items=starterLayout(room);assert.equal(items.length,room.initialFurniture?.length??4);for(const item of items)assert.deepEqual(checkPlacement(room,item,items),{inside:true,overlaps:[]});}
 });
 test('saved layouts preserve per-room furniture including intentionally empty rooms',()=>{
  const rooms=Object.fromEntries(plannerRooms.map(r=>[r.id,starterLayout(r)]));rooms[plannerRooms[1].id]=[];

@@ -13,7 +13,8 @@ export function readLayouts(raw){
     if(!definition||typeof item.id!=='string'||item.id.length>80||ids.has(item.id))continue;
     if(!['x','z','width','depth','height','rotation'].every(k=>Number.isFinite(item[k])))continue;
     if(item.width<.5||item.depth<.5||item.width>20||item.depth>20||item.height<.02||item.height>10)continue;
-    const next={...definition,id:item.id,x:item.x,z:item.z,width:item.width,depth:item.depth,height:item.height,rotation:((item.rotation%360)+360)%360};
+    const preset=room.initialFurniture?.find(p=>p.id===item.id);
+    const next={...definition,...(typeof preset?.underBedStorage==='boolean'?{underBedStorage:preset.underBedStorage}:{}),...(typeof preset?.hasHutch==='boolean'?{hasHutch:preset.hasHutch}:{}),...(preset?.color?{color:preset.color}:{}),id:item.id,x:item.x,z:item.z,width:item.width,depth:item.depth,height:item.height,rotation:((item.rotation%360)+360)%360};
     const placement=checkPlacement(room,next);if(!placement.inside||placement.overlaps.length)continue;
     ids.add(next.id);cleaned.push(next);
    }
@@ -33,6 +34,7 @@ export function findOpenPosition(room,piece,items){
  return null;
 }
 export function starterLayout(room){
+ if(room.initialFurniture)return room.initialFurniture.map(item=>({...furnitureCatalog.find(p=>p.type===item.type),...item}));
  const result=[];
  for(const type of ['bed','desk','chair','dresser']){
   const base=furnitureCatalog.find(p=>p.type===type);

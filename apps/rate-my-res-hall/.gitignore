@@ -5,3 +5,9 @@ dist/
 data/
 vendor/
 .runtime-assets.tar.gz
+
+# Provider tour screenshots stay as local research, outside public Git/deploys.
+research/virtual-tours/**/*.png
+research/virtual-tours/**/*.jpg
+research/virtual-tours/*.png
+research/virtual-tours/*.jpg
